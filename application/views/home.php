@@ -31,38 +31,38 @@
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="favicon.ico">
 
-	<!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'> -->
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
 
 	<!-- Animate.css -->
-	<!-- <link rel="stylesheet" href="css/animate.css"> -->
+	
     <link href="<?php echo  base_url('/assets/css/animate.css');?>" rel="stylesheet">
 	<!-- Icomoon Icon Fonts-->
-	<!-- <link rel="stylesheet" href="css/icomoon.css"> -->
+	
     <link href="<?php echo  base_url('/assets/css/icomoon.css');?>" rel="stylesheet">
 	<!-- Bootstrap  -->
-	<!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+	
     <link href="<?php echo  base_url('/assets/css/bootstrap.css');?>" rel="stylesheet">
 	<!-- Superfish -->
-	<!-- <link rel="stylesheet" href="css/superfish.css"> -->
+	
     <link href="<?php echo  base_url('/assets/css/superfish.css');?>" rel="stylesheet">
 	<!-- Magnific Popup -->
-	<!-- <link rel="stylesheet" href="css/magnific-popup.css"> -->
+	
     <link href="<?php echo  base_url('/assets/css/magnific-popup.css');?>" rel="stylesheet">
 	<!-- Date Picker -->
-	<!-- <link rel="stylesheet" href="css/bootstrap-datepicker.min.css"> -->
+	
     <link href="<?php echo  base_url('/assets/css/bootstrap-datepicker.min.css');?>" rel="stylesheet">
 	<!-- CS Select -->
-	<!-- <link rel="stylesheet" href="css/cs-select.css"> -->
+	
     <link href="<?php echo  base_url('/assets/css/cs-select.css');?>" rel="stylesheet">
-	<!-- <link rel="stylesheet" href="css/cs-skin-border.css"> -->
+	
     <link href="<?php echo  base_url('/assets/css/cs-skin-border.css');?>" rel="stylesheet">
 
-	<!-- <link rel="stylesheet" href="css/style.css"> -->
+	
     <link href="<?php echo  base_url('/assets/css/style.css');?>" rel="stylesheet">
 
 
 	<!-- Modernizr JS -->
-	<!-- <script src="js/modernizr-2.6.2.min.js"></script> -->
+	
     <script src="<?php echo  base_url('/assets/js/modernizr-2.6.2.min.js');?>"></script>
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
@@ -82,7 +82,7 @@
 							<i></i>
 						</a>
 						<h1 id="fh5co-logo">
-							<a href="index.html">
+							<a href="<?php echo  base_url();?>">
 								<!-- <i class="icon-airplane"></i> -->
 								<img src="<?php echo  base_url('/assets/images/logo.png');?>">
 							</a>
@@ -106,10 +106,10 @@
 							<li><a href="car.html">Car</a></li>
 							<li><a href="blog.html">Blog</a></li> -->
 								<li>
-									<a href="login.html"> Already a member? Login</a>
+									<a href="<?php echo  base_url('index.php/user/login');?>"> Already a member? Login</a>
 								</li>
 								<li>
-									<a href="about-us.php"> About Us</a>
+									<a href="<?php echo  base_url('index.php/user/aboutus');?>"> About Us</a>
 								</li>
 							</ul>
 						</nav>
@@ -256,23 +256,10 @@
 														<label for="from">Birthday:</label>
 													</div>
 													<div class="col-xxs-4 col-xs-4 mt ">';
-														// <select id="month_start" name="month_start" />
-														// <option value="01">January</option>
-														// <option value="01">February</option>
-														// <option value="01">March</option>
-														// <option value="01">April</option>
-														// <option value="01">May</option>
-														// <option value="01">June</option>
-														// <option value="01">July</option>
-														// <option value="01">August</option>
-														// <option value="01">September</option>
-														// <option value="01">October</option>
-														// <option value="01">November</option>
-														// <option value="01">December</option>
-                                                        // </select>
+													
                                                         $options = array(
-                                                            '01'         => 'January',
-                                                            '02'         => 'February',
+                                                            '01'  => 'January',
+                                                            '02'  => 'February',
                                                             '03'  => 'March',
                                                             '04' => 'April',
                                                             '05' => 'May',
@@ -287,88 +274,62 @@
                                                         $attribute = 'class="form-control"';
                                 
                                 
-                                                    echo form_dropdown('month_start', $options, 'Mr',$attribute);
+                                                    echo form_dropdown('month_start', $options, '01',$attribute);
 													echo '</div>
 													<div class="col-xxs-4 col-xs-4 mt pl-0">';
-														// <select id="day_start" name="day_start" />
-														// <option>1</option>
-														// <option>2</option>
-														// <option>3</option>
-														// <option>4</option>
-														// <option>5</option>
-														// <option>6</option>
-														// <option>7</option>
-														// <option>8</option>
-														// <option>9</option>
-														// <option>10</option>
-														// <option>11</option>
-														// <option>12</option>
-														// <option>13</option>
-														// <option>14</option>
-														// <option>15</option>
-														// <option>16</option>
-														// <option>17</option>
-														// <option>18</option>
-														// <option>19</option>
-														// <option>20</option>
-														// <option>21</option>
-														// <option>22</option>
-														// <option>23</option>
-														// <option>24</option>
-														// <option>25</option>
-														// <option>26</option>
-														// <option>27</option>
-														// <option>28</option>
-														// <option>29</option>
-														// <option>30</option>
-														// <option>31</option>
-														// </select>
+													$options = array(
+														'01' => '01',
+														'02' => '02',
+														'03' => '03',
+														'04' => '04',
+														'05' => '05',
+														'06' => '06',
+														'07' => '07',
+														'08' => '08',
+														'09' => '09',
+														'10' => '10',
+														'11' => '11',
+														'12' => '12',
+														'13' => '13',                            
+														'14' => '14',                            
+														'15' => '15',                            
+														'16' => '16',                            
+														'17' => '17',                            
+														'18' => '18',                            
+														'19' => '19',                            
+														'20' => '20',                            
+														'21' => '21',                            
+														'22' => '22',                            
+														'23' => '23',                            
+														'24' => '24',                            
+														'25' => '25',                            
+														'26' => '26',                            
+														'27' => '27',                            
+														'28' => '28',                            
+														'29' => '29',                            
+														'30' => '30',                            
+														'31' => '31',                            
+													);
+													$attribute = 'class="form-control"';
+							
+							
+												echo form_dropdown('day_start', $options, '01',$attribute);
+													
 													echo '</div>
 													<div class="col-xxs-4 col-xs-4 mt pl-0">';
-														// <select id="year_start" name="year_start" />
-														// <option>1980</option>
-														// <option>1981</option>
-														// <option>1982</option>
-														// <option>1983</option>
-														// <option>1984</option>
-														// <option>1985</option>
-														// <option>1986</option>
-														// <option>1987</option>
-														// <option>1988</option>
-														// <option>1989</option>
-														// <option>1990</option>
-														// <option>1991</option>
-														// <option>1992</option>
-														// <option>1993</option>
-														// <option>1994</option>
-														// <option>1995</option>
-														// <option>1996</option>
-														// <option>1997</option>
-														// <option>1998</option>
-														// <option>1999</option>
-														// <option>2000</option>
-														// <option>2001</option>
-														// <option>2002</option>
-														// <option>2003</option>
-														// <option>2004</option>
-														// <option>2005</option>
-														// <option>2006</option>
-														// <option>2007</option>
-														// <option>2008</option>
-														// <option>2009</option>
-														// <option>2010</option>
-														// <option>2011</option>
-														// <option>2012</option>
-														// <option>2013</option>
-														// <option>2014</option>
-														// <option>2015</option>
-														// <option>2016</option>
-														// <option>2017</option>
-														// <option>2018</option>
-														// <option>2018</option>
+													
+													for ($i=1980; $i < 2010 ; $i++) { 
+														$options_year[$i] =  $i;
+													}
+
+													
+													$attribute = 'class="form-control"';
+							
+							
+												echo form_dropdown('year_start', $options_year, '1980',$attribute);
 
 
-														// </select>
+														
 													echo '</div>
 
 												</div>
@@ -378,7 +339,18 @@
 													<div class="col-xxs-6 col-xs-6 col-sm-6 mt">
 														<div class="input-field">
 															<label class="form-control">';
-																// <input type="radio" name="gender" value="male" class="mr-2" checked>Male</label>
+															$data = array(
+																'name'          => 'gender',
+																
+																'value'         => 'male',
+																'class'			=> 'mr-2',
+																'checked'       => TRUE,
+																
+															);
+														
+														echo form_radio($data);
+																// <input type="radio" name="gender" value="male" class="mr-2" checked>
+															echo "Male</label>";
 
 														echo '</div>
 													</div>
@@ -386,264 +358,277 @@
 														<div class="input-field">
 
 															<label class="form-control">';
-																// <input type="radio" name="gender" value="female" class="mr-2">Female</label>
+															$data = array(
+																'name'          => 'gender',
+																
+																'value'         => 'female',
+																'class'			=> 'mr-2',
+																'checked'       => FALSE,
+																
+															);
+														
+														echo form_radio($data);
+																
+															echo "Female</label>";
+																
 														echo '</div>
 													</div>
 												</div>
 												<div class="row">
 													<div class="col-xxs-12 col-xs-12 col-sm-12 mt">';
-														// <select class="form-control" name="country" required>
-														// 	<option >Country</option>
-														// 	<option value="AFG">Afghanistan</option>
-														// 	<option value="ALA">Åland Islands</option>
-														// 	<option value="ALB">Albania</option>
-														// 	<option value="DZA">Algeria</option>
-														// 	<option value="ASM">American Samoa</option>
-														// 	<option value="AND">Andorra</option>
-														// 	<option value="AGO">Angola</option>
-														// 	<option value="AIA">Anguilla</option>
-														// 	<option value="ATA">Antarctica</option>
-														// 	<option value="ATG">Antigua and Barbuda</option>
-														// 	<option value="ARG">Argentina</option>
-														// 	<option value="ARM">Armenia</option>
-														// 	<option value="ABW">Aruba</option>
-														// 	<option value="AUS">Australia</option>
-														// 	<option value="AUT">Austria</option>
-														// 	<option value="AZE">Azerbaijan</option>
-														// 	<option value="BHS">Bahamas</option>
-														// 	<option value="BHR">Bahrain</option>
-														// 	<option value="BGD">Bangladesh</option>
-														// 	<option value="BRB">Barbados</option>
-														// 	<option value="BLR">Belarus</option>
-														// 	<option value="BEL">Belgium</option>
-														// 	<option value="BLZ">Belize</option>
-														// 	<option value="BEN">Benin</option>
-														// 	<option value="BMU">Bermuda</option>
-														// 	<option value="BTN">Bhutan</option>
-														// 	<option value="BOL">Bolivia, Plurinational State of</option>
-														// 	<option value="BES">Bonaire, Sint Eustatius and Saba</option>
-														// 	<option value="BIH">Bosnia and Herzegovina</option>
-														// 	<option value="BWA">Botswana</option>
-														// 	<option value="BVT">Bouvet Island</option>
-														// 	<option value="BRA">Brazil</option>
-														// 	<option value="IOT">British Indian Ocean Territory</option>
-														// 	<option value="BRN">Brunei Darussalam</option>
-														// 	<option value="BGR">Bulgaria</option>
-														// 	<option value="BFA">Burkina Faso</option>
-														// 	<option value="BDI">Burundi</option>
-														// 	<option value="KHM">Cambodia</option>
-														// 	<option value="CMR">Cameroon</option>
-														// 	<option value="CAN">Canada</option>
-														// 	<option value="CPV">Cape Verde</option>
-														// 	<option value="CYM">Cayman Islands</option>
-														// 	<option value="CAF">Central African Republic</option>
-														// 	<option value="TCD">Chad</option>
-														// 	<option value="CHL">Chile</option>
-														// 	<option value="CHN">China</option>
-														// 	<option value="CXR">Christmas Island</option>
-														// 	<option value="CCK">Cocos (Keeling) Islands</option>
-														// 	<option value="COL">Colombia</option>
-														// 	<option value="COM">Comoros</option>
-														// 	<option value="COG">Congo</option>
-														// 	<option value="COD">Congo, the Democratic Republic of the</option>
-														// 	<option value="COK">Cook Islands</option>
-														// 	<option value="CRI">Costa Rica</option>
-														// 	<option value="CIV">Côte d\'Ivoire</option>
-														// 	<option value="HRV">Croatia</option>
-														// 	<option value="CUB">Cuba</option>
-														// 	<option value="CUW">Curaçao</option>
-														// 	<option value="CYP">Cyprus</option>
-														// 	<option value="CZE">Czech Republic</option>
-														// 	<option value="DNK">Denmark</option>
-														// 	<option value="DJI">Djibouti</option>
-														// 	<option value="DMA">Dominica</option>
-														// 	<option value="DOM">Dominican Republic</option>
-														// 	<option value="ECU">Ecuador</option>
-														// 	<option value="EGY">Egypt</option>
-														// 	<option value="SLV">El Salvador</option>
-														// 	<option value="GNQ">Equatorial Guinea</option>
-														// 	<option value="ERI">Eritrea</option>
-														// 	<option value="EST">Estonia</option>
-														// 	<option value="ETH">Ethiopia</option>
-														// 	<option value="FLK">Falkland Islands (Malvinas)</option>
-														// 	<option value="FRO">Faroe Islands</option>
-														// 	<option value="FJI">Fiji</option>
-														// 	<option value="FIN">Finland</option>
-														// 	<option value="FRA">France</option>
-														// 	<option value="GUF">French Guiana</option>
-														// 	<option value="PYF">French Polynesia</option>
-														// 	<option value="ATF">French Southern Territories</option>
-														// 	<option value="GAB">Gabon</option>
-														// 	<option value="GMB">Gambia</option>
-														// 	<option value="GEO">Georgia</option>
-														// 	<option value="DEU">Germany</option>
-														// 	<option value="GHA">Ghana</option>
-														// 	<option value="GIB">Gibraltar</option>
-														// 	<option value="GRC">Greece</option>
-														// 	<option value="GRL">Greenland</option>
-														// 	<option value="GRD">Grenada</option>
-														// 	<option value="GLP">Guadeloupe</option>
-														// 	<option value="GUM">Guam</option>
-														// 	<option value="GTM">Guatemala</option>
-														// 	<option value="GGY">Guernsey</option>
-														// 	<option value="GIN">Guinea</option>
-														// 	<option value="GNB">Guinea-Bissau</option>
-														// 	<option value="GUY">Guyana</option>
-														// 	<option value="HTI">Haiti</option>
-														// 	<option value="HMD">Heard Island and McDonald Islands</option>
-														// 	<option value="VAT">Holy See (Vatican City State)</option>
-														// 	<option value="HND">Honduras</option>
-														// 	<option value="HKG">Hong Kong</option>
-														// 	<option value="HUN">Hungary</option>
-														// 	<option value="ISL">Iceland</option>
-														// 	<option value="IND">India</option>
-														// 	<option value="IDN">Indonesia</option>
-														// 	<option value="IRN">Iran, Islamic Republic of</option>
-														// 	<option value="IRQ">Iraq</option>
-														// 	<option value="IRL">Ireland</option>
-														// 	<option value="IMN">Isle of Man</option>
-														// 	<option value="ISR">Israel</option>
-														// 	<option value="ITA">Italy</option>
-														// 	<option value="JAM">Jamaica</option>
-														// 	<option value="JPN">Japan</option>
-														// 	<option value="JEY">Jersey</option>
-														// 	<option value="JOR">Jordan</option>
-														// 	<option value="KAZ">Kazakhstan</option>
-														// 	<option value="KEN">Kenya</option>
-														// 	<option value="KIR">Kiribati</option>
-														// 	<option value="PRK">Korea, Democratic People\'s Republic of</option>
-														// 	<option value="KOR">Korea, Republic of</option>
-														// 	<option value="KWT">Kuwait</option>
-														// 	<option value="KGZ">Kyrgyzstan</option>
-														// 	<option value="LAO">Lao People\'s Democratic Republic</option>
-														// 	<option value="LVA">Latvia</option>
-														// 	<option value="LBN">Lebanon</option>
-														// 	<option value="LSO">Lesotho</option>
-														// 	<option value="LBR">Liberia</option>
-														// 	<option value="LBY">Libya</option>
-														// 	<option value="LIE">Liechtenstein</option>
-														// 	<option value="LTU">Lithuania</option>
-														// 	<option value="LUX">Luxembourg</option>
-														// 	<option value="MAC">Macao</option>
-														// 	<option value="MKD">Macedonia, the former Yugoslav Republic of</option>
-														// 	<option value="MDG">Madagascar</option>
-														// 	<option value="MWI">Malawi</option>
-														// 	<option value="MYS">Malaysia</option>
-														// 	<option value="MDV">Maldives</option>
-														// 	<option value="MLI">Mali</option>
-														// 	<option value="MLT">Malta</option>
-														// 	<option value="MHL">Marshall Islands</option>
-														// 	<option value="MTQ">Martinique</option>
-														// 	<option value="MRT">Mauritania</option>
-														// 	<option value="MUS">Mauritius</option>
-														// 	<option value="MYT">Mayotte</option>
-														// 	<option value="MEX">Mexico</option>
-														// 	<option value="FSM">Micronesia, Federated States of</option>
-														// 	<option value="MDA">Moldova, Republic of</option>
-														// 	<option value="MCO">Monaco</option>
-														// 	<option value="MNG">Mongolia</option>
-														// 	<option value="MNE">Montenegro</option>
-														// 	<option value="MSR">Montserrat</option>
-														// 	<option value="MAR">Morocco</option>
-														// 	<option value="MOZ">Mozambique</option>
-														// 	<option value="MMR">Myanmar</option>
-														// 	<option value="NAM">Namibia</option>
-														// 	<option value="NRU">Nauru</option>
-														// 	<option value="NPL">Nepal</option>
-														// 	<option value="NLD">Netherlands</option>
-														// 	<option value="NCL">New Caledonia</option>
-														// 	<option value="NZL">New Zealand</option>
-														// 	<option value="NIC">Nicaragua</option>
-														// 	<option value="NER">Niger</option>
-														// 	<option value="NGA">Nigeria</option>
-														// 	<option value="NIU">Niue</option>
-														// 	<option value="NFK">Norfolk Island</option>
-														// 	<option value="MNP">Northern Mariana Islands</option>
-														// 	<option value="NOR">Norway</option>
-														// 	<option value="OMN">Oman</option>
-														// 	<option value="PAK">Pakistan</option>
-														// 	<option value="PLW">Palau</option>
-														// 	<option value="PSE">Palestinian Territory, Occupied</option>
-														// 	<option value="PAN">Panama</option>
-														// 	<option value="PNG">Papua New Guinea</option>
-														// 	<option value="PRY">Paraguay</option>
-														// 	<option value="PER">Peru</option>
-														// 	<option value="PHL">Philippines</option>
-														// 	<option value="PCN">Pitcairn</option>
-														// 	<option value="POL">Poland</option>
-														// 	<option value="PRT">Portugal</option>
-														// 	<option value="PRI">Puerto Rico</option>
-														// 	<option value="QAT">Qatar</option>
-														// 	<option value="REU">Réunion</option>
-														// 	<option value="ROU">Romania</option>
-														// 	<option value="RUS">Russian Federation</option>
-														// 	<option value="RWA">Rwanda</option>
-														// 	<option value="BLM">Saint Barthélemy</option>
-														// 	<option value="SHN">Saint Helena, Ascension and Tristan da Cunha</option>
-														// 	<option value="KNA">Saint Kitts and Nevis</option>
-														// 	<option value="LCA">Saint Lucia</option>
-														// 	<option value="MAF">Saint Martin (French part)</option>
-														// 	<option value="SPM">Saint Pierre and Miquelon</option>
-														// 	<option value="VCT">Saint Vincent and the Grenadines</option>
-														// 	<option value="WSM">Samoa</option>
-														// 	<option value="SMR">San Marino</option>
-														// 	<option value="STP">Sao Tome and Principe</option>
-														// 	<option value="SAU">Saudi Arabia</option>
-														// 	<option value="SEN">Senegal</option>
-														// 	<option value="SRB">Serbia</option>
-														// 	<option value="SYC">Seychelles</option>
-														// 	<option value="SLE">Sierra Leone</option>
-														// 	<option value="SGP">Singapore</option>
-														// 	<option value="SXM">Sint Maarten (Dutch part)</option>
-														// 	<option value="SVK">Slovakia</option>
-														// 	<option value="SVN">Slovenia</option>
-														// 	<option value="SLB">Solomon Islands</option>
-														// 	<option value="SOM">Somalia</option>
-														// 	<option value="ZAF">South Africa</option>
-														// 	<option value="SGS">South Georgia and the South Sandwich Islands</option>
-														// 	<option value="SSD">South Sudan</option>
-														// 	<option value="ESP">Spain</option>
-														// 	<option value="LKA">Sri Lanka</option>
-														// 	<option value="SDN">Sudan</option>
-														// 	<option value="SUR">Suriname</option>
-														// 	<option value="SJM">Svalbard and Jan Mayen</option>
-														// 	<option value="SWZ">Swaziland</option>
-														// 	<option value="SWE">Sweden</option>
-														// 	<option value="CHE">Switzerland</option>
-														// 	<option value="SYR">Syrian Arab Republic</option>
-														// 	<option value="TWN">Taiwan, Province of China</option>
-														// 	<option value="TJK">Tajikistan</option>
-														// 	<option value="TZA">Tanzania, United Republic of</option>
-														// 	<option value="THA">Thailand</option>
-														// 	<option value="TLS">Timor-Leste</option>
-														// 	<option value="TGO">Togo</option>
-														// 	<option value="TKL">Tokelau</option>
-														// 	<option value="TON">Tonga</option>
-														// 	<option value="TTO">Trinidad and Tobago</option>
-														// 	<option value="TUN">Tunisia</option>
-														// 	<option value="TUR">Turkey</option>
-														// 	<option value="TKM">Turkmenistan</option>
-														// 	<option value="TCA">Turks and Caicos Islands</option>
-														// 	<option value="TUV">Tuvalu</option>
-														// 	<option value="UGA">Uganda</option>
-														// 	<option value="UKR">Ukraine</option>
-														// 	<option value="ARE">United Arab Emirates</option>
-														// 	<option value="GBR">United Kingdom</option>
-														// 	<option value="USA">United States</option>
-														// 	<option value="UMI">United States Minor Outlying Islands</option>
-														// 	<option value="URY">Uruguay</option>
-														// 	<option value="UZB">Uzbekistan</option>
-														// 	<option value="VUT">Vanuatu</option>
-														// 	<option value="VEN">Venezuela, Bolivarian Republic of</option>
-														// 	<option value="VNM">Viet Nam</option>
-														// 	<option value="VGB">Virgin Islands, British</option>
-														// 	<option value="VIR">Virgin Islands, U.S.</option>
-														// 	<option value="WLF">Wallis and Futuna</option>
-														// 	<option value="ESH">Western Sahara</option>
-														// 	<option value="YEM">Yemen</option>
-														// 	<option value="ZMB">Zambia</option>
-														// 	<option value="ZWE">Zimbabwe</option>
-														// </select>
+													$options_country = array(
+														'AFG'  => 'Afghanistan',
+														'ALA'  => 'Åland Islands',
+														'ALB'  => 'Albania',
+														'DZA' => 'Algeria',
+														'ASM' => 'American Samoa',
+														'AND' => 'Andorra',
+														'AGO' => 'Angola',
+														'AIA' => 'Anguilla',
+														'ATA' => 'Antarctica',
+														"ATG" => 'Antigua and Barbuda',
+														"ARG" => 'Argentina',
+														"ARM" => 'Armenia',
+														"ABW"=> 'Aruba',
+														"AUS" =>'Australia',
+														"AUT" => 'Austria',
+														"AZE" => 'Azerbaijan',
+														"BHS" => 'Bahamas',
+														"BHR" => 'Bahrain',
+														"BGD" => 'Bangladesh',
+														"BRB" =>  'Barbados',
+														"BLR" => 'Belarus',
+														"BEL" => 'Belgium',
+														"BLZ" => 'Belize',
+														"BEN" => 'Benin',
+														"BMU" => 'Bermuda',
+														"BTN" => 'Bhutan',
+														"BOL" => 'Bolivia, Plurinational State of',
+														"BES" => 'Bonaire, Sint Eustatius and Saba',
+														"BIH" => 'Bosnia and Herzegovina',
+														"BWA" => 'Botswana',
+														"BVT" => 'Bouvet Island',
+														"BRA" => 'Brazil',
+														"IOT" => 'British Indian Ocean Territory',
+														"BRN" => 'Brunei Darussalam',
+														"BGR" => 'Bulgaria',
+														"BFA" => 'Burkina Faso',
+														"BDI" => 'Burundi',
+														"KHM" => 'Cambodia',
+														"CMR" => 'Cameroon',
+														"CAN" => 'Canada',
+														"CPV" => 'Cape Verde',
+														"CYM" => 'Cayman Islands',
+														"CAF" => 'Central African Republic',
+														"TCD" => 'Chad',
+														"CHL" => 'Chile',
+														"CHN" => 'China',
+														"CXR" => 'Christmas Island',
+														"CCK" => 'Cocos (Keeling) Islands',
+														"COL" => 'Colombia',
+														"COM" => 'Comoros',
+														"COG" => 'Congo',
+														"COD" => 'Congo, the Democratic Republic of the',
+														"COK" => 'Cook Islands',
+														"CRI" => 'Costa Rica',
+														"CIV" => 'Côte d\'Ivoire',
+														"HRV" => 'Croatia',
+														"CUB" => 'Cuba',
+														"CUW" => 'Curaçao',
+														"CYP" => 'Cyprus',
+														"CZE" => 'Czech Republic',
+														"DNK" => 'Denmark',
+														"DJI" => 'Djibouti',
+														"DMA" => 'Dominica',
+														"DOM" => 'Dominican Republic',
+														"ECU" => 'Ecuador',
+														"EGY" => 'Egypt',
+														"SLV" => 'El Salvador',
+														"GNQ" => 'Equatorial Guinea',
+														"ERI" =>  'Eritrea',
+														"EST" => 'Estonia',
+														"ETH" => 'Ethiopia',
+														"FLK" => 'Falkland Islands (Malvinas)',
+														"FRO" => 'Faroe Islands',
+														"FJI" => 'Fiji',
+														"FIN" => 'Finland',
+														"FRA" => 'France',
+														"GUF" => 'French Guiana',
+														"PYF" => 'French Polynesia',
+														"ATF" => 'French Southern Territories',
+														"GAB" => 'Gabon',
+														"GMB" => 'Gambia',
+														"GEO" => 'Georgia',
+														"DEU" => 'Germany',
+														"GHA" => 'Ghana',
+														"GIB" => 'Gibraltar',
+														"GRC" => 'Greece',
+														"GRL" => 'Greenland',
+														"GRD" => 'Grenada',
+														"GLP" => 'Guadeloupe',
+														"GUM" => 'Guam',
+														"GTM" => 'Guatemala',
+														"GGY" =>'Guernsey',
+														"GIN" => 'Guinea',
+														"GNB" =>'Guinea-Bissau',
+														"GUY" => 'Guyana',
+														"HTI" => 'Haiti',
+														"HMD" => 'Heard Island and McDonald Islands',
+														"VAT" => 'Holy See (Vatican City State)',
+														"HND" => 'Honduras',
+														"HKG" => 'Hong Kong',
+														"HUN" => 'Hungary',
+														"ISL" => 'Iceland',
+														"IND" => 'India',
+														"IDN" => 'Indonesia',
+														"IRN" => 'Iran, Islamic Republic of',
+														"IRQ" => 'Iraq',
+														"IRL" => 'Ireland',
+														"IMN" => 'Isle of Man',
+														"ISR" => 'Israel',
+														"ITA" => 'Italy',
+														"JAM" => 'Jamaica',
+														"JPN" => 'Japan',
+														"JEY" => 'Jersey',
+														"JOR" => 'Jordan',
+														"KAZ" => 'Kazakhstan',
+														"KEN" => 'Kenya',
+														"KIR" => 'Kiribati',
+														"PRK" => 'Korea, Democratic People\'s Republic of',
+														"KOR" => 'Korea, Republic of',
+														"KWT" => 'Kuwait',
+														"KGZ" => 'Kyrgyzstan',
+														"LAO" => 'Lao People\'s Democratic Republic',
+														"LVA" => 'Latvia',
+														"LBN" => 'Lebanon',
+														"LSO" => 'Lesotho',
+														"LBR" => 'Liberia',
+														"LBY" => 'Libya',
+														"LIE" => 'Liechtenstein',
+														"LTU" => 'Lithuania',
+														"LUX" => 'Luxembourg',
+														"MAC" => 'Macao',
+														"MKD" => 'Macedonia, the former Yugoslav Republic of',
+														"MDG" => 'Madagascar',
+														"MWI" => 'Malawi',
+														"MYS" => 'Malaysia',
+														"MDV" => 'Maldives',
+														"MLI" => 'Mali',
+														"MLT" => 'Malta',
+														"MHL" => 'Marshall Islands',
+														"MTQ" => 'Martinique',
+														"MRT" => 'Mauritania',
+														"MUS" => 'Mauritius',
+														"MYT" => 'Mayotte',
+														"MEX" => 'Mexico',
+														"FSM" => 'Micronesia, Federated States of',
+														"MDA" => 'Moldova, Republic of',
+														"MCO" => 'Monaco',
+														"MNG" => 'Mongolia',
+														"MNE" => 'Montenegro',
+														"MSR" => 'Montserrat',
+														"MOZ" => 'Mozambique',
+														"MMR" => 'Myanmar',
+														"NRU" => 'Namibia',
+														"NAM" => 'Nauru',
+														"NPL" => 'Nepal',
+														"NLD" => 'Netherlands',
+														"NCL" => 'New Caledonia',
+														"NZL" => 'New Zealand',
+														"NIC" => 'Nicaragua',
+														"NER" => 'Niger',
+														"NGA" => 'Nigeria',
+														"NIU" => 'Niue',
+														"NFK" => 'Norfolk Island',
+														"MNP" => 'Northern Mariana Islands',
+														"NOR" => 'Norway',
+														"OMN" => 'Oman',
+														"PAK" => 'Pakistan',
+														"PLW" => 'Palau',
+														"PSE" => 'Palestinian Territory, Occupied',
+														"PAN" => 'Panama',
+														"PNG" => 'Papua New Guinea',
+														"PRY" => 'Paraguay',
+														"PER" => 'Peru',
+														"PHL" => 'Philippines',
+														"PCN" => 'Pitcairn',
+														"POL" => 'Poland',
+														"PRT" => 'Portugal',
+														"PRI" => 'Puerto Rico',
+														"QAT" => 'Qatar',
+														"REU" => 'Réunion',
+														"ROU" => 'Romania',
+														"BLM" => 'Russian Federation',
+														"SHN" => 'Saint Helena, Ascension and Tristan da Cunha',
+														"KNA" => 'Saint Kitts and Nevis',
+														"LCA" => 'Saint Lucia',
+														"KNA" => 'Saint Martin (French part)',
+														"SPM" => 'Saint Pierre and Miquelon',
+														"VCT" => 'Saint Vincent and the Grenadines',
+														"WSM" => 'Samoa',
+														"SMR" => 'San Marino',
+														"STP" => 'Sao Tome and Principe',
+														"SAU" => 'Saudi Arabia',
+														"SEN" => 'Senegal',
+														"SEN" => 'Serbia',
+														"SYC" => 'Seychelles',
+														"SLE" => 'Sierra Leone',
+														"SGP" => 'Singapore',
+														"SXM" => 'Sint Maarten (Dutch part)',
+														"SVN" => 'Slovakia',
+														"SLB" => 'Solomon Islands',
+														"SOM" => 'Somalia',
+														"ZAF" => 'South Africa',
+														"SGS" => 'South Georgia and the South Sandwich Islands',
+														"SSD" => 'South Sudan',
+														"ESP" => 'Spain',
+														"LKA" => 'Sri Lanka',
+														"SDN" => 'Sudan',
+														"SUR" => 'Suriname',
+														"SJM" => 'Svalbard and Jan Mayen',
+														"SWZ" => 'Swaziland',
+														"SWE" => 'Sweden',
+														"CHE" => 'Switzerland',
+														"SYR" => 'Syrian Arab Republic',
+														"TWN" => 'Taiwan, Province of China',
+														"TJK" => 'Tajikistan',
+														"TZA" => 'Tanzania, United Republic of',
+														"THA" => 'Thailand',
+														"TLS" => 'Timor-Leste',
+														"TGO" => 'Togo',
+														"TKL" => 'Tokelau',
+														"TON" => 'Tonga',
+														"TTO" => 'Trinidad and Tobago',
+														"TUN" => 'Tunisia',
+														"TUR" => 'Turkey',
+														"TKM" => 'Turkmenistan',
+														"TCA" => 'Turks and Caicos Islands',
+														"TUV" => 'Tuvalu',
+														"UGA" => 'Uganda',
+														"UKR" => 'Ukraine',
+														"ARE" => 'United Arab Emirates',
+														"GBR" => 'United Kingdom',
+														"USA" => 'United States',
+														"TUMIUN" => 'United States Minor Outlying Islands',
+														"URY" => 'Uruguay',
+														"UZB" => 'Uzbekistan',
+														"VUT" => 'Vanuatu',
+														"VEN" => 'Venezuela, Bolivarian Republic of',
+														"VNM" => 'Viet Nam',
+														"VGB" => 'Virgin Islands, British',
+														"VIR" => 'Virgin Islands, U.S.',
+														"WLF" => 'Wallis and Futuna',
+														"ESH" => 'Western Sahara',
+														"YEM" => 'Yemen',
+														"ZMB" => 'Zambia',
+														"ZWE" => 'Zimbabwe',
+														                          
+													);
+													$attribute = 'class="form-control"';
+							
+							
+												echo form_dropdown('country', $options_country, '01',$attribute);
+														
 
 													echo '</div>
 												</div>
@@ -653,21 +638,48 @@
 													<div class="col-xxs-12 col-xs-12 mt">
 														<div class="input-group">
 															<div class="checkbox">
-																<label>
-																	<input id="login-remember" type="checkbox" name="remember" value="1" required> Accept the
+																<label>';
+																$data = array(
+																	'name'          => 'remember',
+																	'value'         => '1',
+																	'checked'       => FALSE,
+																	'required'		=> 'required'
+																);
+															
+															echo form_checkbox($data);
+																	//<input id="login-remember" type="checkbox" name="remember" value="1" required> 
+																	
+																	echo 'Accept the
 																	<strong>Terms of Service</strong>
 																</label>
 															</div>
 															<div class="checkbox">
-																<label>
-																	<input id="login-remember" type="checkbox" name="police" value="1" required> Accept the
-																	<strong>Privacy Police</strong>
+																<label>';
+																$data = array(
+																	'name'          => 'police',
+																	'value'         => '1',
+																	'checked'       => FALSE,
+																	'required'		=> 'required'
+																);
+															
+															echo form_checkbox($data);
+																	//<input id="login-remember" type="checkbox" name="police" value="1" required>
+																	echo ' Accept the <strong>Privacy Police</strong>
 																</label>
 															</div>
 															<div class="checkbox">
-																<label>
-																	<input id="login-remember" type="checkbox" name="cookies" value="1" required> I agree to the use of
-																	<strong>Cookies</strong>
+																<label>';
+																$data = array(
+																	'name'          => 'cookies',
+																	'value'         => '1',
+																	'checked'       => FALSE,
+																	'required'		=> 'required'
+																);
+															
+															echo form_checkbox($data);
+
+																	//<input id="login-remember" type="checkbox" name="cookies" value="1" required>
+																	echo ' I agree to the use of <strong>Cookies</strong>
 																</label>
 															</div>
 
@@ -676,9 +688,11 @@
 
 													</div>
 
-													<div class="col-xs-12">
-														<input type="submit" name="submit" class="btn btn-default btn-block" value="Become a member">
-													</div>
+													<div class="col-xs-12">';
+														//<input type="submit" name="submit" class="btn btn-default btn-block" value="Become a member">
+														echo form_submit('submit', 'Become a member', "class='btn btn-default btn-block'");
+                    echo form_close();
+													echo '</div>
 												</div>
                                             </div>';
                                             ?>
@@ -822,11 +836,31 @@
 											<strong> Malamu. Good. </strong>
 										</h2>
 										<?php 
-											if(isset($_GET['message']) && $_GET['status'] == 1){
-												echo "<h3 class=' notification label label-success'>".  urldecode(base64_decode($_GET['message'])) ."</h3>";
-											}elseif($_GET['status'] == 2){
-												echo "<h3 class=' notification label label-danger'>".  urldecode(base64_decode($_GET['message'])) ."</h3>";
-											}
+
+									if(form_error('first_name') || form_error('first_name') || form_error('phone_number') || form_error('username') || form_error('password') || form_error('remember') || form_error('police') || form_error('cookies') ){
+										// echo '<h3 class="notification label label-danger" >';
+											echo form_error('first_name','<h3 class="notification label label-danger">','</h3><br><br>');
+											echo form_error('first_name','<h3 class="notification label label-danger">','</h3><br><br>');
+											echo form_error('phone_number','<h3 class="notification label label-danger">','</h3><br><br>');
+											echo form_error('username','<h3 class="notification label label-danger">','</h3><br><br>');
+											echo form_error('password','<h3 class="notification label label-danger">','</h3><br><br>');
+											echo form_error('remember','<h3 class="notification label label-danger">','</h3><br><br>');
+											echo form_error('police','<h3 class="notification label label-danger">','</h3><br><br>');
+											echo form_error('cookies','<h3 class="notification label label-danger">','</h3>');
+										// echo '</h3>';
+										}
+									if(isset($success_message_display)){
+										echo "<h3 class=' notification label label-success'>". $success_message_display ."</h3>";
+									}
+									if(isset($error_message_display)){
+										echo "<h3 class='notification label label-danger'>". $error_message_display ."</h3>";
+									}
+
+											// if(isset($_GET['message']) && $_GET['status'] == 1){
+											// 	echo "<h3 class=' notification label label-success'>".  urldecode(base64_decode($_GET['message'])) ."</h3>";
+											// }elseif($_GET['status'] == 2){
+											// 	echo "<h3 class=' notification label label-danger'>".  urldecode(base64_decode($_GET['message'])) ."</h3>";
+											// }
 
 											
 										?>
