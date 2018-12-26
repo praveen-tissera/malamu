@@ -106,6 +106,13 @@
 			display:block;
 		}
 		}
+	.error-style{
+		display: block;
+		margin-bottom: 0;
+		margin-left: 1.5rem;
+		margin-right: 1.5rem;
+		color: white !important;
+	}
 	</style>
 
 </head>
@@ -169,29 +176,52 @@
 									<div class="col-sm-offset-3 col-md-offset-4 col-sm-8 ">
 										<!--  -->
 										<div class="form-signin mg-btm">
-										<img class="login-logo" src="<?php echo base_url('/assets/images/logo.png'); ?>">
-											<h3 class="heading-desc text-center">Welcome Back</h3>
-											<p class="text-center">Please Log in or <a href="" class="login">Sign Up Now</a> </p>
-											<!-- <div class="social-box">
-												<div class="row mg-btm">
-												<div class="col-md-12">
-													<a href="#" class="btn btn-primary btn-block">
-													<i class="icon-facebook"></i>    Login with Facebook
-													</a>
-												</div>
-												</div>
+											
+											<img class="login-logo" src="<?php echo base_url('/assets/images/logo.png'); ?>">
+											<?php
+											echo '<h3 class="heading-desc text-center">Welcome Back</h3>';
+											echo '<p class="text-center">Please Log in or <a href="'. base_url('index.php') .'" class="login">Sign Up Now</a> </p>';
+											if (isset($error_message_display)) {
+												echo "<h3 class='notification label label-danger error-style'>". $error_message_display ."</h3>";
+											}
+											echo form_open('user/userLogin');  
+											echo '<div class="main">	
+												<label>Username or Phone Number (ex. +243 305 679 621)</label>';
+												$data = array(
+													'type' => 'text',
+													'name' => 'username',
+													'class' => 'form-control',
+													'id' => 'from-place',
+													'placeholder' => 'Username or Phone Number',
+													'autofocus' => 'autofocus',
+													'required'=> 'required'
+													);
+													echo form_input($data);
+												//<input type="text" class="form-control" placeholder="Username or Phone Number" autofocus>
+											echo '<label >Password</label>';
+											$data = array(
+												'type' => 'password',
+												'name' => 'password',
+												'class' => 'form-control',
+												'id' => 'from-place',
+												'placeholder' => 'Password',
+												'required'=> 'required'
+												);
+												echo form_input($data);
+											//<input type="password" class="form-control" placeholder="Password">
 												
-											</div> -->
-											<div class="main">	
-												<label>Username or Phone Number (ex. +243 305 679 621)</label>
-												<input type="text" class="form-control" placeholder="Username or Phone Number" autofocus>
-												<label >Password</label>
-												<input type="password" class="form-control" placeholder="Password">
+												echo '<div class="checkbox pull-left">
+													<label>';
+													$data = array(
+														'name'          => 'rememberme',
+														'value'         => '1',
+														'checked'       => FALSE,
+														
+													);
 												
-												<div class="checkbox pull-left">
-													<label>
-														<input type="checkbox"> <span>Remember Me</span>
-													</label>	
+												echo form_checkbox($data);
+														//<input type="checkbox"> 
+													echo '<span>Remember Me</span></label>	
 												
 												</div>
 												<a href="" class="pull-right forgot"> Forgot Passwrod</a>
@@ -200,13 +230,15 @@
 											<div class="login-footer">
 											<div class="row">
 															
-															<div class="col-xs-12 col-md-12">
-																
-																<input type="submit" name="submit" value="Become a member" class="btn btn-default btn-block">
-															</div>
+															<div class="col-xs-12 col-md-12">';
+															echo form_submit('submit', 'Login', "class='btn btn-default btn-block'");
+                   											echo form_close();	
+															//	<input type="submit" name="submit" value="Become a member" class="btn btn-default btn-block">
+															echo '</div>
 														</div>
 											
-											</div>
+											</div>';
+											?>
 										</div>
 
 

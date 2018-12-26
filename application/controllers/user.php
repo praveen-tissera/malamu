@@ -79,7 +79,39 @@ Class User extends CI_Controller {
     }
 
     public function login(){
+        //if user already logged need to direct to dashboard
         $this->load->view('login');
+    }
+    public function userLogin(){
+        
+        //if rememberme true need to set cookie
+        $this->form_validation->set_rules('username', 'Username', 'trim|required');
+        $this->form_validation->set_rules('password', 'Password', 'trim|required');
+        if($this->form_validation->run() == FALSE){
+            $this->load->view('login');
+        }else{
+            $data = array(
+                'username' => $this->input->post('username'),
+                'password' => sha1($this->input->post('password'))
+            );
+            $result = $this->user_model->user_login($data);
+            if ($result == 'nouser') {
+                $data = array(
+					'error_message_display' => 'Invalid Username or Password',
+					);
+					$this->load->view('login', $data);
+            } else {
+                //print_r($result);
+                //echo $result[0]->user_id;
+                $this->session->set_userdata('userID', $result[0]->user_id);
+					redirect('/user/userDashBoard');
+            }
+            
+            
+        }
+    }
+    public function userDashBoard(){
+        $this->load->view('dashboard');
     }
     public function aboutus(){
         

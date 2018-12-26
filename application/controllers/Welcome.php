@@ -34,7 +34,7 @@ class Welcome extends CI_Controller {
 		$this->load->helper('url');
 
 		// Load database
-		$this->load->model('user_model');
+		//$this->load->model('user_model');
 		
 	} 
 
