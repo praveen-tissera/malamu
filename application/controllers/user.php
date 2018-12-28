@@ -69,6 +69,8 @@ Class User extends CI_Controller {
                
             $result = $this->user_model->client_registration($data);
             if ($result == 'registered') {
+                //once user submit sign up form call this function sendSMSVerification
+
                 $data['success_message_display'] = 'Registered Successfully!.';
                 $this->load->view('home', $data);
             }elseif($result == 'duplicate'){
@@ -112,6 +114,57 @@ Class User extends CI_Controller {
     }
     public function userDashBoard(){
         $this->load->view('dashboard');
+    }
+    public function showSMSVerification(){
+        $this->load->view('send-sms');
+    }
+    public function sendSMSVerification(){
+        require_once ('vendor/autoload.php');
+        $client = new Nexmo\Client(new Nexmo\Client\Credentials\Basic('3bdcda87', 'VzU5h0Tf42aGJkeL'));
+        // $this->load->view('send-sms');
+        // $message = $client->message()->send([
+        //     'to' => '94713691344',
+        //     'from' => '94764354111',
+        //     'text' => 'Hi welcom  !!'
+        // ]);
+        // echo "sent";
+
+        //once user submit sign up form call this function
+            
+            $verification = $client->verify()->start([
+                'number' => '94764354111',
+                'brand'  => 'Malamu'
+            ]);
+            echo "Started verification with an id of: " . $verification->getRequestId();
+            $this->session->set_userdata('verificaitionCode', $verification->getRequestId());
+            //redirect('/user/verifyPhoneNumber');
+            echo 'verification code sent';
+        
+            $this->load->view('submit_verification');
+        
+
+           
+    }
+    public function verifyPhoneNumber(){
+        require_once ('vendor/autoload.php');
+        $client = new Nexmo\Client(new Nexmo\Client\Credentials\Basic('3bdcda87', 'VzU5h0Tf42aGJkeL'));
+        if ($this->input->post('verification-code') != NULL) {
+           // $verification_id = $verification->getRequestId();
+            $verification = new \Nexmo\Verify\Verification($this->session->verificaitionCode);
+
+            try {
+                $client->verify()->check($verification, $this->input->post('verification-code'));
+                echo "Verification was successful (status: " . $verification['status'] . ")\n";
+            } catch (Exception $e) {
+                $verification = $e->getEntity();
+                echo "Verification failed with status " . $verification['status']
+                    . " and error text \"" . $verification['error_text'] . "\"\n";
+            }
+        }else{
+            $this->load->view('submit_verification_code');
+        }
+
+        
     }
     public function aboutus(){
         

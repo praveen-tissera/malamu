@@ -139,63 +139,38 @@
 											
 											<img class="login-logo" src="<?php echo base_url('/assets/images/logo.png'); ?>">
 											<?php
-											echo '<h3 class="heading-desc text-center">Welcome Back</h3>';
-											echo '<p class="text-center">Please Log in or <a href="'. base_url('index.php') .'" class="login">Sign Up Now</a> </p>';
+											echo '<h3 class="heading-desc text-center">Enter Your Code</h3>';
+											echo '<p class="text-center">Please take a moment to verify your phone number. This helps us confirm your identity and secure your account.</p>';
 											if (isset($error_message_display)) {
 												echo "<h3 class='notification label label-danger error-style'>". $error_message_display ."</h3>";
 											}
-											echo form_open('user/userLogin');  
+											echo form_open('user/verifyPhoneNumber');
 											echo '<div class="main">	
-												<label>Username</label>';
+											<label>A text message send to ‘phone number’ with a code, enter it below.</label>';
 												$data = array(
 													'type' => 'text',
-													'name' => 'username',
+													'name' => 'verification-code',
 													'class' => 'form-control',
 													'id' => 'from-place',
-													'placeholder' => 'Username',
-													'autofocus' => 'autofocus',
+													'placeholder' => 'Verification Code',
 													'required'=> 'required'
 													);
+										
 													echo form_input($data);
-												//<input type="text" class="form-control" placeholder="Username or Phone Number" autofocus>
-											echo '<label >Password</label>';
-											$data = array(
-												'type' => 'password',
-												'name' => 'password',
-												'class' => 'form-control',
-												'id' => 'from-place',
-												'placeholder' => 'Password',
-												'required'=> 'required'
-												);
-												echo form_input($data);
-											//<input type="password" class="form-control" placeholder="Password">
-												
-												echo '<div class="checkbox pull-left">
-													<label>';
-													$data = array(
-														'name'          => 'rememberme',
-														'value'         => '1',
-														'checked'       => FALSE,
-														
-													);
-												
-												echo form_checkbox($data);
-														//<input type="checkbox"> 
-													echo '<span>Remember Me</span></label>	
-												
-												</div>
-												<a href="" class="pull-right forgot"> Forgot Passwrod</a>
-												<span class="clearfix"></span>	
+												echo '<span class="clearfix"></span>	
 											</div>
 											<div class="login-footer">
-											<div class="row">
-															
-															<div class="col-xs-12 col-md-12">';
-															echo form_submit('submit', 'LOG IN', "class='btn btn-default btn-block'");
-                   											echo form_close();	
-															//	<input type="submit" name="submit" value="Become a member" class="btn btn-default btn-block">
-															echo '</div>
-														</div>
+														<div class="row">
+																<div class="col-xs-6">';
+																echo form_submit('submit', 'Resend Code', "class='btn btn-default btn-block'");	
+																echo '</div>	
+																<div class="col-xs-6 col-md-6">';
+																	echo form_submit('submit', 'Verify', "class='btn btn-default btn-block'");
+																	echo form_close();	
+																	
+																echo '</div>';
+														echo '<p>Note: This can take a few minutes. Retry after 60 seconds.</p>';
+														echo '</div>
 											
 											</div>';
 											?>
