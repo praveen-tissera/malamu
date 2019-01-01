@@ -77,6 +77,9 @@
 	}
 	.fh5co-cover .desc h3,.fh5co-cover .desc p{
 		color:black;
+		padding-left:15px;
+		padding-right:15px;
+		padding-top:10px;
 	}
 	.fh5co-cover .desc p .login{
 		color:#1862ef;
@@ -113,6 +116,12 @@
 		margin-right: 1.5rem;
 		color: white !important;
 	}
+	.notification{
+		white-space: pre-wrap !important;
+	}
+	input[disabled] {
+		background-color:#d0d0d0 !important;
+	}
 	</style>
 
 </head>
@@ -139,12 +148,41 @@
 											
 											<img class="login-logo" src="<?php echo base_url('/assets/images/logo.png'); ?>">
 											<?php
+											// echo $phone_number;
+											// echo '<br>';
+											// echo $db_record_id;
+											if (!($this->session->userdata('verificaitionCode'))) {
+   
+												redirect('/user');
+											}
 											echo '<h3 class="heading-desc text-center">Enter Your Code</h3>';
 											echo '<p class="text-center">Please take a moment to verify your phone number. This helps us confirm your identity and secure your account.</p>';
 											if (isset($error_message_display)) {
 												echo "<h3 class='notification label label-danger error-style'>". $error_message_display ."</h3>";
 											}
+											if(isset($success_message_display)){
+												echo "<h3 class='notification label label-success error-style'>". $success_message_display ."</h3>";	
+											}
+											if(isset($verification_error)){
+												echo "<h3 class='notification label label-danger error-style'>". $verification_error ."</h3>";
+											}
+											if(form_error('verification-code')){
+												echo form_error('verification-code','<h3 class="nnotification label label-danger error-style">','</h3>');
+											}
 											echo form_open('user/verifyPhoneNumber');
+											// $data = array(
+											// 	'type' => 'hidden',
+											// 	'name' => 'phone_number',
+											// 	'value' => $phone_number,
+											// 	);
+											// 	echo form_input($data);
+
+											// 	$data = array(
+											// 		'type' => 'hidden',
+											// 		'name' => 'db_record_id',
+											// 		'value' => $db_record_id,
+											// 		);
+											// 		echo form_input($data);
 											echo '<div class="main">	
 											<label>A text message send to ‘phone number’ with a code, enter it below.</label>';
 												$data = array(
@@ -153,7 +191,7 @@
 													'class' => 'form-control',
 													'id' => 'from-place',
 													'placeholder' => 'Verification Code',
-													'required'=> 'required'
+													
 													);
 										
 													echo form_input($data);
@@ -162,14 +200,17 @@
 											<div class="login-footer">
 														<div class="row">
 																<div class="col-xs-6">';
-																echo form_submit('submit', 'Resend Code', "class='btn btn-default btn-block'");	
+																echo form_submit('submit', 'Resend Code', "class='btn btn-default btn-block resend' disabled='disabled'");	
 																echo '</div>	
 																<div class="col-xs-6 col-md-6">';
 																	echo form_submit('submit', 'Verify', "class='btn btn-default btn-block'");
 																	echo form_close();	
 																	
 																echo '</div>';
-														echo '<p>Note: This can take a few minutes. Retry after 60 seconds.</p>';
+																echo "<div class='col-xs-12'>";
+																echo '<p>Note: This can take a few minutes. Retry after 5 minutes.</p>';
+																echo "</div>";
+														
 														echo '</div>
 											
 											</div>';
@@ -255,8 +296,8 @@
 	<!-- END fh5co-wrapper -->
 
 	<!-- jQuery -->
-
-
+	
+	
 	<!-- <script src="js/jquery.min.js"></script> -->
     <script src="<?php echo base_url('/assets/js/jquery.min.js'); ?>"></script>
 	<!-- jQuery Easing -->
@@ -283,7 +324,15 @@
 
 	<!-- Main JS -->
 	<script src="<?php echo base_url('/assets/js/main.js'); ?>"></script>
+	<script>
+	var fewSeconds = 3;
+		$(document).ready(function(){
+			setTimeout(function(){
+				$('.resend').prop('disabled', false);
+			}, fewSeconds*1000);
+		});
 
+	</script>
 </body>
 
 </html>

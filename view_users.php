@@ -43,6 +43,7 @@
                                 echo "<th> Last Name</th>";
                                 echo "<th> Username</th>";
                                 echo "<th> Phone Number</th>";
+                                echo "<th> Phone Number Status</th>";
                                 echo "<th> Birth Date</th>";
                                 echo "<th> Gender</th>";
                                 echo "<th> Country</th>";
@@ -59,6 +60,7 @@
                                 echo "<td>{$row_view_user['last_name']}</td>";
                                 echo "<td>{$row_view_user['username']}</td>";
                                 echo "<td>{$row_view_user['phone_number']}</td>";
+                                echo "<td>{$row_view_user['phone_verification']}</td>";
                                 echo "<td>{$row_view_user['birthday']}</td>";
                                 echo "<td>{$row_view_user['gender']}</td>";
                                 echo "<td>{$row_view_user['country']}</td>";

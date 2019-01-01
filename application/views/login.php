@@ -113,6 +113,7 @@
 		margin-right: 1.5rem;
 		color: white !important;
 	}
+
 	</style>
 
 </head>
