@@ -50,17 +50,21 @@
     }
     .refer-friend{
         width:100%;
-        height:100px;
+        height:150px;
         background-color:#586eda;
         border-radius:10px 10px 0 0;
+        position:relative;
     }
     .share{
         width:100%;
-        min-height:200px;
+        min-height:300px;
         background-color:#fff;
         margin-top:1rem;
         margin-bottom:1rem;
         box-shadow: 0px 1px 3px #888888;
+    }
+    .share .wallet-number{
+        color:#df9320;
     }
     .referal-status{
         background-color:#fff;
@@ -68,6 +72,19 @@
     }
     .invite{
         border-top: 1px solid #d8d4d4;
+    }
+    .refer-friend h1, .refer-friend p, .refer-friend h3{
+        color:#FFF;
+    }
+    .refer-friend .promo-label{
+        position:absolute;
+        right:20px;
+        top:0;
+        background-color:#ffb100;
+        color:#FFF;
+        border-radius:0 0 10px 10px;
+        box-shadow:0px 1px 0px #000;
+        
     }
 	</style>
 </head>
@@ -88,10 +105,13 @@
 
                         <ul class="dropdown-menu " aria-labelledby="dLabel">
                             <li>
-                                <a href="">Payment Options</a>
-                                <a href="">Redeem Refer Points</a>
-                                <a href="">Log Out</a>
-                            </li>
+								<a href="">Payment Options</a>
+							</li>
+							<li>
+								<a href="">Redeem Refer Points</a>
+							</li>
+							<li role="separator" class="divider"></li>
+							<li><a href="">Log Out</a></li>
                         </ul>
                     </div>
                     <!-- end of user profile menu -->
@@ -121,10 +141,10 @@
 						
                         <div class="col-sm-6 col-md-8">
 							<div class="col-sm-3 col-md-3 text-center pull-left">Money Accumulated<br>
-								105 Points
+								$105 Points
 							</div>
 							<div class="col-sm-6 col-md-6 col-md-offset-3 text-center">Money Untill Payout<br>
-								895 Points
+								$895 Points
 							
 							</div>
 							<div class="col-sm-12 col-md-12 pt-2">
@@ -150,29 +170,36 @@
                             <div class="col-sm-10 col-md-10 text-center">
 
                                 <div class="row">
-                                    <div class="col-sm-12">
+                                    <div class="col-sm-12 mb-4">
                                         <div class="refer-friend">
-                                            refer friend
+                                            <h1 class="text-left pl-4 pr-4 pt-5 ">Refer Friends & Earn Money</h1>
+                                            <p class="text-left pl-4">Invite a friend to Malamu and you'll receive $5 to your wallet</p>
+                                            <div class="promo-label">
+                                                <h1 class="pl-4 pt-4 pr-4">$5</h1>
+                                                <h3 class="pl-4 pr-4">Wallet Balance</h3>
+                                            </div>
                                         </div>
+                                        
 
                                         
                                     </div>
-                                    <div class="col-sm-12">
-                                        <div class="share">
+                                    <div class="col-sm-12 mb-4" >
+                                        <div class="share ">
                                             <div class="col-sm-12">
-                                                <form class="form-inline">
+                                                <form class="form-inline pt-4">
                                                     <div class="form-group pt-4" style="width:70%">
                                                         
                                                         <input type="text" style="width:100%" class="form-control" id="exampleInputName2" placeholder="Enter Cell Phone Number">
                                                     </div>
                                                     
-                                                    <button type="submit" class="btn btn-default pt-4">Send invite</button>
+                                                    <button type="submit" class="btn btn-warning mt-4">Send invite</button>
                                                 </form>
                                             </div>
                                             <div class="col-sm-12">
-                                                <h1>Your wallet number is 392</h1>
+                                                <h1 class="pt-4 wallet-number">Your wallet number is 392</h1>
                                                 
                                             </div>
+                                            
                                             
 
                                             
@@ -185,6 +212,42 @@
                                             <div class="col-sm-4">
                                                 <hr class="invite">
                                             </div>
+
+
+
+
+                                        <div class="col-sm-2">
+                                            <p>Share Your Link:</p>
+                                        </div>
+                                        <div class="col-sm-4">
+                                                <div class="input-group col-md-12">
+                                                    <input type="text" class="form-control input-sm" placeholder="Buscar" />
+                                                    <span class="input-group-btn">
+                                                        <button class="btn btn-info btn-sm" type="button">
+                                                            <i class="glyphicon glyphicon-link"></i> Copy Link
+                                                        </button>
+                                                    </span>
+                                                </div>
+                                        
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <ul class="list-inline">
+                                                <li>
+                                                <a class="btn icon-btn btn-primary" href="#"><span class="glyphicon btn-glyphicon glyphicon-thumbs-up img-circle text-primary"></span>Like</a>
+                                                </li>
+                                                <li>
+                                                <a class="btn icon-btn btn-primary" href="#"><span class="glyphicon btn-glyphicon glyphicon-thumbs-up img-circle text-primary"></span>Like</a>
+                                                </li>
+                                                <li>
+                                                <a class="btn icon-btn btn-primary" href="#"><span class="glyphicon btn-glyphicon glyphicon-thumbs-up img-circle text-primary"></span>Like</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+
+
+
                                         </div>
                                         
                                     </div>
@@ -198,7 +261,7 @@
 
 
 
-								<div class="middle-container">
+								<div class="middle-container mt-4">
 									<div class="row">
 										<div class="col-sm-12 col-md-12">
 											<h1 class="text-center"> <strong>How it works</strong></h1>
@@ -213,18 +276,21 @@
 									
 									<div class="row pt-4">
                                         <div class="col-md-4">
+                                        <img style="width:250px;margin-left:auto;margin-right:auto;" class="img-responsive" src="<?php echo base_url('/assets/images/you_earn.jpg'); ?>" alt="">
                                                <h2> Refer a friend</h2>
                                                <p>
                                                Invite your friend to Malamu using your wallet number
                                                </p>
                                         </div>
                                         <div class="col-md-4">
+                                        <img style="width:250px;margin-left:auto;margin-right:auto;" class="img-responsive" src="<?php echo base_url('/assets/images/you_earn.jpg'); ?>" alt="">
                                            <h2>Your friend gets  $5</h2> 
                                            <p>
                                            Your friend gets $5 towards their wallet balance when they claim your wallet number.
                                            </p>
                                         </div>
                                         <div class="col-md-4">
+                                        <img style="width:243px;margin-left:auto;margin-right:auto;" class="img-responsive" src="<?php echo base_url('/assets/images/friend_earns.jpg'); ?>" alt="">
                                            <h2>You get $5</h2>
                                            <p>
                                            When they claim your wallet number you’ll get $5 towards your wallet balance.
@@ -242,24 +308,27 @@
 										<img class="img-responsive" style="margin:auto;"  src="https://via.placeholder.com/728x90?text=728x90+Leaderboard" alt="">
 									</div>
                                 </div>
-                                <div class="row">
+                                <div class="row mt-4 mb-4">
                                     <div class="col-md-4 ">
                                         <div class="referal-status">
-                                            <h3>32</h3>
+                                            <h2 class="pt-4"> <strong>32</strong></h2>
+                                            <img style="width:200px;margin-left:auto;margin-right:auto;" class="img-responsive text-center" src="<?php echo base_url('/assets/images/referral_signups.jpg'); ?>" alt="">
                                             <h3>Referral Signups</h3>
                                         </div>
                                         
                                     </div>
                                     <div class="col-md-4 ">
                                     <div class="referal-status">
-                                        <h3>13</h3>
+                                        <h2 class="pt-4"> <strong>13</strong></h2>
+                                        <img style="width:200px;margin-left:auto;margin-right:auto;" class="img-responsive" src="<?php echo base_url('/assets/images/referral_successful.jpg'); ?>" alt="">
                                         <h3>Successful Referrals</h3>
                                     </div>
                                         
                                     </div>
                                     <div class="col-md-4 ">
                                     <div class="referal-status"> 
-                                        <h3>$50</h3>
+                                        <h2 class="pt-4"> <strong>$50</strong></h2>
+                                        <img style="width:218px;margin-left:auto;margin-right:auto;" class="img-responsive" src="<?php echo base_url('/assets/images/money_earn.jpg'); ?>" alt="">
                                         <h3>Money Earned</h3>
                                     </div>
                                         
@@ -288,7 +357,7 @@
 						
 						<div class="row">
 							<div class="col-sm-7 col-md-8 text-left">
-								<p>Copyright 2018 Techlab Solutions.
+								<p>Copyright @2019 The Malamu Organization.
 									<!-- <a href="#">Module</a> -->
 									All Rights Reserved.
 									<!-- <br>Made with <i class="icon-heart3"></i> by <a href="http://freehtml5.co/" target="_blank">Freehtml5.co</a> / Demo Images: <a href="https://unsplash.com/" target="_blank">Unsplash</a> -->
@@ -297,21 +366,21 @@
 							</div>
 							<div class="col-sm-5 col-md-4 text-center">
 								<p class="fh5co-social-icons">
-									<a href="#">
+									<!-- <a href="#">
 										<i class="icon-twitter2"></i>
-									</a>
+									</a> -->
 									<a href="#">
 										<i class="icon-facebook2"></i>
 									</a>
 									<a href="#">
 										<i class="icon-instagram"></i>
 									</a>
-									<a href="#">
+									<!-- <a href="#">
 										<i class="icon-dribbble2"></i>
 									</a>
 									<a href="#">
 										<i class="icon-youtube"></i>
-									</a>
+									</a> -->
 								</p>
 								
 							</div>
