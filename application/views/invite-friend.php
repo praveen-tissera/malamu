@@ -30,13 +30,14 @@
 	<meta name="twitter:card" content="" />
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <!-- Bootstrap  -->
 	
     <link href="<?php echo base_url('/assets/css/bootstrap.css'); ?>" rel="stylesheet">
     <link href="<?php echo base_url('/assets/css/style.css'); ?>" rel="stylesheet">
     <!-- Icomoon Icon Fonts-->
 	
-    <link href="<?php echo base_url('/assets/css/icomoon.css'); ?>" rel="stylesheet">
+    <!-- <link href="<?php echo base_url('/assets/css/icomoon.css'); ?>" rel="stylesheet"> -->
 	<style>
 	.progress-bar-success{
 		background-color: #7ae27a;
@@ -86,6 +87,21 @@
         box-shadow:0px 1px 0px #000;
         
     }
+    .messenger{
+        background-color:#0084ff;
+        color:#FFF;
+    }
+    .facebook{
+        background-color:#3B5998;
+        color:#FFF;
+    }
+    .whatsapp{
+        background-color:#075e54;
+        color:#FFF;
+    }
+    .input-md{
+		border: 2px dashed #ccc !important;
+	}
 	</style>
 </head>
 
@@ -95,34 +111,9 @@
             <div class="row">
             
                 <div class="col-sm-2 col-md-2 pt-4">
-                    <img class="login-logo" src="<?php echo base_url('/assets/images/logo.png'); ?>">
+                    <img class="login-logo logo" src="<?php echo base_url('/assets/images/logo.png'); ?>">
                     <!-- user profile menu  -->
-                    <div class="dropdown">
-                        <a id="dLabel" data-target="#" href="" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            Hi, John
-                            <span class="caret"></span>
-                        </a>
-
-                        <ul class="dropdown-menu " aria-labelledby="dLabel">
-                            <li>
-								<a href="">Payment Options</a>
-							</li>
-							<li>
-								<a href="">Redeem Refer Points</a>
-							</li>
-							<li role="separator" class="divider"></li>
-							<li><a href="">Log Out</a></li>
-                        </ul>
-                    </div>
-                    <!-- end of user profile menu -->
-
-                    <ul class="left-menu pt-5">
-                        <li><a href="">Dashboard</a></li>
-                        <li><a href="">My Wallet</a></li>
-                        <li><a href="">Invite Friends</a></li>
-                        <li><a href="">Help</a></li>
-                    
-                    </ul>
+                    <?php $this->load->view('left-menu'); ?>
 
 					<img src="https://via.placeholder.com/160x500?text=160x500+Wide+Skyscaper" alt="">
 
@@ -133,39 +124,7 @@
                 </div>
                 <div class="col-sm-10 col-md-10 middle-section">
 				
-					<div class="row pt-4">
-					
-						<div class="col-sm-2 col-md-2">
-							<strong>Wallet #392</strong> 
-						</div>
-						
-                        <div class="col-sm-6 col-md-8">
-							<div class="col-sm-3 col-md-3 text-center pull-left">Money Accumulated<br>
-								$105 Points
-							</div>
-							<div class="col-sm-6 col-md-6 col-md-offset-3 text-center">Money Untill Payout<br>
-								$895 Points
-							
-							</div>
-							<div class="col-sm-12 col-md-12 pt-2">
-
-								<div class="progress">
-									<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-										60%
-									</div>
-                            	</div>
-							</div>
-                            
-                        
-                        </div>
-                        <div class="take-surve">
-                            <button type="button" class="btn btn-primary">Take Survey</button>
-                            
-                        </div>
-
-
-
-					</div>
+					<?php $this->load->view('my-wallet.php'); ?>
                         
                             <div class="col-sm-10 col-md-10 text-center">
 
@@ -196,7 +155,12 @@
                                                 </form>
                                             </div>
                                             <div class="col-sm-12">
-                                                <h1 class="pt-4 wallet-number">Your wallet number is 392</h1>
+                                                <h1 class="pt-4 wallet-number">Your wallet number is 
+                                                <?php if (isset($this->session->userdata['userID'])) {
+                                                    $wallet_number = sprintf("%03d", $this->session->userdata['userID']);
+                                                    echo $wallet_number;
+                                                } ?>
+                                                </h1>
                                                 
                                             </div>
                                             
@@ -221,9 +185,9 @@
                                         </div>
                                         <div class="col-sm-4">
                                                 <div class="input-group col-md-12">
-                                                    <input type="text" class="form-control input-sm" placeholder="Buscar" />
+                                                    <input type="text" class="form-control input-md " value="Buscar" id="link-text" />
                                                     <span class="input-group-btn">
-                                                        <button class="btn btn-info btn-sm" type="button">
+                                                        <button class="btn btn-info btn-md" type="button" id="copy-link">
                                                             <i class="glyphicon glyphicon-link"></i> Copy Link
                                                         </button>
                                                     </span>
@@ -234,13 +198,13 @@
                                         <div class="col-sm-6">
                                             <ul class="list-inline">
                                                 <li>
-                                                <a class="btn icon-btn btn-primary" href="#"><span class="glyphicon btn-glyphicon glyphicon-thumbs-up img-circle text-primary"></span>Like</a>
+                                                <a class="btn icon-btn messenger" href="#"><i class="fab fa-facebook-messenger"></i> Messenger</a>
                                                 </li>
                                                 <li>
-                                                <a class="btn icon-btn btn-primary" href="#"><span class="glyphicon btn-glyphicon glyphicon-thumbs-up img-circle text-primary"></span>Like</a>
+                                                <a class="btn icon-btn facebook" href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
                                                 </li>
                                                 <li>
-                                                <a class="btn icon-btn btn-primary" href="#"><span class="glyphicon btn-glyphicon glyphicon-thumbs-up img-circle text-primary"></span>Like</a>
+                                                <a class="btn icon-btn whatsapp" href="#"><i class="fab fa-whatsapp"></i> WhatsApp</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -276,7 +240,7 @@
 									
 									<div class="row pt-4">
                                         <div class="col-md-4">
-                                        <img style="width:250px;margin-left:auto;margin-right:auto;" class="img-responsive" src="<?php echo base_url('/assets/images/you_earn.jpg'); ?>" alt="">
+                                        <img style="width:250px;margin-left:auto;margin-right:auto;" class="img-responsive" src="<?php echo base_url('/assets/images/refer-friend.jpg'); ?>" alt="">
                                                <h2> Refer a friend</h2>
                                                <p>
                                                Invite your friend to Malamu using your wallet number
@@ -406,6 +370,12 @@
 	<script src="<?php echo base_url('/assets/js/bootstrap.min.js'); ?>"></script>
     <script>
          $('.dropdown-toggle').dropdown()
+         $('#copy-link').on('click',function(){
+            
+             $('#link-text').select();
+             document.execCommand("copy");
+                alert("Copied the link");
+         });
     </script>
        
     </body>

@@ -140,6 +140,12 @@ Class User extends CI_Controller {
             
         }
     }
+    public function userLogout(){
+        $this->session->unset_userdata('userID');
+				$data['success_message_display'] = 'Log out sucessfully';
+				
+				$this->load->view('login', $data);
+    }
     public function userDashBoard(){
         //check session ready and load the dashboard
         $this->load->view('dashboard');

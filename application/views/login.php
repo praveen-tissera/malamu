@@ -138,13 +138,19 @@
 										<!--  -->
 										<div class="form-signin mg-btm">
 											
-											<img class="login-logo" src="<?php echo base_url('/assets/images/logo.png'); ?>">
+											<img class="login-logo logo" src="<?php echo base_url('/assets/images/logo.png'); ?>">
 											<?php
 											echo '<h3 class="heading-desc text-center">Welcome Back</h3>';
 											echo '<p class="text-center">Please Log in or <a href="'. base_url('index.php') .'" class="login">Sign Up Now</a> </p>';
 											if (isset($error_message_display)) {
 												echo "<h3 class='notification label label-danger error-style'>". $error_message_display ."</h3>";
 											}
+											if(isset($success_message_display)){
+												echo '<div class="notification label label-success error-style" role="alert">';
+												echo $success_message_display;
+												echo '</div>';
+											}
+
 											echo form_open('user/userLogin');  
 											echo '<div class="main">	
 												<label>Username</label>';

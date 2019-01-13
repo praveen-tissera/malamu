@@ -122,6 +122,7 @@
 	input[disabled] {
 		background-color:#d0d0d0 !important;
 	}
+
 	</style>
 
 </head>
@@ -146,7 +147,7 @@
 										<!--  -->
 										<div class="form-signin mg-btm">
 											
-											<img class="login-logo" src="<?php echo base_url('/assets/images/logo.png'); ?>">
+											<img class="login-logo logo" src="<?php echo base_url('/assets/images/logo.png'); ?>">
 											<?php
 											// echo $phone_number;
 											// echo '<br>';

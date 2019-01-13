@@ -32,6 +32,7 @@
 	<link rel="shortcut icon" href="favicon.ico">
 
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
 	<!-- Animate.css -->
 	
@@ -84,7 +85,7 @@
 						<h1 id="fh5co-logo">
 							<a href="<?php echo  base_url();?>">
 								<!-- <i class="icon-airplane"></i> -->
-								<img src="<?php echo  base_url('/assets/images/logo.png');?>">
+								<img class="login-logo logo" src="<?php echo  base_url('/assets/images/logo.png');?>">
 							</a>
 						</h1>
 						<!-- START #fh5co-menu-wrap -->

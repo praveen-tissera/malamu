@@ -57,36 +57,9 @@
             <div class="row">
             
                 <div class="col-sm-2 col-md-2 pt-4">
-                    <img class="login-logo" src="<?php echo base_url('/assets/images/logo.png'); ?>">
+                    <img class="logo" src="<?php echo base_url('/assets/images/logo.png'); ?>">
                     <!-- user profile menu  -->
-                    <div class="dropdown">
-                        <a id="dLabel" data-target="#" href="" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            Hi, John
-                            <span class="caret"></span>
-                        </a>
-
-                        <ul class="dropdown-menu " aria-labelledby="dLabel">
-                            <li>
-								<a href="">Payment Options</a>
-							</li>
-							<li>
-								<a href="">Redeem Refer Points</a>
-							</li>
-							<li role="separator" class="divider"></li>
-							<li><a href="">Log Out</a></li>
-                                
-                            
-                        </ul>
-                    </div>
-                    <!-- end of user profile menu -->
-
-                    <ul class="left-menu pt-5">
-                        <li><a href="">Dashboard</a></li>
-                        <li><a href="">My Wallet</a></li>
-                        <li><a href="">Invite Friends</a></li>
-                        <li><a href="">Help</a></li>
-                    
-                    </ul>
+                    <?php $this->load->view('left-menu'); ?>
 
 					<img src="https://via.placeholder.com/160x500?text=160x500+Wide+Skyscaper" alt="">
 
@@ -96,36 +69,9 @@
                 
                 </div>
                 <div class="col-sm-10 col-md-10 middle-section">
-				
-					<div class="row pt-4">
-					
-						<div class="col-sm-2 col-md-2">
-							<strong>Wallet #392</strong> 
-						</div>
-						
-                        <div class="col-sm-8 col-md-8">
-							<div class="col-sm-3 col-md-3 text-center pull-left">Money Accumulated<br>
-								$105 Points
-							</div>
-							<div class="col-sm-6 col-md-6 col-md-offset-3 text-center">Money Untill Payout<br>
-								$895 Points
-							
-							</div>
-							<div class="col-sm-12 col-md-12 pt-2">
+				<!-- load my-wallet -->
+				<?php $this->load->view('my-wallet'); ?>
 
-								<div class="progress">
-									<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-										60%
-									</div>
-                            	</div>
-							</div>
-                            
-                        
-                        </div>
-
-
-
-					</div>
                         
                             <div class="col-sm-10 col-md-10 text-center">
 								<div class="middle-container">

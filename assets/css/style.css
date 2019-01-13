@@ -99,6 +99,9 @@ figure {
 .header-top .fh5co-link a:hover {
   color: white !important;
 }
+.logo{
+  width: 70px;
+}
 @media screen and (max-width: 768px) {
   .header-top .fh5co-link {
     text-align: center;

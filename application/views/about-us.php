@@ -94,7 +94,7 @@
 						<h1 id="fh5co-logo">
 							<a href="<?php echo  base_url();?>">
 								<!-- <i class="icon-airplane"></i> -->
-								<img src="<?php echo  base_url('/assets/images/logo.png');?>">
+								<img class="logo" src="<?php echo  base_url('/assets/images/logo.png');?>">
 							</a>
 						</h1>
 						<!-- START #fh5co-menu-wrap -->
