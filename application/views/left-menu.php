@@ -1,10 +1,10 @@
 <?php 
-//print_r($this->session->userdata);
+// print_r($this->session->userdata);
 if(isset($this->session->userdata['userID'])){
     echo "<div class='dropdown pt-4'>
                         <a class='text-capitalize' id='dLabel' data-target='#' href='' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'>
                           <strong>  Hi, ";
-                             echo $this->session->userdata['sign_up']['first_name'];
+                             echo $this->session->userdata['firstName'];
                             echo "<span class='caret'></span></strong>
                         </a>
 

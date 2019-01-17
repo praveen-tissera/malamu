@@ -18,6 +18,8 @@
 
 
 
+
+
 	<!-- Facebook and Twitter integration -->
 	<meta property="og:title" content="" />
 	<meta property="og:image" content="" />
@@ -35,6 +37,10 @@
 	
     <link href="<?php echo base_url('/assets/css/bootstrap.css'); ?>" rel="stylesheet">
     <link href="<?php echo base_url('/assets/css/style.css'); ?>" rel="stylesheet">
+
+
+    <!-- <script src="js/jquery.min.js"></script> -->
+    <script src="<?php echo base_url('/assets/js/jquery.min.js'); ?>"></script>
     <!-- Icomoon Icon Fonts-->
 	
     <!-- <link href="<?php echo base_url('/assets/css/icomoon.css'); ?>" rel="stylesheet"> -->
@@ -102,6 +108,15 @@
     .input-md{
 		border: 2px dashed #ccc !important;
 	}
+    .m-messenger{
+        display:none;
+    }
+    @media only screen and (max-width: 760px) {
+        .d-messenger { display: none; }
+        .m-messenger { display: block; }
+    }
+    
+    
 	</style>
 </head>
 
@@ -188,7 +203,7 @@
                                                     <input type="text" class="form-control input-md " value="Buscar" id="link-text" />
                                                     <span class="input-group-btn">
                                                         <button class="btn btn-info btn-md" type="button" id="copy-link">
-                                                            <i class="glyphicon glyphicon-link"></i> Copy Link
+                                                            <i class="glyphicon glyphicon-link"></i> <span id="copytext">Copy Link</span>
                                                         </button>
                                                     </span>
                                                 </div>
@@ -198,13 +213,19 @@
                                         <div class="col-sm-6">
                                             <ul class="list-inline">
                                                 <li>
-                                                <a class="btn icon-btn messenger" href="#"><i class="fab fa-facebook-messenger"></i> Messenger</a>
+                                                <button class="btn icon-btn messenger d-messenger" onclick="javascript:FB.ui({method: 'send',name: 'malamu.org',link: 'http://malamu.org',picture: 'http://malamu.org',caption: 'Buscar',description: 'Buscar'});"><i class="fab fa-facebook-messenger"></i> Messenger</button>
+                                                <button class="btn icon-btn messenger m-messenger" onclick="window.open('fb-messenger://share?link=' + encodeURIComponent('https://malamu.org') + '&app_id=' + encodeURIComponent(222956528646810));"><i class="fab fa-facebook-messenger"></i> Messenger</button>
+                                                
+                                                
                                                 </li>
                                                 <li>
-                                                <a class="btn icon-btn facebook" href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+                                                <!-- <a class="btn icon-btn facebook" href="#"><i class="fab fa-facebook-f"></i> Facebook</a> -->
+                                                <!-- <div id="shareBtn" class="btn btn-success clearfix">Share</div> -->
+                                                <button class="btn icon-btn facebook" onclick="javascript:FB.ui({method: 'feed',name: 'malamu.org',link: 'http://malamu.org',picture: 'http://malamu.org',caption: 'Buscar',description: 'Buscar'});"> <i class="fab fa-facebook-f"></i> Facebook </button>
                                                 </li>
                                                 <li>
-                                                <a class="btn icon-btn whatsapp" href="#"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                                                <a class="btn icon-btn whatsapp" target="_blank" href="https://wa.me/?text=BusCar" data-action="share/whatsapp/share"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                                                
                                                 </li>
                                             </ul>
                                         </div>
@@ -362,8 +383,7 @@
         <!-- jQuery -->
 
 
-	<!-- <script src="js/jquery.min.js"></script> -->
-    <script src="<?php echo base_url('/assets/js/jquery.min.js'); ?>"></script>
+
 	<!-- jQuery Easing -->
 	<script src="<?php echo base_url('/assets/js/jquery.easing.1.3.js'); ?>"></script>
 	<!-- Bootstrap -->
@@ -374,8 +394,45 @@
             
              $('#link-text').select();
              document.execCommand("copy");
-                alert("Copied the link");
+             $('#copytext').text('copied');
+             setInterval(copyText, 4000);
+
+                //alert("Copied the link");
          });
+
+        function copyText(){
+            $('#copytext').text('copy link');
+        }
+    </script>
+    
+    <script>
+
+
+$(document).ready(function() {
+  $.ajaxSetup({ cache: true });
+  $.getScript('https://connect.facebook.net/en_US/sdk.js', function(){
+    FB.init({
+      appId: '222956528646810',
+      version: 'v2.7', // or v2.1, v2.2, v2.3, ...
+      
+    });     
+    $('#loginbutton,#feedbutton').removeAttr('disabled');
+    FB.getLoginStatus(updateStatusCallback);
+  });
+});
+</script>
+
+<script>
+    
+            // document.getElementById('shareBtn').onclick = function() {
+               
+            // FB.ui({
+            //     method: 'share',
+            //     display: 'popup',
+            //      href: 'https://www.facebook.com/dialog/share?app_id=222956528646810&display=popup&href=https%3A%2F%2Fmalamu.org&redirect_uri=https%3A%2F%2Fmalamu.org%2Fuser%2FviewInviteFriend',
+                
+            // }, function(response){});
+            // }
     </script>
        
     </body>

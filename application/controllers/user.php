@@ -134,6 +134,8 @@ Class User extends CI_Controller {
                 //print_r($result);
                 //echo $result[0]->user_id;
                 $this->session->set_userdata('userID', $result[0]->user_id);
+                $this->session->set_userdata('firstName', $result[0]->first_name);
+                
 					redirect('/user/userDashBoard');
             }
             
