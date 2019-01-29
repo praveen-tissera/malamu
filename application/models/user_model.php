@@ -65,4 +65,18 @@ class User_model extends CI_Model
                 
     //         }
     // }
+    /**
+     * setting cookie 
+     */
+    public function set_cookie($userid,$token){
+        $this->db->set('cookie', $token);
+            $this->db->where('user_id', $userid);
+            $this->db->update('tbl_user');
+            if ($this->db->affected_rows() > 0) { 
+                return "updated";
+            }else{
+                return "error";
+                
+            }
+    }
 }

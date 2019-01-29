@@ -17,7 +17,9 @@ Class User extends CI_Controller {
 		$this->load->helper('url');
 
 		// Load database
-		$this->load->model('user_model');
+        $this->load->model('user_model');
+        //load cookie
+        $this->load->helper('cookie');
 		
     }  
     public function index() {
@@ -136,7 +138,31 @@ Class User extends CI_Controller {
                 $this->session->set_userdata('userID', $result[0]->user_id);
                 $this->session->set_userdata('firstName', $result[0]->first_name);
                 
-					redirect('/user/userDashBoard');
+                if(isset($_POST['rememberme']) && $_POST['rememberme'] == 1){
+                    $token = sha1($this->input->post('username'));
+                    $result_set_cookie = $this->user_model->set_cookie($result[0]->user_id,$token);
+                    if($result_set_cookie == 'updated'){
+                       // print_r($_POST);
+                    
+                        $name   = 'malamuuser';
+                        $value  = $token;
+                        $expire = time()+1000;
+                        $path  = '/';
+                        $secure = TRUE;
+                    
+                        setcookie($name,$value,$expire,$path); 
+                        redirect('/user/userDashBoard');
+                    }else{
+                        echo "error";
+                    }
+
+                    
+                    
+                }else{
+                    redirect('/user/userDashBoard');
+                }
+                
+					
             }
             
             
@@ -149,8 +175,14 @@ Class User extends CI_Controller {
 				$this->load->view('login', $data);
     }
     public function userDashBoard(){
+        if(isset($this->session->userdata['userID'])){
+			//if session is already set
+			$this->load->view('dashboard');
+		}else{
+            $this->load->view('login');
+        }
         //check session ready and load the dashboard
-        $this->load->view('dashboard');
+        
     }
     public function showSMSVerification(){
         $this->load->view('send-sms');
@@ -303,7 +335,15 @@ Class User extends CI_Controller {
      */
 
      public function viewHelp(){
-         $this->load->view('help-good');
+        if(isset($this->session->userdata['userID'])){
+			//if session is already set
+            $this->load->view('help-good');
+           echo $this->input->cookie('malamuuser');
+		}else{
+            $this->load->view('login');
+        }
+       
+         
      }
      /**
       * send email once help form submit
@@ -359,7 +399,50 @@ Class User extends CI_Controller {
      * Invite Friends
      */
     public function viewInviteFriend(){
-        $this->load->view('invite-friend');
+        if(isset($this->session->userdata['userID'])){
+			//if session is already set
+			$this->load->view('invite-friend');
+		}else{
+            $this->load->view('login');
+        }
+        
+    }
+    /**
+     * view user wallet
+     */
+    public function viewMyWallet(){
+        if(isset($this->session->userdata['userID'])){
+			//if session is already set
+			$this->load->view('user-wallet');
+		}else{
+            $this->load->view('login');
+        }
+        
+    }
+    /**
+     * view user activities
+     */
+    public function viewUserActivities(){
+        if(isset($this->session->userdata['userID'])){
+			//if session is already set
+			$this->load->view('user-activities');
+		}else{
+            $this->load->view('login');
+        }
+        
+    }
+
+    /**
+     * view user redeem
+     */
+    public function viewUserRedeem(){
+        if(isset($this->session->userdata['userID'])){
+			//if session is already set
+			$this->load->view('user-redeem');
+		}else{
+            $this->load->view('login');
+        }
+        
     }
 
 

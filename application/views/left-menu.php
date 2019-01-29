@@ -12,9 +12,9 @@ if(isset($this->session->userdata['userID'])){
                             <li>
 								<a href=''>Payment Options</a>
 							</li>
-							<li>
-								<a href=''>Redeem Refer Points</a>
-							</li>
+							<li>";
+								echo "<a href='" . base_url('index.php/user/viewuserredeem') ."'>Redeem Refer Points</a>";
+							echo "</li>
 							<li role='separator' class='divider'></li>
 							<li><a href='". base_url('index.php/user/userLogout') ."'>Log Out</a></li>
                         </ul>
@@ -24,7 +24,7 @@ if(isset($this->session->userdata['userID'])){
 
                     echo "<ul class='left-menu pt-5'>
                         <li><a href='" . base_url('index.php/user/userDashBoard')."'><strong>Dashboard</strong></a></li>
-                        <li><a href='" . base_url('index.php/user/viewWallet')."'><strong>My Wallet</strong></a></li>
+                        <li><a href='" . base_url('index.php/user/viewMyWallet')."'><strong>My Wallet</strong></a></li>
                         <li><a href='" . base_url('index.php/user/viewInviteFriend')."'><strong>Invite Friends<strong></a></li>
                         <li><a href='" . base_url('index.php/user/viewHelp')."'><strong>Help</strong></a></li>
                     

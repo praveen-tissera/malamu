@@ -1,5 +1,6 @@
                      
-                     <div class="row pt-4">
+                     <!-- this is a componet to load into every profile pages -->
+					 <div class="row pt-4">
 					
 						<div class="col-sm-2 col-md-2">
 							<strong class="pl-4">Wallet #

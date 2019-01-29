@@ -43,7 +43,7 @@
     <script src="<?php echo base_url('/assets/js/jquery.min.js'); ?>"></script>
     <!-- Icomoon Icon Fonts-->
 	
-    <!-- <link href="<?php echo base_url('/assets/css/icomoon.css'); ?>" rel="stylesheet"> -->
+    <link href="<?php echo base_url('/assets/css/icomoon.css'); ?>" rel="stylesheet">
 	<style>
 	.progress-bar-success{
 		background-color: #7ae27a;
@@ -159,76 +159,83 @@
                                     </div>
                                     <div class="col-sm-12 mb-4" >
                                         <div class="share ">
+                                        <div class="row">
                                             <div class="col-sm-12">
-                                                <form class="form-inline pt-4">
-                                                    <div class="form-group pt-4" style="width:70%">
+                                                    <form class="form-inline pt-4">
+                                                        <div class="form-group pt-4" style="width:70%">
+                                                            
+                                                            <input type="text" style="width:100%" class="form-control" id="exampleInputName2" placeholder="Enter Cell Phone Number">
+                                                        </div>
                                                         
-                                                        <input type="text" style="width:100%" class="form-control" id="exampleInputName2" placeholder="Enter Cell Phone Number">
-                                                    </div>
-                                                    
-                                                    <button type="submit" class="btn btn-warning mt-4">Send invite</button>
-                                                </form>
-                                            </div>
-                                            <div class="col-sm-12">
-                                                <h1 class="pt-4 wallet-number">Your wallet number is 
-                                                <?php if (isset($this->session->userdata['userID'])) {
-                                                    $wallet_number = sprintf("%03d", $this->session->userdata['userID']);
-                                                    echo $wallet_number;
-                                                } ?>
-                                                </h1>
-                                                
-                                            </div>
-                                            
-                                            
-
-                                            
-                                            <div class="col-sm-4">
-                                                <hr class="invite">
-                                            </div>
-                                            <div class="col-sm-4">
-                                               <label>More ways to invite your friends</label> 
-                                            </div>
-                                            <div class="col-sm-4">
-                                                <hr class="invite">
-                                            </div>
-
-
-
-
-                                        <div class="col-sm-2">
-                                            <p>Share Your Link:</p>
-                                        </div>
-                                        <div class="col-sm-4">
-                                                <div class="input-group col-md-12">
-                                                    <input type="text" class="form-control input-md " value="Buscar" id="link-text" />
-                                                    <span class="input-group-btn">
-                                                        <button class="btn btn-info btn-md" type="button" id="copy-link">
-                                                            <i class="glyphicon glyphicon-link"></i> <span id="copytext">Copy Link</span>
-                                                        </button>
-                                                    </span>
+                                                        <button type="submit" class="btn btn-warning mt-4">Send invite</button>
+                                                    </form>
                                                 </div>
-                                        
+                                                <div class="col-sm-12">
+                                                    <h1 class="pt-4 wallet-number">Your wallet number is 
+                                                    <?php if (isset($this->session->userdata['userID'])) {
+                                                        $wallet_number = sprintf("%03d", $this->session->userdata['userID']);
+                                                        echo $wallet_number;
+                                                    } ?>
+                                                    </h1>
+                                                    
+                                                </div>
+                                        </div>
+                                            
+                                            
+                                            
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <hr class="invite">
+                                                </div>
+                                                <div class="col-sm-4">
+                                                <label>More ways to invite your friends</label> 
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <hr class="invite">
+                                                </div>
+                                            </div>
+                                            
+                                            
+
+
+                                        <div class="row">
+                                                <div class="col-sm-2">
+                                                    <p>Share Your Link:</p>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                        <div class="input-group col-md-12">
+                                                            <input type="text" class="form-control input-md " value="Buscar" id="link-text" />
+                                                            <span class="input-group-btn">
+                                                                <button class="btn btn-info btn-md" type="button" id="copy-link">
+                                                                    <i class="glyphicon glyphicon-link"></i> <span id="copytext">Copy Link</span>
+                                                                </button>
+                                                            </span>
+                                                        </div>
+                                                
+                                                </div>
+
+                                                <div class="col-sm-6">
+                                                    <ul class="list-inline">
+                                                        <li>
+                                                        <button class="btn icon-btn messenger d-messenger" onclick="javascript:FB.ui({method: 'send',name: 'malamu.org',link: 'http://malamu.org',picture: 'http://malamu.org',caption: 'Buscar',description: 'Buscar'});"><i class="fab fa-facebook-messenger"></i> Messenger</button>
+                                                        <button class="btn icon-btn messenger m-messenger" onclick="window.open('fb-messenger://share?link=' + encodeURIComponent('https://malamu.org') + '&app_id=' + encodeURIComponent(222956528646810));"><i class="fab fa-facebook-messenger"></i> Messenger</button>
+                                                        
+                                                        
+                                                        </li>
+                                                        <li>
+                                                        <!-- <a class="btn icon-btn facebook" href="#"><i class="fab fa-facebook-f"></i> Facebook</a> -->
+                                                        <!-- <div id="shareBtn" class="btn btn-success clearfix">Share</div> -->
+                                                        <button class="btn icon-btn facebook" onclick="javascript:FB.ui({method: 'feed',name: 'malamu.org',link: 'http://malamu.org',picture: 'http://malamu.org',caption: 'Buscar',description: 'Buscar'});"> <i class="fab fa-facebook-f"></i> Facebook </button>
+                                                        </li>
+                                                        <li>
+                                                        <a class="btn icon-btn whatsapp" target="_blank" href="https://wa.me/?text=BusCar" data-action="share/whatsapp/share"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                                                        
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                         </div>
 
-                                        <div class="col-sm-6">
-                                            <ul class="list-inline">
-                                                <li>
-                                                <button class="btn icon-btn messenger d-messenger" onclick="javascript:FB.ui({method: 'send',name: 'malamu.org',link: 'http://malamu.org',picture: 'http://malamu.org',caption: 'Buscar',description: 'Buscar'});"><i class="fab fa-facebook-messenger"></i> Messenger</button>
-                                                <button class="btn icon-btn messenger m-messenger" onclick="window.open('fb-messenger://share?link=' + encodeURIComponent('https://malamu.org') + '&app_id=' + encodeURIComponent(222956528646810));"><i class="fab fa-facebook-messenger"></i> Messenger</button>
-                                                
-                                                
-                                                </li>
-                                                <li>
-                                                <!-- <a class="btn icon-btn facebook" href="#"><i class="fab fa-facebook-f"></i> Facebook</a> -->
-                                                <!-- <div id="shareBtn" class="btn btn-success clearfix">Share</div> -->
-                                                <button class="btn icon-btn facebook" onclick="javascript:FB.ui({method: 'feed',name: 'malamu.org',link: 'http://malamu.org',picture: 'http://malamu.org',caption: 'Buscar',description: 'Buscar'});"> <i class="fab fa-facebook-f"></i> Facebook </button>
-                                                </li>
-                                                <li>
-                                                <a class="btn icon-btn whatsapp" target="_blank" href="https://wa.me/?text=BusCar" data-action="share/whatsapp/share"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                                                
-                                                </li>
-                                            </ul>
-                                        </div>
+                                        
 
 
 
@@ -336,47 +343,8 @@
 
             </div>
             
-                <footer class="row">
-				<div id="footer">
-					<div class="container">
-						
-						<div class="row">
-							<div class="col-sm-7 col-md-8 text-left">
-								<p>Copyright @2019 The Malamu Organization.
-									<!-- <a href="#">Module</a> -->
-									All Rights Reserved.
-									<!-- <br>Made with <i class="icon-heart3"></i> by <a href="http://freehtml5.co/" target="_blank">Freehtml5.co</a> / Demo Images: <a href="https://unsplash.com/" target="_blank">Unsplash</a> -->
-								</p>
-								
-							</div>
-							<div class="col-sm-5 col-md-4 text-center">
-								<p class="fh5co-social-icons">
-									<!-- <a href="#">
-										<i class="icon-twitter2"></i>
-									</a> -->
-									<a href="#">
-										<i class="icon-facebook2"></i>
-									</a>
-									<a href="#">
-										<i class="icon-instagram"></i>
-									</a>
-									<!-- <a href="#">
-										<i class="icon-dribbble2"></i>
-									</a>
-									<a href="#">
-										<i class="icon-youtube"></i>
-									</a> -->
-								</p>
-								
-							</div>
-						</div>
-					</div>
-				</div>
-			</footer>
-
-          
-
-
+            <!-- load footer -->
+            <?php $this->load->view('footer');  ?>
 
         </div>
 
