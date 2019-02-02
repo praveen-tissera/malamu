@@ -137,7 +137,7 @@ Class User extends CI_Controller {
                 //echo $result[0]->user_id;
                 $this->session->set_userdata('userID', $result[0]->user_id);
                 $this->session->set_userdata('firstName', $result[0]->first_name);
-                
+                $this->session->set_userdata('lastName', $result[0]->last_name);
                 if(isset($_POST['rememberme']) && $_POST['rememberme'] == 1){
                     $token = sha1($this->input->post('username'));
                     $result_set_cookie = $this->user_model->set_cookie($result[0]->user_id,$token);

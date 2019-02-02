@@ -1679,11 +1679,11 @@ div.cs-select span {
   background: #F78536;
   color: #fff !important;
 }
-.btn:hover, .btn:active, .btn:focus {
+/* .btn:hover, .btn:active, .btn:focus {
   background: #393e46 !important;
   color: #fff;
   outline: none !important;
-}
+} */
 .btn.btn-default:hover, .btn.btn-default:focus, .btn.btn-default:active {
   border-color: transparent;
 }

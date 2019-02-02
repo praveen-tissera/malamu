@@ -109,7 +109,7 @@
 		
             <div class="row">
             
-                <div class="col-sm-2 col-md-2 pt-4">
+                <div class="col-sm-2 col-md-2 pt-4 text-center">
                     <img class="logo" src="<?php echo base_url('/assets/images/logo.png'); ?>">
                     <!-- user profile menu  -->
                     <?php $this->load->view('left-menu'); ?>
