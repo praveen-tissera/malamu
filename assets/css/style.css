@@ -25,10 +25,13 @@ body.fh5co-offcanvas {
 }
 
 a {
-  color: #F78536;
+  color: #29323d;
   -webkit-transition: 0.5s, ease;
   -o-transition: 0.5s, ease;
   transition: 0.5s, ease;
+}
+.left-menu i{
+  color: #bbb9b9;
 }
 a:hover {
   text-decoration: none;
@@ -2170,6 +2173,25 @@ select{
 
 }
 
+/* navigatio wallet icon */
+
+.nav-home{
+  /* background-color: #cac8c8; */
+  background-image: linear-gradient(#f1f1f1, #d4d4d4);
+  padding: 7px 10px;
+  border-radius: 5px;
+  border: #d4d4d4 1px solid;
+}
+.nav-home>i{
+  color: #fff;
+}
+
+.user-name{
+  background-image: linear-gradient(#f1f1f1, #d4d4d4);
+}
+.user-name-btn{
+  background-image: linear-gradient(#f1f1f1, #d4d4d4);
+}
 
 
 
@@ -2197,7 +2219,9 @@ select{
   margin-top:16px;
 }
 
-
+.mb-0{
+  margin-bottom:0;
+}
 .mb-1{
   margin-bottom:4px;
 }

@@ -30,6 +30,7 @@
 	<meta name="twitter:card" content="" />
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!-- Bootstrap  -->
 	
     <link href="<?php echo base_url('/assets/css/bootstrap.css'); ?>" rel="stylesheet">
@@ -105,17 +106,19 @@
 </head>
 
     <body>
+	<?php $this->load->view('navbar'); ?>
         <div class="container-fluid">
 		
             <div class="row">
             
-                <div class="col-sm-2 col-md-2 pt-4 text-center">
+                <div class="col-sm-2 col-md-2 text-center">
                     <img class="logo" src="<?php echo base_url('/assets/images/logo.png'); ?>">
+					<h4 class="mb-0">MALAMU</h4>
                     <!-- user profile menu  -->
                     <?php $this->load->view('left-menu'); ?>
 
-					<img src="https://via.placeholder.com/160x500?text=160x500+Wide+Skyscaper" alt="">
-
+					<img src="https://via.placeholder.com/200x500?text=160x500+Wide+Skyscaper" alt="">
+					
 
 
 
