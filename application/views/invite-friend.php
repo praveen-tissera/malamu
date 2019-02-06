@@ -166,7 +166,7 @@
                                                     <form class="form-inline pt-4">
                                                         <div class="form-group pt-4" style="width:70%">
                                                             
-                                                            <input type="text" style="width:100%" class="form-control" id="exampleInputName2" placeholder="Enter Cell Phone Number">
+                                                            <input type="text" style="width:100%" class="form-control" id="exampleInputName2" placeholder="Enter your friend’s cell phone number">
                                                         </div>
                                                         
                                                         <button type="submit" class="btn btn-warning mt-4">Send invite</button>
