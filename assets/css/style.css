@@ -142,7 +142,7 @@ figure {
 .fh5co-cover,
 .fh5co-hero {
   position: relative;
-  height: 600px;
+  height: 800px;
 }
 @media screen and (max-width: 768px) {
   .fh5co-cover,
@@ -175,7 +175,7 @@ figure {
 }
 @media screen and (max-width: 768px) {
   .fh5co-cover {
-    heifght: inherit;
+    height: inherit;
     padding: 3em 0;
   }
 }
@@ -193,7 +193,7 @@ figure {
   }
 }
 .fh5co-cover .desc {
-  top: 40%;
+  top: 25%;
   position: absolute;
   width: 100%;
   /* margin-top: -80px; */
