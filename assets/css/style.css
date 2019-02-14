@@ -2188,9 +2188,11 @@ select{
 
 .user-name{
   background-image: linear-gradient(#f1f1f1, #d4d4d4);
+  font-size: 12px;
 }
 .user-name-btn{
   background-image: linear-gradient(#f1f1f1, #d4d4d4);
+  font-size: 12px;
 }
 
 
