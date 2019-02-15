@@ -2388,8 +2388,10 @@ select{
       transform: rotate(0deg);
   }
   100%{
-      -webkit-transform: rotate(126deg);
-      transform: rotate(126deg);
+      /* -webkit-transform: rotate(126deg);
+      transform: rotate(126deg); */
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
   }
 }
 @media only screen and (max-width: 990px){

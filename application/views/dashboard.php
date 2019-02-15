@@ -50,7 +50,7 @@
 		background-color: #d0d0d0;
 	}
 	.wallet-balance{
-		border-right: #2dc1ec 1px solid;
+		border-right: #daddde 1px solid;
 	}
 	.wallet-balance .wallet-amount{
 		color:#2dc1ec;
