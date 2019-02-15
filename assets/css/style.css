@@ -2168,7 +2168,7 @@ select{
 .middle-container{
   background-color: #fff;
   border-radius: 10px;
-  padding: 5rem 8rem 5rem 8rem;
+  padding: 5rem 5rem 5rem 5rem;
   margin-bottom: 1rem;
 
 }
@@ -2182,6 +2182,10 @@ select{
   border-radius: 5px;
   border: #d4d4d4 1px solid;
 }
+.nav-home:hover{
+  background-image: linear-gradient(#d4d4d4, #f1f1f1);
+}
+
 .nav-home>i{
   color: #fff;
 }
@@ -2305,7 +2309,7 @@ select{
   height: 90%;
   border-radius: 50%;
   /* background: #44484b; */
-  font-size: 24px;
+  font-size: 36px;
   color: rgb(2, 2, 2);
   line-height: 135px;
   text-align: center;

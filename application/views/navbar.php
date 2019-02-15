@@ -4,7 +4,10 @@
 					<a class="navbar-brand"></a>
 				</div>
 				<p class="navbar-text pull-right">
-					<span class="nav-home"><i class="fas fa-home"></i></span>&nbsp;&nbsp;
+					<a href="<?php echo base_url('index.php/user/userDashBoard'); ?>">
+						<span class="nav-home"><i class="fas fa-home"></i></span>
+					</a>
+					&nbsp;&nbsp;
 					<strong>Wallet #
 											<?php if (isset($this->session->userdata['userID'])) {
 												$wallet_number = sprintf("%03d", $this->session->userdata['userID']);

@@ -40,7 +40,7 @@
     <link href="<?php echo base_url('/assets/css/icomoon.css'); ?>" rel="stylesheet">
 	<style>
 	.progress-bar-success{
-		background-color: #7ae27a;
+		background-color: #2dd1b8;
 	}
 	.left-menu{
 		list-style-type:none;

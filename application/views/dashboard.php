@@ -40,7 +40,7 @@
     <link href="<?php echo base_url('/assets/css/icomoon.css'); ?>" rel="stylesheet">
 	<style>
 	.progress-bar-success{
-		background-color: #7ae27a;
+		background-color: #2dd1b8;
 	}
 	.left-menu{
 		list-style-type:none;
@@ -182,7 +182,13 @@
 										</div>
 										
 									</div>
+									
 
+								</div>
+								<div class="row">
+								<div class="col-sm-12 mb-4">
+                                         <img class="img-responsive"  style="margin:auto;"  src="https://via.placeholder.com/908x120?text=908x120+Leaderboard" alt="">
+                                    </div>
 								</div>
 								<div class="middle-container">
 									<div class="row">
@@ -198,7 +204,7 @@
 										
 									</div>
 									<div class="row summary">
-										<div class="col-sm-3">
+										<div class="col-md-3">
 									
 
 											
@@ -209,12 +215,13 @@
 													<span class="progress-right">
 														<span class="progress-bar"></span>
 													</span>
-													<div class="progress-value">80%</div>
+													<div class="progress-value">36</div>
 												</div>
+												<label class="text-center">Number of surveys completed</label>
 
 										</div>
 
-										<div class="col-sm-3 wallet-balance">
+										<div class="col-md-3 wallet-balance">
 									
 
 											
@@ -225,14 +232,16 @@
 												<span class="progress-right">
 													<span class="progress-bar"></span>
 												</span>
-												<div class="progress-value">80%</div>
+												<div class="progress-value">$296</div>
 											</div>
+
+											<label class="text-center">Amount of money I have made</label>
 
 										</div>
 
 
-										<div class="col-sm-6">
-											<h3 class="text-center">
+										<div class="col-md-6 text-center">
+											<h3>
 											<strong>The more questions you <br> complete, the more money <br> you make!</strong> 
 											</h3>
 											<button class="btn btn-color btn-info mb-5 mt-4 pl-5 pr-5">Take Survey</button>
@@ -240,7 +249,11 @@
 									</div>
 
 								</div>
-
+								<div class="row">
+									<div class="col-sm-12 mb-4">
+											<img class="img-responsive"  style="margin:auto;"  src="https://via.placeholder.com/908x120?text=908x120+Leaderboard" alt="">
+									</div>
+								</div>
 								
 
 							</div>
