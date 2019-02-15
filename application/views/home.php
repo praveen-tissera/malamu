@@ -107,7 +107,7 @@
 							<li><a href="car.html">Car</a></li>
 							<li><a href="blog.html">Blog</a></li> -->
 								<li>
-									<a href="<?php echo  base_url('index.php/user/login');?>"> Already a member? Login</a>
+									<a href="<?php echo  base_url('index.php/user/login');?>"> Already a member? <span class="login">Login</span></a>
 								</li>
 								<li>
 									<a href="<?php echo  base_url('index.php/user/aboutus');?>"> About Us</a>
@@ -879,7 +879,7 @@
 			</div>
 
 			<!-- after banner text -->
-			<div id="fh5co-tours" class="fh5co-features">
+			<!-- <div id="fh5co-tours" class="fh5co-features">
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-6">
@@ -899,7 +899,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<!--  -->
 
 			<!-- -->
