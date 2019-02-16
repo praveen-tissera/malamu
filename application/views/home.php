@@ -107,7 +107,7 @@
 							<li><a href="car.html">Car</a></li>
 							<li><a href="blog.html">Blog</a></li> -->
 								<li>
-									<a href="<?php echo  base_url('index.php/user/login');?>"> Already a member? <span class="login">Login</span></a>
+									<a href="<?php echo  base_url('index.php/user/login');?>"> Already a member? <span class="nav-login">Login</span></a>
 								</li>
 								<li>
 									<a href="<?php echo  base_url('index.php/user/aboutus');?>"> About Us</a>
@@ -149,9 +149,16 @@
                                             <?php
                                                 echo form_open('user/userRegistration');  
 											
-											echo '<div role="tabpanel" class="tab-pane active" id="flights">
+											echo '<div role="tabpanel" class="tab-pane active" id="register">
+												<div class="row">
+													<div class="col-sm-12">
+														<h4 class="text-center registration-heading">Earn up to $4 MD per survey completed <sup>*</sup> </h4>
+													</div>
+												
+												</div>
 												<div class="row">
 													<div class="col-xxs-4 col-xs-4 mt ">
+													
 														<div class="input-field">';
 															
                                                             // <input type="text" name="first_name" class="form-control" id="from-place" placeholder="First Name" required />
@@ -253,93 +260,11 @@
 													</div>
 												</div>
 												<div class="row">
-													<div class="col-xxs-12 col-xs-12">
-														<label for="from">Birthday:</label>
-													</div>
-													<div class="col-xxs-4 col-xs-4 mt ">';
-													
-                                                        $options = array(
-                                                            '01'  => 'January',
-                                                            '02'  => 'February',
-                                                            '03'  => 'March',
-                                                            '04' => 'April',
-                                                            '05' => 'May',
-                                                            '06' => 'June',
-                                                            '07' => 'July',
-                                                            '08' => 'August',
-                                                            '09' => 'September',
-                                                            '10' => 'October',
-                                                            '11' => 'November',
-                                                            '12' => 'December',                            
-                                                        );
-                                                        $attribute = 'class="form-control"';
-                                
-                                
-                                                    echo form_dropdown('month_start', $options, '01',$attribute);
-													echo '</div>
-													<div class="col-xxs-4 col-xs-4 mt pl-0">';
-													$options = array(
-														'01' => '01',
-														'02' => '02',
-														'03' => '03',
-														'04' => '04',
-														'05' => '05',
-														'06' => '06',
-														'07' => '07',
-														'08' => '08',
-														'09' => '09',
-														'10' => '10',
-														'11' => '11',
-														'12' => '12',
-														'13' => '13',                            
-														'14' => '14',                            
-														'15' => '15',                            
-														'16' => '16',                            
-														'17' => '17',                            
-														'18' => '18',                            
-														'19' => '19',                            
-														'20' => '20',                            
-														'21' => '21',                            
-														'22' => '22',                            
-														'23' => '23',                            
-														'24' => '24',                            
-														'25' => '25',                            
-														'26' => '26',                            
-														'27' => '27',                            
-														'28' => '28',                            
-														'29' => '29',                            
-														'30' => '30',                            
-														'31' => '31',                            
-													);
-													$attribute = 'class="form-control"';
-							
-							
-												echo form_dropdown('day_start', $options, '01',$attribute);
-													
-													echo '</div>
-													<div class="col-xxs-4 col-xs-4 mt pl-0">';
-													
-													for ($i=1980; $i < 2010 ; $i++) { 
-														$options_year[$i] =  $i;
-													}
-
-													
-													$attribute = 'class="form-control"';
-							
-							
-												echo form_dropdown('year_start', $options_year, '1980',$attribute);
-
-
-														
-													echo '</div>
-
-												</div>
-												<div class="row">
 
 
 													<div class="col-xxs-6 col-xs-6 col-sm-6 mt">
 														<div class="input-field">
-															<label class="form-control">';
+															<label class="form-control male">';
 															$data = array(
 																'name'          => 'gender',
 																
@@ -358,7 +283,7 @@
 													<div class=" col-xxs-6 col-xs-6 col-sm-6 mt pl-0">
 														<div class="input-field">
 
-															<label class="form-control">';
+															<label class="form-control female">';
 															$data = array(
 																'name'          => 'gender',
 																
@@ -634,64 +559,100 @@
 													echo '</div>
 												</div>
 												<div class="row">
-
-
-													<div class="col-xxs-12 col-xs-12 mt">
-														<div class="input-group">
-															<div class="checkbox">
-																<label>';
-																$data = array(
-																	'name'          => 'remember',
-																	'value'         => '1',
-																	'checked'       => FALSE,
-																	'required'		=> 'required'
-																);
-															
-															echo form_checkbox($data);
-																	//<input id="login-remember" type="checkbox" name="remember" value="1" required> 
-																	
-																	echo 'Accept the
-																	<strong>Terms of Service</strong>
-																</label>
-															</div>
-															<div class="checkbox">
-																<label>';
-																$data = array(
-																	'name'          => 'police',
-																	'value'         => '1',
-																	'checked'       => FALSE,
-																	'required'		=> 'required'
-																);
-															
-															echo form_checkbox($data);
-																	//<input id="login-remember" type="checkbox" name="police" value="1" required>
-																	echo ' Accept the <strong>Privacy Police</strong>
-																</label>
-															</div>
-															<div class="checkbox">
-																<label>';
-																$data = array(
-																	'name'          => 'cookies',
-																	'value'         => '1',
-																	'checked'       => FALSE,
-																	'required'		=> 'required'
-																);
-															
-															echo form_checkbox($data);
-
-																	//<input id="login-remember" type="checkbox" name="cookies" value="1" required>
-																	echo ' I agree to the use of <strong>Cookies</strong>
-																</label>
-															</div>
-
-														</div>
-
-
+													<div class="col-xxs-12 col-xs-12 pl-5">
+														<label for="from">Birthday:</label>
 													</div>
+													<div class="col-xxs-4 col-xs-4 mt ">';
+													
+                                                        $options = array(
+                                                            '01'  => 'January',
+                                                            '02'  => 'February',
+                                                            '03'  => 'March',
+                                                            '04' => 'April',
+                                                            '05' => 'May',
+                                                            '06' => 'June',
+                                                            '07' => 'July',
+                                                            '08' => 'August',
+                                                            '09' => 'September',
+                                                            '10' => 'October',
+                                                            '11' => 'November',
+                                                            '12' => 'December',                            
+                                                        );
+                                                        $attribute = 'class="form-control"';
+                                
+                                
+                                                    echo form_dropdown('month_start', $options, '01',$attribute);
+													echo '</div>
+													<div class="col-xxs-4 col-xs-4 mt pl-0">';
+													$options = array(
+														'01' => '01',
+														'02' => '02',
+														'03' => '03',
+														'04' => '04',
+														'05' => '05',
+														'06' => '06',
+														'07' => '07',
+														'08' => '08',
+														'09' => '09',
+														'10' => '10',
+														'11' => '11',
+														'12' => '12',
+														'13' => '13',                            
+														'14' => '14',                            
+														'15' => '15',                            
+														'16' => '16',                            
+														'17' => '17',                            
+														'18' => '18',                            
+														'19' => '19',                            
+														'20' => '20',                            
+														'21' => '21',                            
+														'22' => '22',                            
+														'23' => '23',                            
+														'24' => '24',                            
+														'25' => '25',                            
+														'26' => '26',                            
+														'27' => '27',                            
+														'28' => '28',                            
+														'29' => '29',                            
+														'30' => '30',                            
+														'31' => '31',                            
+													);
+													$attribute = 'class="form-control"';
+							
+							
+												echo form_dropdown('day_start', $options, '01',$attribute);
+													
+													echo '</div>
+													<div class="col-xxs-4 col-xs-4 mt pl-0">';
+													
+													for ($i=1980; $i < 2010 ; $i++) { 
+														$options_year[$i] =  $i;
+													}
 
-													<div class="col-xs-12">';
+													
+													$attribute = 'class="form-control"';
+							
+							
+												echo form_dropdown('year_start', $options_year, '1980',$attribute);
+
+
+														
+													echo '</div>
+
+												</div>';
+												
+												
+												echo '<div class="row">';
+
+													echo '<div class="col-xs-12 text-center mb-4">
+															<label>Clicking "Become a Member" indicates that you have read and agree to our Terms of Use and Privacy Policy</label>
+														</div>';
+													
+												
+															
+													echo '<div class="col-xs-12">';
 														//<input type="submit" name="submit" class="btn btn-default btn-block" value="Become a member">
-														echo form_submit('submit', 'Become a member', "class='btn btn-default btn-block'");
+														echo form_submit('submit', 'Become a member', "class='btn  btn-block become-member'");
                     echo form_close();
 													echo '</div>
 												</div>
@@ -699,143 +660,22 @@
                                             ?>
 
 										</form>
-											<!-- <div role="tabpanel" class="tab-pane" id="hotels">
-												<div class="row">
-													<div class="col-xxs-12 col-xs-12 mt">
-														<div class="input-field">
-															<label for="from">City:</label>
-															<input type="text" class="form-control" id="from-place" placeholder="Los Angeles, USA" />
-														</div>
-													</div>
-													<div class="col-xxs-12 col-xs-6 mt alternate">
-														<div class="input-field">
-															<label for="date-start">Return:</label>
-															<input type="text" class="form-control" id="date-start" placeholder="mm/dd/yyyy" />
-														</div>
-													</div>
-													<div class="col-xxs-12 col-xs-6 mt alternate">
-														<div class="input-field">
-															<label for="date-end">Check Out:</label>
-															<input type="text" class="form-control" id="date-end" placeholder="mm/dd/yyyy" />
-														</div>
-													</div>
-													<div class="col-sm-12 mt">
-														<section>
-															<label for="class">Rooms:</label>
-															<select class="cs-select cs-skin-border">
-																<option value="" disabled selected>1</option>
-																<option value="economy">1</option>
-																<option value="first">2</option>
-																<option value="business">3</option>
-															</select>
-														</section>
-													</div>
-													<div class="col-xxs-12 col-xs-6 mt">
-														<section>
-															<label for="class">Adult:</label>
-															<select class="cs-select cs-skin-border">
-																<option value="" disabled selected>1</option>
-																<option value="1">1</option>
-																<option value="2">2</option>
-																<option value="3">3</option>
-																<option value="4">4</option>
-															</select>
-														</section>
-													</div>
-													<div class="col-xxs-12 col-xs-6 mt">
-														<section>
-															<label for="class">Children:</label>
-															<select class="cs-select cs-skin-border">
-																<option value="" disabled selected>1</option>
-																<option value="1">1</option>
-																<option value="2">2</option>
-																<option value="3">3</option>
-																<option value="4">4</option>
-															</select>
-														</section>
-													</div>
-													<div class="col-xs-12">
-														<input type="submit" class="btn btn-primary btn-block" value="Search Hotel">
-													</div>
-												</div>
-											</div> -->
-
-											<!-- <div role="tabpanel" class="tab-pane" id="packages">
-												<div class="row">
-													<div class="col-xxs-12 col-xs-6 mt">
-														<div class="input-field">
-															<label for="from">City:</label>
-															<input type="text" class="form-control" id="from-place" placeholder="Los Angeles, USA" />
-														</div>
-													</div>
-													<div class="col-xxs-12 col-xs-6 mt">
-														<div class="input-field">
-															<label for="from">Destination:</label>
-															<input type="text" class="form-control" id="to-place" placeholder="Tokyo, Japan" />
-														</div>
-													</div>
-													<div class="col-xxs-12 col-xs-6 mt alternate">
-														<div class="input-field">
-															<label for="date-start">Departs:</label>
-															<input type="text" class="form-control" id="date-start" placeholder="mm/dd/yyyy" />
-														</div>
-													</div>
-													<div class="col-xxs-12 col-xs-6 mt alternate">
-														<div class="input-field">
-															<label for="date-end">Return:</label>
-															<input type="text" class="form-control" id="date-end" placeholder="mm/dd/yyyy" />
-														</div>
-													</div>
-													<div class="col-sm-12 mt">
-														<section>
-															<label for="class">Rooms:</label>
-															<select class="cs-select cs-skin-border">
-																<option value="" disabled selected>1</option>
-																<option value="economy">1</option>
-																<option value="first">2</option>
-																<option value="business">3</option>
-															</select>
-														</section>
-													</div>
-													<div class="col-xxs-12 col-xs-6 mt">
-														<section>
-															<label for="class">Adult:</label>
-															<select class="cs-select cs-skin-border">
-																<option value="" disabled selected>1</option>
-																<option value="1">1</option>
-																<option value="2">2</option>
-																<option value="3">3</option>
-																<option value="4">4</option>
-															</select>
-														</section>
-													</div>
-													<div class="col-xxs-12 col-xs-6 mt">
-														<section>
-															<label for="class">Children:</label>
-															<select class="cs-select cs-skin-border">
-																<option value="" disabled selected>1</option>
-																<option value="1">1</option>
-																<option value="2">2</option>
-																<option value="3">3</option>
-																<option value="4">4</option>
-															</select>
-														</section>
-													</div>
-													<div class="col-xs-12">
-														<input type="submit" class="btn btn-primary btn-block" value="Search Packages">
-													</div>
-												</div>
-											</div> -->
+											
 										</div>
 
 									</div>
 								</div>
 								<div class="desc2 animate-box">
-									<div class="col-sm-7 col-sm-push-1 col-md-7 col-md-push-1">
+									<div class="col-sm-7 col-md-7  text-center">
 										<!-- <p>HandCrafted by <a href="http://frehtml5.co/" target="_blank" class="fh5co-site-name">FreeHTML5.co</a></p> -->
-										<h2 class="head-title">
+										<img src="<?php echo base_url('assets/images/logo.png'); ?>" alt="logo" class="home-log">
+										<img src="<?php echo base_url('assets/images/site-name.png') ?>" alt="company name">
+										<!-- <h2 class="head-title">
 											<strong> Malamu. Good. </strong>
-										</h2>
+										</h2> -->
+										<h3 class="head-description head-title">
+											Be good to all, so one could be good to others.<br> Kozala malamu, pona biso nioso.
+										</h3>
 										<?php 
 
 									if(form_error('first_name') || form_error('first_name') || form_error('phone_number') || form_error('username') || form_error('password') || form_error('remember') || form_error('police') || form_error('cookies') ){
@@ -878,32 +718,10 @@
 
 			</div>
 
-			<!-- after banner text -->
-			<!-- <div id="fh5co-tours" class="fh5co-features">
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-6">
-
-						</div>
-						<div class="col-xs-6">
-							<h1 class="text-uppercase quoat">
-								<label> good for all, </label>
-								<br>
-								<small>so one could be good.</small>
-							</h1>
-							<h1 class="text-uppercase quoat">
-								<label> kozala malamu, </label>
-								<br>
-								<small>pona biso nioso.</small>
-							</h1>
-						</div>
-					</div>
-				</div>
-			</div> -->
-			<!--  -->
+		
 
 			<!-- -->
-			<div id="fh5co-blog-section" class="fh5co-section-gray">
+			<div id="fh5co-blog-section" class="fh5co-features">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
@@ -914,10 +732,10 @@
 				</div>
 				<div class="container">
 					<div class="row row-bottom-padded-md">
-						<div class="col-lg-4 col-md-4 col-sm-6">
+						<div class="col-lg-4 col-md-4 col-sm-6 text-center">
 							<div class="fh5co-blog animate-box">
 								<a href="#">
-									<img class="img-responsive" src="<?php echo  base_url('/assets/images/first-icon.png');?>" alt="">
+									<img  src="<?php echo  base_url('/assets/images/card_one.png');?>" alt="">
 								</a>
 								<div class="blog-text">
 									<div class="prod-title">
@@ -933,9 +751,9 @@
 							</div>
 						</div>
 						<div class="col-lg-4 col-md-4 col-sm-6">
-							<div class="fh5co-blog animate-box">
+							<div class="fh5co-blog animate-box text-center">
 								<a href="#">
-									<img class="img-responsive" src="<?php echo  base_url('/assets/images/second-icon.png');?>" alt="">
+									<img  src="<?php echo  base_url('/assets/images/card_two.png');?>" alt="">
 								</a>
 								<div class="blog-text">
 									<div class="prod-title">
@@ -953,10 +771,10 @@
 							</div>
 						</div>
 						<div class="clearfix visible-sm-block"></div>
-						<div class="col-lg-4 col-md-4 col-sm-6">
+						<div class="col-lg-4 col-md-4 col-sm-6 text-center">
 							<div class="fh5co-blog animate-box">
 								<a href="#">
-									<img class="img-responsive" src="<?php echo  base_url('/assets/images/third-icon.png');?>" alt="">
+									<img src="<?php echo  base_url('/assets/images/card_three.png');?>" alt="">
 								</a>
 								<div class="blog-text">
 									<div class="prod-title">
@@ -987,7 +805,7 @@
 
 
 
-			<div id="fh5co-tours" class="fh5co-features">
+			<div id="fh5co-tours" class="fh5co-section-gray">
 				<div class="container">
 					<!-- <div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
@@ -1049,228 +867,7 @@
 				</div>
 			</div>
 
-			<!-- <div id="fh5co-features">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-4 animate-box">
-
-						<div class="feature-left">
-							<span class="icon">
-								<i class="icon-hotairballoon"></i>
-							</span>
-							<div class="feature-copy">
-								<h3>Family Travel</h3>
-								<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit.</p>
-								<p><a href="#">Learn More</a></p>
-							</div>
-						</div>
-
-					</div>
-
-					<div class="col-md-4 animate-box">
-						<div class="feature-left">
-							<span class="icon">
-								<i class="icon-search"></i>
-							</span>
-							<div class="feature-copy">
-								<h3>Travel Plans</h3>
-								<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit.</p>
-								<p><a href="#">Learn More</a></p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 animate-box">
-						<div class="feature-left">
-							<span class="icon">
-								<i class="icon-wallet"></i>
-							</span>
-							<div class="feature-copy">
-								<h3>Honeymoon</h3>
-								<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit.</p>
-								<p><a href="#">Learn More</a></p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-4 animate-box">
-
-						<div class="feature-left">
-							<span class="icon">
-								<i class="icon-wine"></i>
-							</span>
-							<div class="feature-copy">
-								<h3>Business Travel</h3>
-								<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit.</p>
-								<p><a href="#">Learn More</a></p>
-							</div>
-						</div>
-
-					</div>
-
-					<div class="col-md-4 animate-box">
-						<div class="feature-left">
-							<span class="icon">
-								<i class="icon-genius"></i>
-							</span>
-							<div class="feature-copy">
-								<h3>Solo Travel</h3>
-								<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit.</p>
-								<p><a href="#">Learn More</a></p>
-							</div>
-						</div>
-
-					</div>
-					<div class="col-md-4 animate-box">
-						<div class="feature-left">
-							<span class="icon">
-								<i class="icon-chat"></i>
-							</span>
-							<div class="feature-copy">
-								<h3>Explorer</h3>
-								<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit.</p>
-								<p><a href="#">Learn More</a></p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div> -->
-
-
-			<!-- <div id="fh5co-destination">
-			<div class="tour-fluid">
-				<div class="row">
-					<div class="col-md-12">
-						<ul id="fh5co-destination-list" class="animate-box">
-							<li class="one-forth text-center" style="background-image: url(images/place-1.jpg); ">
-								<a href="#">
-									<div class="case-studies-summary">
-										<h2>Los Angeles</h2>
-									</div>
-								</a>
-							</li>
-							<li class="one-forth text-center" style="background-image: url(images/place-2.jpg); ">
-								<a href="#">
-									<div class="case-studies-summary">
-										<h2>Hongkong</h2>
-									</div>
-								</a>
-							</li>
-							<li class="one-forth text-center" style="background-image: url(images/place-3.jpg); ">
-								<a href="#">
-									<div class="case-studies-summary">
-										<h2>Italy</h2>
-									</div>
-								</a>
-							</li>
-							<li class="one-forth text-center" style="background-image: url(images/place-4.jpg); ">
-								<a href="#">
-									<div class="case-studies-summary">
-										<h2>Philippines</h2>
-									</div>
-								</a>
-							</li>
-
-							<li class="one-forth text-center" style="background-image: url(images/place-5.jpg); ">
-								<a href="#">
-									<div class="case-studies-summary">
-										<h2>Japan</h2>
-									</div>
-								</a>
-							</li>
-							<li class="one-half text-center">
-								<div class="title-bg">
-									<div class="case-studies-summary">
-										<h2>Most Popular Destinations</h2>
-										<span><a href="#">View All Destinations</a></span>
-									</div>
-								</div>
-							</li>
-							<li class="one-forth text-center" style="background-image: url(images/place-6.jpg); ">
-								<a href="#">
-									<div class="case-studies-summary">
-										<h2>Paris</h2>
-									</div>
-								</a>
-							</li>
-							<li class="one-forth text-center" style="background-image: url(images/place-7.jpg); ">
-								<a href="#">
-									<div class="case-studies-summary">
-										<h2>Singapore</h2>
-									</div>
-								</a>
-							</li>
-							<li class="one-forth text-center" style="background-image: url(images/place-8.jpg); ">
-								<a href="#">
-									<div class="case-studies-summary">
-										<h2>Madagascar</h2>
-									</div>
-								</a>
-							</li>
-							<li class="one-forth text-center" style="background-image: url(images/place-9.jpg); ">
-								<a href="#">
-									<div class="case-studies-summary">
-										<h2>Egypt</h2>
-									</div>
-								</a>
-							</li>
-							<li class="one-forth text-center" style="background-image: url(images/place-10.jpg); ">
-								<a href="#">
-									<div class="case-studies-summary">
-										<h2>Indonesia</h2>
-									</div>
-								</a>
-							</li>
-						</ul>		
-					</div>
-				</div>
-			</div>
-		</div> -->
-
-
-			<!-- <div id="fh5co-testimonial" style="background-image:url(images/img_bg_1.jpg);">
-		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Happy Clients</h2>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-4">
-					<div class="box-testimony animate-box">
-						<blockquote>
-							<span class="quote"><span><i class="icon-quotes-right"></i></span></span>
-							<p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
-						</blockquote>
-						<p class="author">John Doe, CEO <a href="http://freehtml5.co/" target="_blank">FREEHTML5.co</a> <span class="subtext">Creative Director</span></p>
-					</div>
-					
-				</div>
-				<div class="col-md-4">
-					<div class="box-testimony animate-box">
-						<blockquote>
-							<span class="quote"><span><i class="icon-quotes-right"></i></span></span>
-							<p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.&rdquo;</p>
-						</blockquote>
-						<p class="author">John Doe, CEO <a href="http://freehtml5.co/" target="_blank">FREEHTML5.co</a> <span class="subtext">Creative Director</span></p>
-					</div>
-					
-					
-				</div>
-				<div class="col-md-4">
-					<div class="box-testimony animate-box">
-						<blockquote>
-							<span class="quote"><span><i class="icon-quotes-right"></i></span></span>
-							<p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
-						</blockquote>
-						<p class="author">John Doe, Founder <a href="#">FREEHTML5.co</a> <span class="subtext">Creative Director</span></p>
-					</div>
-					
-				</div>
-			</div>
-		</div>
-	</div> -->
+			
 			<!-- load footer -->
             <?php $this->load->view('footer');  ?>
 
@@ -1311,6 +908,26 @@
 
 	<!-- Main JS -->
 	<script src="<?php echo  base_url('/assets/js/main.js');?>"></script>
+	<script>
+		$(document).ready(
+			function(){
+				$('.male').css('background-color','#208a44');
+				$('.male').css('color','#FFF');
+				$('.male').on('click', function(){
+					$(this).css('background-color','#208a44');
+					$('.female').css('background-color','#FFF');
+					$('.female').css('color','rgba(0, 0, 0, 0.5)');
+					$(this).css('color','#fff');
+				});
+				$('.female').on('click', function(){
+					$(this).css('background-color','#208a44');
+					$('.male').css('background-color','#FFF');
+					$(this).css('color','#fff');
+					$('.male').css('color','rgba(0, 0, 0, 0.5)');
+				});
+			}
+		);
+	</script>
 
 </body>
 

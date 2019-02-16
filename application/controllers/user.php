@@ -39,9 +39,9 @@ Class User extends CI_Controller {
         $this->form_validation->set_rules('phone_number', 'Contact', 'trim|required');
         $this->form_validation->set_rules('username', 'Username', 'trim|required');
         $this->form_validation->set_rules('password', 'Password', 'trim|required');
-        $this->form_validation->set_rules('remember', 'Terms of Service', 'trim|required');
-        $this->form_validation->set_rules('police', 'Terms of Service', 'trim|required');
-        $this->form_validation->set_rules('cookies', 'Cookies', 'trim|required');
+       // $this->form_validation->set_rules('remember', 'Terms of Service', 'trim|required');
+       // $this->form_validation->set_rules('police', 'Terms of Service', 'trim|required');
+       // $this->form_validation->set_rules('cookies', 'Cookies', 'trim|required');
 		
 		
 		if ($this->form_validation->run() == FALSE) {

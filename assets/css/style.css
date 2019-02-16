@@ -46,10 +46,10 @@ p, ul, ol {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #5a5a5a;
+  color: #212121;
   font-family: "Open Sans", Arial, sans-serif;
   font-weight: 400;
-  margin: 0 0 30px 0;
+  margin: 0 0 15px 0;
 }
 
 figure {
@@ -542,7 +542,7 @@ figure {
   width: 100%;
   float: left;
   margin-top: -7em;
-  background: rgba(255, 255, 255, 0.95);
+  background: #FFF;
   -webkit-box-shadow: 0px 43px 83px -20px rgba(0, 0, 0, 0.41);
   -moz-box-shadow: 0px 43px 83px -20px rgba(0, 0, 0, 0.41);
   -ms-box-shadow: 0px 43px 83px -20px rgba(0, 0, 0, 0.41);
@@ -561,7 +561,7 @@ figure {
 }
 .tabulation input[type="text"], .tabulation input[type="password"] {
   /* background: #31b0d5; */
-  /* border: none; */
+  border: none;
   box-shadow: none;
   font-weight: bold;
   font-size: 14px;
@@ -602,7 +602,7 @@ figure {
 }
 
 .tab-content {
-  padding: 30px;
+  padding: 30px 15px 30px 15px;
 }
 .tab-content .btn {
   /* border: 1px solid red !important; */
@@ -1436,8 +1436,8 @@ div.cs-select span {
   -ms-box-shadow: none;
   -o-box-shadow: none;
   box-shadow: none;
-  border: none;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: none !important;
+  /* border: 1px solid rgba(0, 0, 0, 0.1); */
   font-size: 18px;
   font-weight: 400;
   -webkit-border-radius: 0px;
@@ -1530,7 +1530,7 @@ div.cs-select span {
   margin-bottom: 60px;
 }
 .fh5co-blog a img {
-  width: 100%;
+  /* width: 100%; */
 }
 @media screen and (max-width: 768px) {
   .fh5co-blog {
@@ -2042,7 +2042,10 @@ select{
   font-size: 50px;
 }
 .head-title{
-  text-shadow: 3px 3px 3px rgb(0, 0, 0);
+  text-shadow: 1px 2px 2px rgb(0, 0, 0);
+}
+.head-description{
+  color: #fff;
 }
 .quoat{
   text-shadow: 1px 1px  rgb(0, 0, 0);
@@ -2402,7 +2405,7 @@ select{
 
 
 /* login button */
-.login{
+.nav-login{
   border: 2px solid rgba(127, 124, 123, 1);
   padding: 5px 16px 5px 16px;
   font-weight: bold;
@@ -2412,8 +2415,31 @@ select{
 }
 
 
+/* home page registration */
+#register .form-control{
+  border: none;
+  box-shadow: 0 0;
+}
+.registration-heading{
+  color: #208a44;
+  font-weight: bold;
+  font-size: 20px;
+}
 
-
+input[type="radio"]:checked~label { 
+ background-color: green;
+}
+.become-member{
+  background-color: #208a44;
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+}
+.become-member:hover{
+  color: #FFF !important;
+}
+.home-log{
+  width: 150px;
+}
 
 
 
