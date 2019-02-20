@@ -725,7 +725,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
-							<h3>How It Work</h3>
+							<h3 class="text-uppercase">How It Work</h3>
 							<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit est facilis maiores, perspiciatis accusamus asperiores sint consequuntur debitis.</p> -->
 						</div>
 					</div>
