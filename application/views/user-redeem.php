@@ -146,7 +146,7 @@
 													<label for="redeem-money">Code: &nbsp; &nbsp;</label>
 													<input type="text" class="form-control" id="redeem-money" placeholder="394">
 												</div> <br><br>
-												<button type="submit" class="btn btn-primary">Redeem</button>
+												<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Redeem</button>
 											</form>
 											
 
@@ -218,6 +218,43 @@
 
 
         </div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		<i class="fas fa-times-circle"></i>
+		</button>
+        
+      </div>
+      <div class="modal-body">
+        <h2>Something went wrong</h2>
+		<p>
+			Error message will appear here Error message will appear here
+			Error message will appear here
+		</p>
+      </div>
+      <div class="modal-footer">
+       
+        <button type="button" class="btn btn-link">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
 
         <!-- jQuery -->
 

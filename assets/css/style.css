@@ -2236,13 +2236,22 @@ select{
     
 }
 .card-one{
-  background-color: #f8c318;
+  /* background-color: #f8c318; */
+  background-image: url(../images/card-one.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .card-two{
-  background-color: #23a04e;
+  /* background-color: #23a04e; */
+  background-image: url(../images/card-two.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .card-three{
-  background-color: #cb4139;
+  /* background-color: #cb4139; */
+  background-image: url(../images/card-three.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 
@@ -2444,7 +2453,41 @@ input[type="radio"]:checked~label {
 
 
 
-
+/* model pop up style */
+.modal{
+  text-align: center;
+}
+.modal-content{
+  border-radius: 35px;
+}
+.modal-body{
+  padding-left: 10%;
+    padding-right: 10%;
+    margin-bottom: 70px;
+}
+.modal-header{
+  border-bottom: 0;
+  padding-left: 10%;
+    padding-right: 10%;
+}
+.modal-footer{
+  border-top: 0;
+  text-align: center;
+  background-color: rgb(190, 10, 10);
+  border-radius: 0 0 30px 30px;
+}
+.modal .modal-footer .btn-link{
+  text-decoration: none;
+  color: #FFF;
+  font-weight: bold;
+}
+.modal .close{
+  float: none;
+  font-size: 100px;
+  padding-top: 50px;
+  color: rgb(190, 10, 10);
+  opacity: 1;
+}
 
 
 .mt-1{
