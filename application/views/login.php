@@ -138,7 +138,7 @@
 										<!--  -->
 										<div class="form-signin mg-btm">
 											
-											<img class="login-logo logo" src="<?php echo base_url('/assets/images/logo.png'); ?>">
+											<img class="login-logo logo pt-4" src="<?php echo base_url('/assets/images/logo.png'); ?>">
 											<?php
 											echo '<h3 class="heading-desc text-center">Welcome Back</h3>';
 											echo '<p class="text-center">Please Log in or <a href="'. base_url('index.php') .'" class="login">Sign Up Now</a> </p>';

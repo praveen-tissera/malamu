@@ -239,7 +239,7 @@
       </div>
       <div class="modal-footer">
        
-        <button type="button" class="btn btn-link">Save changes</button>
+        <button type="button" class="btn btn-link">TRY AGAIN</button>
       </div>
     </div>
   </div>
