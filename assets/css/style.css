@@ -2453,41 +2453,82 @@ input[type="radio"]:checked~label {
 
 
 
-/* model pop up style */
-.modal{
+/* model pop up error style */
+.error .modal{
   text-align: center;
 }
-.modal-content{
+
+
+.error .modal-content{
   border-radius: 35px;
 }
-.modal-body{
+.error .modal-body{
   padding-left: 10%;
     padding-right: 10%;
     margin-bottom: 70px;
 }
-.modal-header{
+.error .modal-header{
   border-bottom: 0;
   padding-left: 10%;
     padding-right: 10%;
 }
-.modal-footer{
+.error .modal-footer{
   border-top: 0;
   text-align: center;
   background-color: rgb(190, 10, 10);
   border-radius: 0 0 30px 30px;
 }
-.modal .modal-footer .btn-link{
+.error .modal .modal-footer .btn-link{
   text-decoration: none;
   color: #FFF;
   font-weight: bold;
 }
-.modal .close{
+.error .modal .close{
   float: none;
   font-size: 100px;
   padding-top: 50px;
   color: rgb(190, 10, 10);
   opacity: 1;
 }
+
+/* model pop up success style */
+.success .modal{
+  text-align: center;
+}
+
+
+.success .modal-content{
+  border-radius: 35px;
+}
+.success .modal-body{
+  padding-left: 10%;
+    padding-right: 10%;
+    margin-bottom: 70px;
+}
+.success .modal-header{
+  border-bottom: 0;
+  padding-left: 10%;
+    padding-right: 10%;
+}
+.success .modal-footer{
+  border-top: 0;
+  text-align: center;
+  background-color: #388e3c;
+  border-radius: 0 0 30px 30px;
+}
+.success .modal .modal-footer .btn-link{
+  text-decoration: none;
+  color: #FFF;
+  font-weight: bold;
+}
+.success .modal .close{
+  float: none;
+  font-size: 100px;
+  padding-top: 50px;
+  color: #388e3c;
+  opacity: 1;
+}
+
 
 
 .mt-1{
