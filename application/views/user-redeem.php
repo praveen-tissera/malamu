@@ -220,29 +220,29 @@
         </div>
 
 <div class="error">
-<div class="modal fade" id="myModald" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-		<i class="fas fa-times-circle"></i>
-		</button>
-        
-      </div>
-      <div class="modal-body">
-        <h2>Something went wrong</h2>
-		<p>
-			Error message will appear here Error message will appear here
-			Error message will appear here
-		</p>
-      </div>
-      <div class="modal-footer">
-       
-        <button type="button" class="btn btn-link">TRY AGAIN</button>
-      </div>
-    </div>
-  </div>
-</div>
+	<div class="modal fade" id="myModald" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<i class="fas fa-times-circle"></i>
+			</button>
+			
+		</div>
+		<div class="modal-body">
+			<h2>Something went wrong</h2>
+			<p>
+				Error message will appear here Error message will appear here
+				Error message will appear here
+			</p>
+		</div>
+		<div class="modal-footer">
+		
+			<button type="button" class="btn btn-link">TRY AGAIN</button>
+		</div>
+		</div>
+	</div>
+	</div>
 </div>
 <!-- Modal Error-->
 
@@ -250,26 +250,23 @@
 <!-- Modal Success-->
 <div class="success">
 	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-	<div class="modal-dialog" role="document">
-		<div class="modal-content">
-		<div class="modal-header">
-			<button class="close"  >
-			<i class="fas fa-check-circle"></i>
-</button>
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+			<div class="modal-header">
+				<button class="close"><i class="far fa-thumbs-up"></i></button>
+			</div>
+			<div class="modal-body">
+				<h2>Your message was sent!</h2>
+				<p>
+					Please check your email to confirm your subscription
+				</p>
+			</div>
+			<div class="modal-footer">
 			
+				<button type="button" class="btn btn-success">CONTINUE</button>
+			</div>
+			</div>
 		</div>
-		<div class="modal-body">
-			<h2>Your message was sent!</h2>
-			<p>
-				Please check your email to confirm your subscription
-			</p>
-		</div>
-		<div class="modal-footer">
-		
-			<button type="button" class="btn btn-link">CONTINUE</button>
-		</div>
-		</div>
-	</div>
 	</div>
 </div>
 

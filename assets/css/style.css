@@ -2498,12 +2498,15 @@ input[type="radio"]:checked~label {
 
 
 .success .modal-content{
-  border-radius: 35px;
+  border-radius: 5px;
 }
 .success .modal-body{
   padding-left: 10%;
-    padding-right: 10%;
-    margin-bottom: 70px;
+  padding-right: 10%;
+
+}
+.success .modal-body h2{
+  color: #61d20f;
 }
 .success .modal-header{
   border-bottom: 0;
@@ -2513,22 +2516,39 @@ input[type="radio"]:checked~label {
 .success .modal-footer{
   border-top: 0;
   text-align: center;
-  background-color: #388e3c;
+  margin-bottom: 15px;
   border-radius: 0 0 30px 30px;
 }
-.success .modal .modal-footer .btn-link{
+.success .modal .modal-footer .btn-success{
   text-decoration: none;
-  color: #FFF;
+  color: #61d20f;
   font-weight: bold;
+  border-radius: 25px;
+  background: transparent;
+  border: 3px #61d20f solid;
+  padding: 10px 45px 10px 45px;
 }
 .success .modal .close{
   float: none;
   font-size: 100px;
-  padding-top: 50px;
+  padding-top: 25px;
   color: #388e3c;
   opacity: 1;
 }
+.success .modal .close .far{
+    border: #61d20f 5px solid;
+    border-radius: 50%;
+    padding: 25px 28px;
+    font-size: 50px;
+    color: #61d20f;
+}
 
+
+@media (min-width: 768px){
+.modal-dialog {
+    width: 400px;
+    margin: 30px auto;
+}
 
 
 .mt-1{
