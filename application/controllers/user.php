@@ -457,6 +457,17 @@ Class User extends CI_Controller {
         }
         
     }
-
+  /**
+     * view surveys form
+     */
+    public function viewSurveysForm(){
+        if(isset($this->session->userdata['userID'])){
+			//if session is already set
+			$this->load->view('survey-form');
+		}else{
+            $this->load->view('login');
+        }
+        
+    }
 
 }
