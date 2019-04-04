@@ -98,12 +98,12 @@
   border-radius: 25px;
 }
 
-/*survey table*/
-.survey th{
+.survey  > tbody > tr > td{
 	color:#000000;
-	font-size:12px;
+	font-size:14px;
+	border:0;
 }
-.survey th a {
+.survey td a {
 	color:#22a0cf;
 }
 	</style>
@@ -153,13 +153,13 @@
 												</thead>
 												<tbody>
 													<tr>
-														<th> <a href="">Customer Service Satisfaction</a></th>
+														<td class="text-left"> <a href=""  data-toggle="modal" data-target="#confimation">Customer Service Satisfaction</a></th>
 													
 														<td class="text-right">$3MD </td>
 													
 													</tr>
 													<tr>
-														<th> <a href="">Best cafe you have visit</a> </th>
+														<td class="text-left"> <a href="">Best cafe you have visit</a> </th>
 													
 														<td  class="text-right">$3MD </td>
 													
@@ -192,6 +192,44 @@
 
 
         </div>
+
+
+
+<div class="survey-notification">
+	<div class="modal fade" id="confimation" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content pl-5 pr-5">
+		<div class="modal-header text-center">
+		<h1 class="mb-0 mt-4">Customer Service Satisfaction</h1>
+
+			
+		</div>
+		<div class="modal-body text-center mt-5">
+			
+			<p>
+			This survey contains of 20 questions.<br>
+		 <span class="">Earning: $2MD</span>	
+			
+			</p>
+			
+		</div>
+		<div class="modal-footer text-ceter mb-4 pt-5">
+		
+			<button type="button" class="btn btn-success">TAKE THIS SURVEY</button>
+		</div>
+		</div>
+	</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
 
         <!-- jQuery -->
 
