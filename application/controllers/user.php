@@ -445,5 +445,18 @@ Class User extends CI_Controller {
         
     }
 
+     /**
+     * view surveys to complete
+     */
+    public function viewSurveysToComplete(){
+        if(isset($this->session->userdata['userID'])){
+			//if session is already set
+			$this->load->view('survey-to-complete');
+		}else{
+            $this->load->view('login');
+        }
+        
+    }
+
 
 }
