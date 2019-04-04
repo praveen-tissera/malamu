@@ -98,9 +98,13 @@
   border-radius: 25px;
 }
 
-/*earning table*/
-.earning th{
+/*survey table*/
+.survey th{
 	color:#000000;
+	font-size:12px;
+}
+.survey th a {
+	color:#22a0cf;
 }
 	</style>
 </head>
@@ -138,7 +142,7 @@
 										<div class="col-sm-12 col-md-12">
 											
 											<h2 class="text-left">Surveys to complete</h2>
-											<table class="table table-striped table-responsive">
+											<table class="table table-striped table-responsive survey">
 												<thead >
 													<tr>
 														<th>Topic</th>
