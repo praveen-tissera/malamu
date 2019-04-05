@@ -163,14 +163,21 @@
 											
 											<h2 class="text-left survey-form-heading pt-4 pb-4">Customer Service Satisfaction</h2>
 											
-											<div class="col-sm-6 col-sm-offset-3">
-											<span class="pull-left survey-label">5 of 20 answered  &nbsp;</span>
-												<div class="progress survey-steps mt-2">
-													
-												<div class="progress-bar progress-bar-warning " role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-													<span class="sr-only">40% Complete (success)</span>
-												</div>
-												</div>
+											<div class="col-sm-10 col-sm-offset-1">
+												<ul class="step d-flex flex-nowrap" style="display:flex;">
+													<li class="step-item">
+														<a href="#!" class="">Step 1</a>
+													</li>
+													<li class="step-item">
+														<a href="#!" class="">Step 2</a>
+													</li>
+													<li class="step-item active">
+														<a href="#!" class="">Step 3</a>
+													</li>
+													<li class="step-item">
+														<a href="#!" class="">Step 4</a>
+													</li>
+												</ul> 
 											</div>
 											
 											<table class="table text-left">

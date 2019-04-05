@@ -12,7 +12,7 @@ if(isset($this->session->userdata['userID'])){
             <span class='sr-only'>Toggle Dropdown</span>
         </button>
         <ul class='dropdown-menu'>
-            <li><a href='#'>Withdraw</a></li>
+            <li><a href='". base_url('index.php/user/withdrawStepOne') ."'>Withdraw</a></li>
             <li><a href='" . base_url('index.php/user/viewuserredeem') ."'>Redeem Refer Money</a></li>
             
             <li role='separator' class='divider'></li>
