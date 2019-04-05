@@ -98,14 +98,7 @@
   border-radius: 25px;
 }
 
-.survey  > tbody > tr > td{
-	color:#000000;
-	font-size:14px;
-	border:0;
-}
-.survey td a {
-	color:#22a0cf;
-}
+
 /*survey steps*/
 .survey-steps{
 	border-radius: 25px;
@@ -123,7 +116,13 @@
     background-color: #3ab54b;
     color: #fff;
 }
-
+.survey-question li:first-letter{
+	text-transform:	capitalize;
+}
+.form-submission{
+	height:40px;
+	background-color:#ccc;
+}
 	</style>
 </head>
 
@@ -171,28 +170,43 @@
 												</div>
 											</div>
 											
-											<table class="table table-striped table-responsive survey">
-												<thead >
-													<tr>
-														<th>Topic</th>
-													
-														<th class="text-right">Earning</th>
-													
-													</tr>
-												</thead>
+											<table class="table text-left">
+												
 												<tbody>
 													<tr>
-														<td class="text-left"> <a href=""  data-toggle="modal" data-target="#confimation">Customer Service Satisfaction</a></th>
-													
-														<td class="text-right">$3MD </td>
+														<td>
+															<ol start="6" class="survey-question">
+																<li>in general, how satisfied or dissatisfied are you with our company ?</li>
+															</ol>
+															<form action="">
+															<div class="radio">
+																<label>
+																	<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+																	very satisfied
+																</label>
+															</div>
+															<div class="radio">
+																<label>
+																	<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+																	very satisfied
+																</label>
+															</div>
+
+															<div>
+															<ul class="list-inline form-submission">
+																<li class="pull-left"><a href="" class="btn">Prev</a></li>
+																<li class="pull-right"><button type="submit" class="btn btn-link ">Next</button></li>
+															</ul>
+															</div>
+															
+															
+															
+															
+															</form>
+														</td>
 													
 													</tr>
-													<tr>
-														<td class="text-left"> <a href="">Best cafe you have visit</a> </th>
-													
-														<td  class="text-right">$3MD </td>
-													
-													</tr>
+										
 												</tbody>
 											</table>
 											
