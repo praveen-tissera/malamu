@@ -106,6 +106,24 @@
 .survey td a {
 	color:#22a0cf;
 }
+/*survey steps*/
+.survey-steps{
+	border-radius: 25px;
+    height: 10px;
+}
+.survey-steps .progress-bar-warning{
+	background-color:#7cc576;
+	border-radius: 25px;
+}
+.survey-label{
+	font-size:15px;
+}
+.survey-form-heading{
+	text-align: center;
+    background-color: #3ab54b;
+    color: #fff;
+}
+
 	</style>
 </head>
 
@@ -141,12 +159,18 @@
 									<div class="row">
 										<div class="col-sm-12 col-md-12">
 											
-											<h2 class="text-left">Customer Service Satisfaction</h2>
-											<div class="progress">
-  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-    <span class="sr-only">40% Complete (success)</span>
-  </div>
-</div>
+											<h2 class="text-left survey-form-heading pt-4 pb-4">Customer Service Satisfaction</h2>
+											
+											<div class="col-sm-6 col-sm-offset-3">
+											<span class="pull-left survey-label">5 of 20 answered  &nbsp;</span>
+												<div class="progress survey-steps mt-2">
+													
+												<div class="progress-bar progress-bar-warning " role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+													<span class="sr-only">40% Complete (success)</span>
+												</div>
+												</div>
+											</div>
+											
 											<table class="table table-striped table-responsive survey">
 												<thead >
 													<tr>
