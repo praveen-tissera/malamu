@@ -172,36 +172,42 @@
 
 								<div class="middle-container">
 									<div class="row">
-										<div class="col-sm-12 col-md-12">
-											
-											<h2 class="text-left survey-form-heading pt-4 pb-4">Customer Service Satisfaction</h2>
-											
-											<div class="col-sm-10 col-sm-offset-1">
-												<ul class="step d-flex flex-nowrap" style="display:flex;">
-													<li class="step-item">
-														<a href="#!" class="">Step 1</a>
-													</li>
-													<li class="step-item">
-														<a href="#!" class="">Step 2</a>
-													</li>
-													<li class="step-item active">
-														<a href="#!" class="">Step 3</a>
-													</li>
-													<li class="step-item">
-														<a href="#!" class="">Step 4</a>
-													</li>
-												</ul> 
-											</div>
+										
+											<div class="col-sm-12 col-md-12">
+												<div class="tbl-survey">
+													<h2 class="text-left survey-form-heading pt-4 pb-4">Customer Service Satisfaction</h2>
+													
+													<div class="col-sm-10 col-sm-offset-1">
+														
 
-										</div>
-										<div class="col-sm-5">
-											<div class="cash-pickup pull-right">
+															<ul class="step d-flex flex-nowrap" style="display:flex;">
+																<li class="step-item">
+																	<a href="#!" class="">Step 1</a>
+																</li>
+																<li class="step-item">
+																	<a href="#!" class="">Step 2</a>
+																</li>
+																<li class="step-item active">
+																	<a href="#!" class="">Step 3</a>
+																</li>
+																<li class="step-item">
+																	<a href="#!" class="">Step 4</a>
+																</li>
+															</ul> 
+
+															<div class="col-sm-5">
+																<div class="cash-pickup pull-right"></div>
+															</div>
+															<div class="col-sm-5 col-sm-offset-2">
+																<div class="mobile-transfer"></div>
+															</div>	
+														
+													</div>
+												</div>
 											</div>
-										</div>
-										<div class="col-sm-5 col-sm-offset-2">
-											<div class="mobile-transfer">
-											</div>
-										</div>
+											
+										
+										
 										
 									</div>
 

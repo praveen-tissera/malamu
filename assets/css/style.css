@@ -2628,7 +2628,11 @@ input[type="radio"]:checked~label {
   background: #e7e9ed;
 }
 
-
+/* survey and withdraw tabel wrapper*/
+.tbl-survey{
+  border:#3ab54b 2px solid;
+  display: grid;
+}
 
 
 

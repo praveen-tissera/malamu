@@ -123,9 +123,7 @@
 	height:40px;
 	background-color:#ccc;
 }
-.tbl-survey{
-	border:#3ab54b 2px solid;
-}
+
 	</style>
 </head>
 
@@ -160,7 +158,7 @@
 								<div class="middle-container">
 									<div class="row">
 										<div class="col-sm-12 col-md-12">
-											
+											<div class="tbl-survey">
 											<h2 class="text-left survey-form-heading pt-4 pb-4">Customer Service Satisfaction</h2>
 											
 											<div class="col-sm-6 col-sm-offset-3">
@@ -173,9 +171,9 @@
 												</div>
 											</div>
 											
-											<table class="table text-left">
+											<table class="table text-left mb-0">
 												
-												<tbody class="tbl-survey">
+												<tbody>
 													<tr>
 														<td>
 															<ol start="6" class="survey-question">
@@ -212,6 +210,8 @@
 										
 												</tbody>
 											</table>
+											
+											</div>
 											
 
 										</div>
