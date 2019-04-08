@@ -126,6 +126,19 @@
 .tbl-survey{
 	border:#3ab54b 2px solid;
 }
+.cash-pickup{
+	width:100px;
+	height:100px;
+	background-image:url(<?php echo base_url('/assets/images/cach_pickup.png') ?>);
+	background-size: contain;
+
+}
+.mobile-transfer{
+	width:100px;
+	height:100px;
+	background-image:url(<?php echo base_url('/assets/images/mobile_transfer.png') ?>);
+	background-size: contain;
+}
 	</style>
 </head>
 
@@ -179,48 +192,15 @@
 													</li>
 												</ul> 
 											</div>
-											
-											<table class="table text-left">
-												
-												<tbody class="tbl-survey">
-													<tr>
-														<td>
-															<ol start="6" class="survey-question">
-																<li>in general, how satisfied or dissatisfied are you with our company ?</li>
-															</ol>
-															<form action="">
-															<div class="radio">
-																<label>
-																	<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
-																	very satisfied
-																</label>
-															</div>
-															<div class="radio">
-																<label>
-																	<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
-																	very satisfied
-																</label>
-															</div>
 
-															<div>
-															<ul class="list-inline form-submission mb-0">
-																<li class="pull-left"><a href="" class="btn">Prev</a></li>
-																<li class="pull-right"><button type="submit" class="btn btn-link ">Next</button></li>
-															</ul>
-															</div>
-															
-															
-															
-															
-															</form>
-														</td>
-													
-													</tr>
-										
-												</tbody>
-											</table>
-											
-
+										</div>
+										<div class="col-sm-5">
+											<div class="cash-pickup pull-right">
+											</div>
+										</div>
+										<div class="col-sm-5 col-sm-offset-2">
+											<div class="mobile-transfer">
+											</div>
 										</div>
 										
 									</div>
