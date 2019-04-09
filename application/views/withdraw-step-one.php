@@ -142,11 +142,21 @@
 	color:#3cb54c;
 
 }
-.cash-pickup>div,.mobile-transfer>div{
+.cash-pickup>div{
 	display: block;
     position: absolute;
-	bottom: -35px;
-	left:0px;
+	bottom: -40px;
+	left:4px;
+	font-weight:bold;
+	font-size:14px;
+}
+.mobile-transfer>div{
+	display: block;
+    position: absolute;
+	bottom: -40px;
+	font-weight:bold;
+	font-size:14px;
+	left:-15px;
 }
 
 .mobile-transfer{
@@ -161,6 +171,7 @@
 	height:100px;
 	background-image:url(<?php echo base_url('/assets/images/mobile_transfer_hover.png') ?>);
 	background-size: contain;
+	color:#3cb54c;
 }
 .tbl-survey .note{
 	border:#3cb54c 2px solid;
@@ -206,19 +217,17 @@
 													<div class="col-sm-10 col-sm-offset-1">
 														
 
-															<ul class="step d-flex flex-nowrap" style="display:flex;">
-																<li class="step-item">
-																	<a href="#!" class="">Step 1</a>
+															<ul class="step d-flex flex-nowrap mb-5" style="display:flex;">
+																<li class="step-item ">
+																	<a href="#!" class="">Method of Payment</a>
 																</li>
-																<li class="step-item">
-																	<a href="#!" class="">Step 2</a>
+																<li class="step-item ">
+																	<a href="#!" class="">Contact Information</a>
 																</li>
 																<li class="step-item active">
-																	<a href="#!" class="">Step 3</a>
+																	<a href="#!" class="">Account Overview</a>
 																</li>
-																<li class="step-item">
-																	<a href="#!" class="">Step 4</a>
-																</li>
+																
 															</ul> 
 
 															<div class="col-sm-5">
@@ -235,7 +244,7 @@
 															</div>	
 															
 														<div class="col-sm-9 text-left col-sm-offset-2 mt-5 pt-5 pb-5">
-														<div class="note">
+														<div class="note pl-4 pt-4 pr-4 pb-4">
 															Please ensure that all the details you enter are accurate and correct.
 															Once you make your transaction, it is difficult for us to amend or stop the 
 															transfer, although we will always try our best to do so. 
@@ -244,7 +253,14 @@
 
 														
 														</div>
+														
 													</div>
+													<div class="ml-1">
+															<ul class="list-inline form-submission mb-0">
+																<!-- <li class="pull-left"><a href="" class="btn">Prev</a></li> -->
+																<li class="pull-right"><button type="submit" class="btn btn-link ">Next</button></li>
+															</ul>
+															</div>
 												</div>
 											</div>
 											

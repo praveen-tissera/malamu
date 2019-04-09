@@ -2584,7 +2584,7 @@ input[type="radio"]:checked~label {
 }
 
 .step .step-item:not(:first-child)::before {
-  background: #0069d9;
+  background: #9a9b9c;
   content: "";
   height: 2px;
   left: -50%;
@@ -2601,7 +2601,7 @@ input[type="radio"]:checked~label {
 }
 
 .step .step-item a::before {
-  background: #0069d9;
+  background: #3ab54b;
   border: .1rem solid #fff;
   border-radius: 50%;
   content: "";
@@ -2616,8 +2616,8 @@ input[type="radio"]:checked~label {
 }
 
 .step .step-item.active a::before {
-  background: #fff;
-  border: .1rem solid #0069d9;
+  background: #3ab54b;
+  border: .1rem solid #3ab54b;
 }
 
 .step .step-item.active ~ .step-item::before {
@@ -2680,6 +2680,24 @@ input[type="radio"]:checked~label {
   margin-bottom:28px;
 }
 
+.ml-0{
+  margin-left:0;
+}
+.ml-1{
+  margin-left:4px;
+}
+.ml-2{
+  margin-left:8px;
+}
+.ml-3{
+  margin-left:12px;
+}
+.ml-4{
+  margin-left:16px;
+}
+.ml-5{
+  margin-left:28px;
+}
 
 
 .pt-1{
