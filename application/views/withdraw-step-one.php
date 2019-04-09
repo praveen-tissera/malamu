@@ -131,13 +131,39 @@
 	height:100px;
 	background-image:url(<?php echo base_url('/assets/images/cach_pickup.png') ?>);
 	background-size: contain;
+	position:relative;
 
 }
+.cash-pickup:hover{
+	width:100px;
+	height:100px;
+	background-image:url(<?php echo base_url('/assets/images/cach_pickup_hover.png') ?>);
+	background-size: contain;
+	color:#3cb54c;
+
+}
+.cash-pickup>div,.mobile-transfer>div{
+	display: block;
+    position: absolute;
+	bottom: -35px;
+	left:0px;
+}
+
 .mobile-transfer{
 	width:100px;
 	height:100px;
 	background-image:url(<?php echo base_url('/assets/images/mobile_transfer.png') ?>);
 	background-size: contain;
+	
+}
+.mobile-transfer:hover{
+	width:100px;
+	height:100px;
+	background-image:url(<?php echo base_url('/assets/images/mobile_transfer_hover.png') ?>);
+	background-size: contain;
+}
+.tbl-survey .note{
+	border:#3cb54c 2px solid;
 }
 	</style>
 </head>
@@ -196,12 +222,28 @@
 															</ul> 
 
 															<div class="col-sm-5">
-																<div class="cash-pickup pull-right"></div>
+																<div class="cash-pickup pull-right">
+																<div>Cash pick up</div>
+																</div>
+																
 															</div>
 															<div class="col-sm-5 col-sm-offset-2">
-																<div class="mobile-transfer"></div>
+																<div class="mobile-transfer">
+																<div>Mobile money transfer</div>
+																</div>
+
 															</div>	
+															
+														<div class="col-sm-9 text-left col-sm-offset-2 mt-5 pt-5 pb-5">
+														<div class="note">
+															Please ensure that all the details you enter are accurate and correct.
+															Once you make your transaction, it is difficult for us to amend or stop the 
+															transfer, although we will always try our best to do so. 
+														</div>
 														
+
+														
+														</div>
 													</div>
 												</div>
 											</div>
