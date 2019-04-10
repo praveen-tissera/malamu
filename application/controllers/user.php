@@ -477,5 +477,14 @@ Class User extends CI_Controller {
             $this->load->view('login');
         }
     }
+    public function withdrawStepTwo(){
+        if(isset($this->session->userdata['userID'])){
+            //print_r($_POST);
+			//if session is already set
+			$this->load->view('withdraw-step-two');
+		}else{
+            $this->load->view('login');
+        }
+    }
 
 }
