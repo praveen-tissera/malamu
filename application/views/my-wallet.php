@@ -18,7 +18,7 @@
                     <div class="col-md-4">
                         <div class="card card-three mt-5 pr-5">
 							<span class="card-title pt-4 pb-2">Earn up to $4 MD per <br>survey completed.</span>
-							<button class="btn btn-color btn-info mb-5 mt-4 pl-5 pr-5">Take Survey</button>
+							<a href="<?php echo base_url('index.php/User/viewSurveysForm'); ?>" class="btn btn-color btn-info mb-5 mt-4 pl-5 pr-5">Take Survey</a>
 						
                         </div>
                     </div>

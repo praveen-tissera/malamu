@@ -176,7 +176,7 @@
 												<tbody>
 													<tr>
 														<td>
-															<ol start="6" class="survey-question">
+															<ol start="6" class="survey-question pl-4">
 																<li>in general, how satisfied or dissatisfied are you with our company ?</li>
 															</ol>
 															<form action="">

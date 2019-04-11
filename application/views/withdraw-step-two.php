@@ -183,6 +183,17 @@ input[type="radio"]:checked~label{
 	background-color:#000;
 	border-radius:5px;
 }
+.exchange-rate span{
+		display:block;
+}
+.exchange-rate .amount{
+	font-weight:bold;
+	font-size:30px;
+}
+.exchange-rate li{
+	padding-left:36px;
+}
+
 	</style>
 </head>
 
@@ -219,16 +230,16 @@ input[type="radio"]:checked~label{
 										
 											<div class="col-sm-12 col-md-12">
 												<div class="tbl-survey">
-													<h2 class="text-left survey-form-heading pt-4 pb-4">Customer Service Satisfaction</h2>
+													<h2 class="text-left survey-form-heading pt-4 pb-4"><em>Targetted Country: Zambia, and Zimbabwe</em></h2>
 													
 													<div class="col-sm-10 col-sm-offset-1">
 														
 
 															<ul class="step d-flex flex-nowrap mb-5" style="display:flex;">
-																<li class="step-item active">
+																<li class="step-item ">
 																	<a href="#!" class="">Method of Payment</a>
 																</li>
-																<li class="step-item ">
+																<li class="step-item active">
 																	<a href="#!" class="">Contact Information</a>
 																</li>
 																<li class="step-item ">
@@ -236,38 +247,25 @@ input[type="radio"]:checked~label{
 																</li>
 																
 															</ul> 
+															<ul class="list-inline exchange-rate">
+																<li>
+																	<span class="amount">$1</span>
+																	<span>Malamu Dollars</span></li>
+																<li><i class="fas fa-exchange-alt fa-2x"></i></li>
+																<li>
+																	<span class="amount">$0.25</span>
+																	<span>U.S Dollars</span>
+																</li>
+															</ul>
 														<?php echo form_open('User/withdrawStepTwo'); ?>
-															<div class="col-sm-5">
-																<input type="radio" name="pay-method" value="cash" id="cash" checked>
-																<label class="cash-pickup pull-right" for="cash" >
-																<div>Cash pick up</div>
-																</label>
-																
-															</div>
-																
-															<div class="col-sm-5 col-sm-offset-2">
-																<input type="radio" name="pay-method" value="mobile" id="mobile">
-																<label class="mobile-transfer pull-left" for="mobile">
-																<div>Mobile money transfer</div>
-																</label>
-
-															</div>	
+										
 															
-														<div class="col-sm-9 text-left col-sm-offset-2 mt-5 pt-5 pb-5">
-														<div class="note pl-4 pt-4 pr-4 pb-4">
-															Please ensure that all the details you enter are accurate and correct.
-															Once you make your transaction, it is difficult for us to amend or stop the 
-															transfer, although we will always try our best to do so. 
-														</div>
-														
-
-														
-														</div>
+	
 														
 													</div>
 													<div class="ml-1">
 														<ul class="list-inline form-submission mb-0">
-															<!-- <li class="pull-left"><a href="" class="btn">Prev</a></li> -->
+															 <li class="pull-left"><a href="<?php echo base_url('index.php/User/withdrawStepOne') ?>" class="btn">Prev</a></li> 
 															<li class="pull-right"><button type="submit" class="btn btn-link ">Next</button></li>
 														</ul>
 													</div>
