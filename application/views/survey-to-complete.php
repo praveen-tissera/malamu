@@ -215,7 +215,7 @@
 		</div>
 		<div class="modal-footer text-ceter mb-4 pt-5">
 		
-			<button type="button" class="btn btn-success">TAKE THIS SURVEY</button>
+			<a href="<?php echo base_url('index.php/User/viewSurveysForm'); ?>" class="btn btn-success">TAKE THIS SURVEY</a>
 		</div>
 		</div>
 	</div>

@@ -220,7 +220,7 @@
         </div>
 
 <div class="error">
-	<div class="modal fade" id="myModald" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal fade" id="myModald-error" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 		<div class="modal-header">
@@ -247,28 +247,8 @@
 <!-- Modal Error-->
 
 
-<!-- Modal Success-->
-<div class="success">
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-			<div class="modal-header">
-				<button class="close"><i class="far fa-thumbs-up"></i></button>
-			</div>
-			<div class="modal-body">
-				<h2>Your message was sent!</h2>
-				<p>
-					Please check your email to confirm your subscription
-				</p>
-			</div>
-			<div class="modal-footer">
-			
-				<button type="button" class="btn btn-success">CONTINUE</button>
-			</div>
-			</div>
-		</div>
-	</div>
-</div>
+	<!-- Modal Success-->
+	<?php $this->load->view('popups/redeem-refer-money'); ?>
 
 
 
@@ -277,14 +257,7 @@
 
 
 
-
-
-
-
-
-        <!-- jQuery -->
-
-
+    <!-- jQuery -->
 	<!-- <script src="js/jquery.min.js"></script> -->
     <script src="<?php echo base_url('/assets/js/jquery.min.js'); ?>"></script>
 	<!-- jQuery Easing -->

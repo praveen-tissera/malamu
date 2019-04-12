@@ -244,7 +244,7 @@
 											<h3>
 											<strong>The more questions you <br> complete, the more money <br> you make!</strong> 
 											</h3>
-											<a href="<?php echo base_url('index.php/User/viewSurveysForm'); ?>" class="btn btn-color btn-info mb-5 mt-4 pl-5 pr-5">Take Survey</a>
+											<a href="<?php echo base_url('index.php/User/viewSurveysToComplete'); ?>" class="btn btn-color btn-info mb-5 mt-4 pl-5 pr-5">Take Survey</a>
 										</div>
 									</div>
 
