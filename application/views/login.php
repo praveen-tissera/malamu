@@ -27,7 +27,14 @@
 	<meta name="twitter:image" content="" />
 	<meta name="twitter:url" content="" />
 	<meta name="twitter:card" content="" />
-
+	<!-- google ads -->
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script>
+	(adsbygoogle = window.adsbygoogle || []).push({
+		google_ad_client: "ca-pub-6199427025925151",
+		enable_page_level_ads: true
+	});
+	</script>
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="favicon.ico">
 
