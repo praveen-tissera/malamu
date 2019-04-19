@@ -229,10 +229,10 @@ input[type="radio"]:checked~label{
 									<div class="row">
 										
 											<div class="col-sm-12 col-md-12">
-												<div class="tbl-survey">
+												<div class="tbl-withdraw">
 													<h2 class="text-left survey-form-heading pt-4 pb-4"><em>Targetted Country: Zambia, and Zimbabwe</em></h2>
 													
-													<div class="col-sm-10 col-sm-offset-1">
+													<div class="col-sm-12 col-sm-offset-0">
 														
 
 															<ul class="step d-flex flex-nowrap mb-5" style="display:flex;">
@@ -257,9 +257,119 @@ input[type="radio"]:checked~label{
 																	<span>U.S Dollars</span>
 																</li>
 															</ul>
-														<?php echo form_open('User/withdrawStepTwo'); ?>
-										
-															
+														<?php echo form_open('User/withdrawStepThree'); ?>
+														
+														<?php 
+														
+															if($this->session->userdata['pay_method'] == 'cash'){
+																
+																echo "<div class='row'>";
+																	echo "<div class='col-sm-6 text-left'>";
+																		echo "<div class='form-group mb-1'>";
+																			echo "<label for='fname'>Frist Name *</label>";
+																			echo "<input id='fname' type='text'  class='form-control' aria-describedby='first name'>";
+																		echo "</div>";
+																		echo "<span class='help-block'>(?) Please enter your full legal name. It must match their valid, government-issued photo ID for your to successfully collect their funds</span>";
+																	echo "</div>";
+																	echo "<div class='col-sm-6 text-left'>";
+																			echo "<div class='form-group mb-1'>";
+																				echo "<label for='country'>Country *</label>";
+																				echo "<input id='country type='text'  class='form-control' aria-describedby='helpBlock'>";
+																			echo "</div>";
+																			echo "<span id='helpBlock' class='help-block'>(?) Indicate your current country</span>";
+																	echo "</div>";
+																echo "</div>";
+																echo "<div class='row'>";
+																	echo "<div class='col-sm-6 text-left'>";
+																		echo "<div class='form-group mb-1'>";
+																			echo "<label for='mname'>Middle Name</label>";
+																			echo "<input id='mname' type='text'  class='form-control' aria-describedby='first name'>";
+																		echo "</div>";
+																		echo "<span class='help-block'>(?) Please enter your full legal name. It must match their valid, government-issued photo ID for your to successfully collect their funds</span>";
+																	echo "</div>";
+																	echo "<div class='col-sm-6 text-left'>";
+																			echo "<div class='form-group mb-1'>";
+																				echo "<label for='city'>City *</label>";
+																				echo "<input id='city' type='text'  class='form-control' aria-describedby='helpBlock'>";
+																			echo "</div>";
+																			echo "<span id='helpBlock' class='help-block'>(?) Indicate your current city</span>";
+																	echo "</div>";
+																echo "</div>";
+
+																echo "<div class='row'>";
+																	echo "<div class='col-sm-6 text-left'>";
+																		echo "<div class='form-group mb-1'>";
+																			echo "<label for='lname'>Last Name *</label>";
+																			echo "<input id='lname' type='text'  class='form-control' aria-describedby='first name'>";
+																		echo "</div>";
+																		echo "<span class='help-block'>(?) Please enter your full legal name. It must match their valid, government-issued photo ID for your to successfully collect their funds</span>";
+																	echo "</div>";
+																	echo "<div class='col-sm-6 text-left'>";
+																			echo "<div class='form-group mb-1'>";
+																				echo "<label for='mobile'>Mobile Number *</label>";
+																				echo "<input id='country type='text'  class='form-control' aria-describedby='helpBlock'>";
+																			echo "</div>";
+																			echo "<span id='helpBlock' class='help-block'>(?) Please enter the same mobile number you used to register Malamu account </span>";
+																	echo "</div>";
+																echo "</div>";
+																
+
+																
+															}else{
+																
+																echo "<div class='row'>";
+																	echo "<div class='col-sm-6 text-left'>";
+																		echo "<div class='form-group mb-1'>";
+																			echo "<label for='fname'>Full Name *</label>";
+																			echo "<input id='fname' type='text'  class='form-control' aria-describedby='first name'>";
+																		echo "</div>";
+																		echo "<span class='help-block'>(?) Please enter your full legal name. It must match their valid, government-issued photo ID for them to sucessfully collec their funds</span>";
+																	echo "</div>";
+																	echo "<div class='col-sm-6 text-left'>";
+																			echo "<div class='form-group mb-1'>";
+																				echo "<label for='country'>Mobile money account number *</label>";
+																				echo "<input id='country type='text'  class='form-control' aria-describedby='helpBlock'>";
+																			echo "</div>";
+																			echo "<span id='helpBlock' class='help-block'>(?) Indicate your Mobile money account number</span>";
+																	echo "</div>";
+																echo "</div>";
+																echo "<div class='row'>";
+																	echo "<div class='col-sm-6 text-left'>";
+																		echo "<div class='form-group mb-1'>";
+																			echo "<label for='mname'>Contry *</label>";
+																			echo "<input id='mname' type='text'  class='form-control' aria-describedby='first name'>";
+																		echo "</div>";
+																		echo "<span class='help-block'>(?) Indicate your country</span>";
+																	echo "</div>";
+																	echo "<div class='col-sm-6 text-left'>";
+																			echo "<div class='form-group mb-1'>";
+																				echo "<label for='city'>Re-enter Mobile money account number *</label>";
+																				echo "<input id='city' type='text'  class='form-control' aria-describedby='helpBlock'>";
+																			echo "</div>";
+																			echo "<span id='helpBlock' class='help-block'>(?) Re-enter Mobile money account number</span>";
+																	echo "</div>";
+																echo "</div>";
+
+																echo "<div class='row'>";
+																	echo "<div class='col-sm-6 text-left'>";
+																		echo "<div class='form-group mb-1'>";
+																			echo "<label for='lname'>City *</label>";
+																			echo "<input id='lname' type='text'  class='form-control' aria-describedby='first name'>";
+																		echo "</div>";
+																		echo "<span class='help-block'>(?) Indicate your city</span>";
+																	echo "</div>";
+																	echo "<div class='col-sm-6 text-left'>";
+																			echo "<div class='form-group mb-1'>";
+																				echo "<label for='mobile'>Mobile Number *</label>";
+																				echo "<input id='country type='text'  class='form-control' aria-describedby='helpBlock'>";
+																			echo "</div>";
+																			echo "<span id='helpBlock' class='help-block'>(?) Please enter the same mobile number you used to register Malamu account </span>";
+																	echo "</div>";
+																echo "</div>";
+															}
+														
+														?>
+														
 	
 														
 													</div>

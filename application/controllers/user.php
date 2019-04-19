@@ -478,10 +478,51 @@ Class User extends CI_Controller {
         }
     }
     public function withdrawStepTwo(){
+        
         if(isset($this->session->userdata['userID'])){
             //print_r($_POST);
-			//if session is already set
-			$this->load->view('withdraw-step-two');
+            //if session is already set
+            if(isset($_POST) && !empty($_POST)){
+                if($_POST['pay_method'] == 'cash'){
+                    
+                    $this->session->set_userdata('pay_method', 'cash');
+                    $this->load->view('withdraw-step-two');
+                }elseif($_POST['pay_method'] == 'mobile'){
+                    
+                    $this->session->set_userdata('pay_method', 'mobile');
+                    $this->load->view('withdraw-step-two');
+                } 
+
+
+                 
+            }else if(isset($this->session->userdata['pay_method'])){
+                
+                if($this->session->userdata['pay_method'] == 'cash'){
+                    $data['pay_method'] = 'cash';
+                    $this->load->view('withdraw-step-two');
+                }elseif($this->session->userdata['pay_method'] == 'mobile'){
+                    $data['pay_method'] = 'mobile';
+                    $this->load->view('withdraw-step-two');
+                } 
+            }
+              
+			
+		}else{
+            $this->load->view('login');
+        }
+    }
+    public function withdrawStepThree(){
+        if(isset($this->session->userdata['userID'])){
+            //print_r($_POST);
+            //if session is already set
+            if($this->session->userdata['pay_method'] == 'cash'){
+               
+                $this->load->view('withdraw-step-three');
+            }elseif($this->session->userdata['pay_method'] == 'mobile'){
+                
+                $this->load->view('withdraw-step-three');
+            }   
+			
 		}else{
             $this->load->view('login');
         }

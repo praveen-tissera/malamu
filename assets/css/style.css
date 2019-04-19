@@ -2629,12 +2629,19 @@ input[type="radio"]:checked~label {
 }
 
 /* survey and withdraw tabel wrapper*/
-.tbl-survey{
+.tbl-survey,.tbl-withdraw{
   border:#3ab54b 2px solid;
   display: grid;
 }
 
-
+/* survey and  withdraw form styles */
+.tbl-survey .note, .tbl-withdraw .note {
+	border:#3cb54c 2px solid;
+}
+.tbl-withdraw .help-block{
+  font-size: 14px;
+  color: #049dff;
+}
 
 
 

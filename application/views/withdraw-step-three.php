@@ -173,7 +173,9 @@
 	background-size: contain;
 	color:#3cb54c;
 }
-
+.tbl-survey .note{
+	border:#3cb54c 2px solid;
+}
 #cash,#mobile{
 	display:none;
 }
@@ -181,6 +183,17 @@ input[type="radio"]:checked~label{
 	background-color:#000;
 	border-radius:5px;
 }
+.exchange-rate span{
+		display:block;
+}
+.exchange-rate .amount{
+	font-weight:bold;
+	font-size:30px;
+}
+.exchange-rate li{
+	padding-left:36px;
+}
+
 	</style>
 </head>
 
@@ -216,56 +229,70 @@ input[type="radio"]:checked~label{
 									<div class="row">
 										
 											<div class="col-sm-12 col-md-12">
-												<div class="tbl-survey">
+												<div class="tbl-withdraw">
 													<h2 class="text-left survey-form-heading pt-4 pb-4"><em>Targetted Country: Zambia, and Zimbabwe</em></h2>
 													
-													<div class="col-sm-12 col-sm-offset-0">
+													<div class="col-sm-10 col-sm-offset-1">
 														
 
 															<ul class="step d-flex flex-nowrap mb-5" style="display:flex;">
-																<li class="step-item active">
+																<li class="step-item ">
 																	<a href="#!" class="">Method of Payment</a>
 																</li>
 																<li class="step-item ">
 																	<a href="#!" class="">Contact Information</a>
 																</li>
-																<li class="step-item ">
+																<li class="step-item active">
 																	<a href="#!" class="">Account Overview</a>
 																</li>
 																
 															</ul> 
-														<?php echo form_open('User/withdrawStepTwo'); ?>
-															<div class="col-sm-5">
-																<input type="radio" name="pay_method" value="cash" id="cash" checked>
-																<label class="cash-pickup pull-right" for="cash" >
-																<div>Cash pick up</div>
-																</label>
+														
+														<?php echo form_open('User/withdrawStepThree'); ?>
+														
+														<?php 
+															if($this->session->userdata['pay_method'] == 'cash'){
 																
-															</div>
-																
-															<div class="col-sm-5 col-sm-offset-2">
-																<input type="radio" name="pay_method" value="mobile" id="mobile">
-																<label class="mobile-transfer pull-left" for="mobile">
-																<div>Mobile money transfer</div>
-																</label>
+																echo "<div class='row'>";
+																	echo "<div class='col-sm-12 text-left'>";
+																			echo "<em>Name: </em> <strong>Lemlen Hagos</strong><br>";
+																			echo "<em>Country: </em><strong>Lemlen Hagos</strong><br>";
+																			echo "<em>Mobile money account number: </em><strong>Lemlen Hagos</strong><br>";
+																			echo "<em>Contact mobile number: </em><strong>Lemlen Hagos</strong><br>";
 
-															</div>	
+																			echo "<div class='note pl-4 pt-4 pr-4 pb-4 mt-4 mb-4'>";
+																				echo "NOTE";
+																				echo "<p>It may take 2 to 5 days to receive the funds.</p>";
+																				echo "<p> We'll notify you by SMS when funds are ready to be collect and send a transction reference number. Please quote \"WorldRemit\" and the 8-digit transacition reference number when </p>";
+																			echo "</div>";
+																	echo "</div>";
+																	
+																echo "</div>";
+																
+
 															
-														<div class="col-sm-9 text-left col-sm-offset-2 mt-5 pt-5 pb-5">
-														<div class="note pl-4 pt-4 pr-4 pb-4">
-															Please ensure that all the details you enter are accurate and correct.
-															Once you make your transaction, it is difficult for us to amend or stop the 
-															transfer, although we will always try our best to do so. 
-														</div>
-														
+																
 
+																
+															}else{
+																
+																echo "<div class='row'>";
+																	echo "<div class='col-sm-12 text-left'>";
+																		
+																	echo "</div>";
+																	
+																echo "</div>";
+															
+															}
 														
-														</div>
+														?>
+														
+	
 														
 													</div>
 													<div class="ml-1">
 														<ul class="list-inline form-submission mb-0">
-															<!-- <li class="pull-left"><a href="" class="btn">Prev</a></li> -->
+															 <li class="pull-left"><a href="<?php echo base_url('index.php/User/withdrawStepTwo') ?>" class="btn">Prev</a></li> 
 															<li class="pull-right"><button type="submit" class="btn btn-link ">Next</button></li>
 														</ul>
 													</div>
