@@ -164,7 +164,7 @@
 												
 												</div>
 												<div class="row">
-													<div class="col-xxs-4 col-xs-4 mt ">
+													<div class=" col-md-4 mt ">
 													
 														<div class="input-field">';
 															
@@ -180,7 +180,7 @@
                                                                 echo form_input($data);
 														echo '</div>
 													</div>
-													<div class="col-xxs-4 col-xs-4 mt pl-0">
+													<div class="col-md-4 mt ">
 														<div class="input-field">';
 															
                                                             // <input type="text" name="middle_name" class="form-control" id="to-place" placeholder="Middle Name" />
@@ -195,7 +195,7 @@
                                                                 echo form_input($data);
 														echo '</div>
 													</div>
-													<div class="col-xxs-4 col-xs-4 mt pl-0">
+													<div class="col-md-4 mt ">
 														<div class="input-field">';
 															
                                                             // <input type="text" name="last_name" class="form-control" id="to-place" placeholder="Last Name" required/>
@@ -569,7 +569,7 @@
 													<div class="col-xxs-12 col-xs-12 pl-5">
 														<label for="from">Birthday:</label>
 													</div>
-													<div class="col-xxs-4 col-xs-4 mt ">';
+													<div class="col-md-4 mt ">';
 													
                                                         $options = array(
                                                             '01'  => 'January',
@@ -590,7 +590,7 @@
                                 
                                                     echo form_dropdown('month_start', $options, '01',$attribute);
 													echo '</div>
-													<div class="col-xxs-4 col-xs-4 mt pl-0">';
+													<div class=" col-md-4 mt ">';
 													$options = array(
 														'01' => '01',
 														'02' => '02',
@@ -630,7 +630,7 @@
 												echo form_dropdown('day_start', $options, '01',$attribute);
 													
 													echo '</div>
-													<div class="col-xxs-4 col-xs-4 mt pl-0">';
+													<div class=" col-md-4 mt ">';
 													
 													for ($i=1980; $i < 2010 ; $i++) { 
 														$options_year[$i] =  $i;
@@ -673,10 +673,10 @@
 									</div>
 								</div>
 								<div class="desc2 animate-box">
-									<div class="col-sm-7 col-md-7  text-center">
+									<div class="col-sm-7 col-md-7  text-center" style="text-align:-webkit-center; text-align:-moz-center">
 										<!-- <p>HandCrafted by <a href="http://frehtml5.co/" target="_blank" class="fh5co-site-name">FreeHTML5.co</a></p> -->
-										<img src="<?php echo base_url('assets/images/logo.png'); ?>" alt="logo" class="home-log">
-										<img src="<?php echo base_url('assets/images/site-name.png') ?>" alt="company name">
+										<img src="<?php echo base_url('assets/images/logo.png'); ?>" alt="logo" class="home-log img-responsive">
+										<img src="<?php echo base_url('assets/images/site-name.png') ?>" alt="company name" class="img-responsive">
 										<!-- <h2 class="head-title">
 											<strong> Malamu. Good. </strong>
 										</h2> -->

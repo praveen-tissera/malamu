@@ -144,12 +144,7 @@ figure {
   position: relative;
   height: 800px;
 }
-@media screen and (max-width: 768px) {
-  .fh5co-cover,
-  .fh5co-hero {
-    height: 400px;
-  }
-}
+
 .fh5co-cover .fh5co-overlay,
 .fh5co-hero .fh5co-overlay {
   position: absolute !important;
@@ -2545,11 +2540,11 @@ input[type="radio"]:checked~label {
 
 
 @media (min-width: 768px){
-.modal-dialog {
-    width: 400px;
-    margin: 30px auto;
+  .modal-dialog {
+      width: 400px;
+      margin: 30px auto;
+  }
 }
-
 
 /*survey model pop up*/
 
@@ -2770,3 +2765,118 @@ input[type="radio"]:checked~label {
   padding-right:28px;
 }
 
+
+
+
+
+/*   Responsive desining */
+
+@media only screen and (min-width: 1824px) {
+    
+}
+
+/* Large/Retina device 2560 screen wide (Mac book pro ) */
+
+@media only screen and (min-width: 2530px) {
+    
+}
+
+/* Displays/Screens 1680x1050 ( Mac book mini screen ) */
+
+@media only screen and (min-width: 1650px) and (max-width: 1889px) {
+    
+}
+
+/* Large Devices, Wide Screens */
+
+@media only screen and (max-width: 1200px) {}
+
+/* Medium Devices, Desktops */
+
+@media only screen and (min-width: 992px) {}
+
+/* Display device 768 and 1280 resolution */
+
+@media (min-width: 768px) and (max-width: 1280px) {
+        
+    
+  
+}
+
+/*Display device between 1024 and 1280 (projectors)*/
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+   
+   
+}
+
+/* Small Devices, Tablets */
+
+@media only screen and (max-width: 768px) {
+  .fh5co-cover,
+  .fh5co-hero {
+    height: 400px;
+  }
+  .nav-login{
+    border: 2px solid rgb(255, 255, 255);
+    color: #fff;
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+  }
+  #offcanvas-menu ul li{
+    text-align: center;
+  }
+}
+
+/* iPads (landscape) ----------- */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+   
+   
+
+}
+
+/* Extra Small Devices, Phones */
+
+@media only screen and (max-width: 480px) {
+  .fh5co-cover, .fh5co-hero {
+    height: 900px !important;
+  }
+  .middle-container{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 2rem 1rem 2rem 1rem;
+    margin-bottom: 1rem;
+  
+  }
+    
+}
+
+/* Custom, iPhone Retina */
+
+@media only screen and (max-width: 320px) {
+  .fh5co-cover, .fh5co-hero {
+    height: 900px !important;
+  }
+  .middle-container{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 2rem 1rem 2rem 1rem;
+    margin-bottom: 1rem;
+  
+  }
+}
+/*custom mobile s5 iphone 6 7 8+ x*/
+@media only screen and (max-width: 415px) {
+  .fh5co-cover, .fh5co-hero {
+    height: 900px !important;
+  }
+  .middle-container{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 2rem 1rem 2rem 1rem;
+    margin-bottom: 1rem;
+  
+  }
+}

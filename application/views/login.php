@@ -80,7 +80,7 @@
 		top:20%;
 	}
 	.fh5co-hero{
-		height:800px !important;
+		/* height:800px !important; */
 	}
 	.fh5co-cover .desc h3,.fh5co-cover .desc p{
 		color:black;
