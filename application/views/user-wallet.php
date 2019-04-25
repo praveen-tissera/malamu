@@ -143,7 +143,7 @@
 											</div>
 											
 											<div class="col-sm-6 wallet-balance">
-												<h2 class="wallet-amount">$203</h2>
+												<h2 class="wallet-amount">$203 MD</h2>
 												<h2>Wallet Balance</h2>
 											
 											</div>
@@ -162,7 +162,7 @@
 									<div class="row">
 										<div class="col-sm-12 col-md-12">
 										
-												<h1 class="text-center"> <strong>Invite a friend, you both get $5</strong></h1>
+												<h1 class="text-center"> <strong>Invite a friend, you both get $5 MD</strong></h1>
 												<img style="width:243px;margin-left:auto;margin-right:auto;" class="img-responsive" src="<?php echo base_url('/assets/images/friend_earns.jpg'); ?>" alt="">
 												<h4>It’s super easy to refer a friend. Share the goodness as much as you can!</h4>
 												<!--  -->

@@ -114,7 +114,7 @@
 							<li><a href="car.html">Car</a></li>
 							<li><a href="blog.html">Blog</a></li> -->
 								<li>
-									<a href="<?php echo  base_url('index.php/user/login');?>"> Already a member? <span class="nav-login">Login</span></a>
+									<a href="<?php echo  base_url('index.php/user/login');?>"> Already a member? <span class="nav-login">Log in</span></a>
 								</li>
 								<li>
 									<a href="<?php echo  base_url('index.php/user/aboutus');?>"> About Us</a>

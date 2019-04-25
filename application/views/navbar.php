@@ -5,7 +5,7 @@
 				</div>
 				<p class="navbar-text pull-right">
 					<a href="<?php echo base_url('index.php/user/userDashBoard'); ?>">
-						<span class="nav-home"><i class="fas fa-home"></i></span>
+						<span class="nav-home"><i class="fas fa-wallet"></i></span>
 					</a>
 					&nbsp;&nbsp;
 					<strong>Wallet #

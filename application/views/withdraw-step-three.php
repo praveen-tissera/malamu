@@ -230,7 +230,7 @@ input[type="radio"]:checked~label{
 										
 											<div class="col-sm-12 col-md-12">
 												<div class="tbl-withdraw">
-													<h2 class="text-left survey-form-heading pt-4 pb-4"><em>Targetted Country: Zambia, and Zimbabwe</em></h2>
+													<h2 class="text-left survey-form-heading pt-4 pb-4"><em>Withdraw Fund</em></h2>
 													
 													<div class="col-sm-10 col-sm-offset-1">
 														
@@ -255,10 +255,11 @@ input[type="radio"]:checked~label{
 																
 																echo "<div class='row'>";
 																	echo "<div class='col-sm-12 text-left'>";
-																			echo "<em>Name: </em> <strong>Lemlen Hagos</strong><br>";
-																			echo "<em>Country: </em><strong>Lemlen Hagos</strong><br>";
-																			echo "<em>Mobile money account number: </em><strong>Lemlen Hagos</strong><br>";
-																			echo "<em>Contact mobile number: </em><strong>Lemlen Hagos</strong><br>";
+																			echo "First name:  <strong>Lemlen Hagos</strong><br>";
+																			echo "Middle name: <strong></strong><br>";
+																			echo "Last name: <strong></strong><br>";
+																			echo "City: <strong></strong><br>";
+																			echo "Mobile number: <strong></strong><br>";
 
 																			echo "<div class='note pl-4 pt-4 pr-4 pb-4 mt-4 mb-4'>";
 																				echo "NOTE";
@@ -278,7 +279,18 @@ input[type="radio"]:checked~label{
 																
 																echo "<div class='row'>";
 																	echo "<div class='col-sm-12 text-left'>";
-																		
+																		echo "Full name:  <strong>Lemlen Hagos</strong><br>";
+																		echo "Country: <strong></strong><br>";
+																		echo "City: <strong></strong><br>";
+																		echo "Mobile money account number: <strong></strong><br>";
+																		echo "Re-enter Mobile money account number: <strong></strong><br>";
+																		echo "Mobile number: <strong></strong><br>";
+
+																		echo "<div class='note pl-4 pt-4 pr-4 pb-4 mt-4 mb-4'>";
+																			echo "NOTE";
+																			echo "<p>It may take 2 to 5 days to receive the funds.</p>";
+																			echo "<p> We'll notify you by SMS when funds are ready to be collect and send a transction reference number. Please quote \"WorldRemit\" and the 8-digit transacition reference number when </p>";
+																		echo "</div>";
 																	echo "</div>";
 																	
 																echo "</div>";

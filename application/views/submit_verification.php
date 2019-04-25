@@ -185,7 +185,7 @@
 											// 		);
 											// 		echo form_input($data);
 											echo '<div class="main">	
-											<label>A text message send to ‘phone number’ with a code, enter it below.</label>';
+											<label>A text message send to ‘' .$phone_number. '’ with a code, enter it below.</label>';
 												$data = array(
 													'type' => 'text',
 													'name' => 'verification-code',

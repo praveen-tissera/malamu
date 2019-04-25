@@ -80,7 +80,7 @@
     width: 75%;
     height: 5px;
     
-	background-color: #f0ad4e;
+	background-color: #337ab7;
 	left:15%;
 }
 
@@ -144,7 +144,7 @@
 											<form class="form-inline">
 												<div class="form-group">
 													<label for="redeem-money">Code: &nbsp; &nbsp;</label>
-													<input type="text" class="form-control" id="redeem-money" placeholder="394">
+													<input type="text" class="form-control" id="redeem-money" placeholder="023">
 												</div> <br><br>
 												<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Redeem</button>
 											</form>
@@ -163,22 +163,22 @@
 											
 											<h1 class="text-center">Redeem Refer Money</h1>
 											<h3 class="text-center">
-											You can only redeem once. However, you can earn money by inviting your friends, so you both can get $5. It’s super easy to refer a friend. Share the goodness as much as you can!
+											You can only redeem once. However, you can earn money by inviting your friends, so you both can get $5 MD. It’s super easy to refer a friend. Share the goodness as much as you can!
 											
 											</h3>
 											<!--  -->
 											<div class="stepwizard">
 													<div class="stepwizard-row setup-panel">
 														<div class="stepwizard-step">
-															<span   class="btn btn-warning btn-circle">1</span>
+															<span   class="btn btn-primary btn-circle">1</span>
 															<p>Refer a friend</p>
 														</div>
 														<div class="stepwizard-step">
-														<span   class="btn btn-warning btn-circle">2</span>
+														<span   class="btn btn-primary btn-circle">2</span>
 															<p>Your frident gets $5 </p>
 														</div>
 														<div class="stepwizard-step">
-														<span   class="btn btn-warning btn-circle">3</span>
+														<span   class="btn btn-primary btn-circle">3</span>
 															<p>You get $5</p>
 														</div>
 													</div>

@@ -150,10 +150,10 @@
                                         <div class="refer-friend">
                                             <h1 class="text-left pl-4 pr-4 pt-5 ">Refer Friends & Earn Money</h1>
                                             <p class="text-left pl-4">Invite a friend to Malamu and you'll receive $5 to your wallet</p>
-                                            <div class="promo-label">
+                                            <!-- <div class="promo-label">
                                                 <h1 class="pl-4 pt-4 pr-4">$5</h1>
                                                 <h3 class="pl-4 pr-4">Wallet Balance</h3>
-                                            </div>
+                                            </div> -->
                                         </div>
                                         
 

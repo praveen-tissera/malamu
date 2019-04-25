@@ -160,7 +160,7 @@
 											'name' => 'help_type',
 											'class' => 'form-control',
 											'id' => 'from-place',
-											'placeholder' => 'WHAT TYPE DO YOU NEED?',
+											'placeholder' => 'WHAT TYPE OF HELP DO YOU NEED?',
 											
 											);
 								

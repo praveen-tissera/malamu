@@ -230,8 +230,8 @@ Class User extends CI_Controller {
                 if($resend == 'resend'){
                     $this->load->view('submit_verification',$data);
                 }else{
-                    
-                    $this->load->view('submit_verification');
+                    $data['phone_number'] = $phone_verification['phone_number'];
+                    $this->load->view('submit_verification',$data);
                 }
                 
             } catch (Exception $e) {

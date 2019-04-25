@@ -230,7 +230,7 @@ input[type="radio"]:checked~label{
 										
 											<div class="col-sm-12 col-md-12">
 												<div class="tbl-withdraw">
-													<h2 class="text-left survey-form-heading pt-4 pb-4"><em>Targetted Country: Zambia, and Zimbabwe</em></h2>
+													<h2 class="text-left survey-form-heading pt-4 pb-4"><em>Withdraw Fund</em></h2>
 													
 													<div class="col-sm-12 col-sm-offset-0">
 														
