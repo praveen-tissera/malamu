@@ -190,9 +190,9 @@ input[type="radio"]:checked~label{
 		
             <div class="row">
             
-                <div class="col-sm-2 col-md-2 text-center">
-                    <img class="logo" src="<?php echo base_url('/assets/images/logo.png'); ?>">
-					<h4 class="mb-0">MALAMU</h4>
+                <div class=" col-xs-3 col-sm-2 col-md-2 text-center">
+                    <!-- <img class="logo" src="<?php echo base_url('/assets/images/logo.png'); ?>">
+					<h4 class="mb-0">MALAMU</h4> -->
                     <!-- user profile menu  -->
                     <?php $this->load->view('left-menu'); ?>
 
@@ -203,20 +203,20 @@ input[type="radio"]:checked~label{
 
                 
                 </div>
-                <div class="col-sm-10 col-md-10 middle-section">
+                <div class="col-xs-9 col-sm-10 col-md-10 middle-section">
 				<!-- load my-wallet -->
 				<?php $this->load->view('my-wallet'); ?>
 
                         
-                            <div class="col-sm-10 col-md-10 text-center">
+                            <div class="col-xs-12 col-sm-10 col-md-10 text-center">
 								
 								
 
-								<div class="middle-container">
-									<div class="row">
+								<div class="middle-container ">
+									<div class="row tbl-survey">
 										
 											<div class="col-sm-12 col-md-12">
-												<div class="tbl-survey">
+												<div class="row">
 													<h2 class="text-left survey-form-heading pt-4 pb-4"><em>Targetted Country: Zambia, and Zimbabwe</em></h2>
 													
 													<div class="col-sm-12 col-sm-offset-0">
@@ -263,7 +263,7 @@ input[type="radio"]:checked~label{
 														</div>
 														
 													</div>
-													<div class="ml-1">
+													<div class="col-sm-12 pl-1 pr-0">
 														<ul class="list-inline form-submission mb-0">
 															<!-- <li class="pull-left"><a href="" class="btn">Prev</a></li> -->
 															<li class="pull-right"><button type="submit" class="btn btn-link ">Next</button></li>
@@ -283,7 +283,7 @@ input[type="radio"]:checked~label{
 							</div>
 
 							
-                            <div class=" col-sm-2 col-md-2 text-center " >
+                            <div class=" col-sm-2 col-md-2 text-center hidden-xs" >
 								<img class="img-responsive" src="https://via.placeholder.com/160x600?text=160x600+Wide+Skyscaper" alt="">
 							</div>
                 </div>

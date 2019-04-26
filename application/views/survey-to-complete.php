@@ -115,9 +115,9 @@
 		
             <div class="row">
             
-                <div class="col-sm-2 col-md-2 text-center">
-                    <img class="logo" src="<?php echo base_url('/assets/images/logo.png'); ?>">
-					<h4 class="mb-0">MALAMU</h4>
+                <div class="col-xs-3 col-sm-2 col-md-2 text-center">
+                    <!-- <img class="logo" src="<?php echo base_url('/assets/images/logo.png'); ?>">
+					<h4 class="mb-0">MALAMU</h4> -->
                     <!-- user profile menu  -->
                     <?php $this->load->view('left-menu'); ?>
 
@@ -128,7 +128,7 @@
 
                 
                 </div>
-                <div class="col-sm-10 col-md-10 middle-section">
+                <div class="col-xs-9 col-sm-10 col-md-10 middle-section">
 				<!-- load my-wallet -->
 				<?php $this->load->view('my-wallet'); ?>
 
@@ -177,7 +177,7 @@
 							</div>
 
 							
-                            <div class=" col-sm-2 col-md-2 text-center " >
+                            <div class=" col-sm-2 col-md-2 text-center hidden-xs" >
 								<img class="img-responsive" src="https://via.placeholder.com/160x600?text=160x600+Wide+Skyscaper" alt="">
 							</div>
                 </div>

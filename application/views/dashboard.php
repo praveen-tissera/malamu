@@ -112,8 +112,8 @@
             <div class="row">
             
                 <div class="col-xs-3 col-sm-2 col-md-2 text-center">
-                    <img class="logo" src="<?php echo base_url('/assets/images/logo.png'); ?>">
-					<h4 class="mb-0">MALAMU</h4>
+                    <!-- <img class="logo" src="<?php echo base_url('/assets/images/logo.png'); ?>">
+					<h4 class="mb-0">MALAMU</h4> -->
                     <!-- user profile menu  -->
                     <?php $this->load->view('left-menu'); ?>
 

@@ -133,9 +133,9 @@
 		
             <div class="row">
             
-                <div class="col-sm-2 col-md-2 text-center">
-                    <img class="logo" src="<?php echo base_url('/assets/images/logo.png'); ?>">
-					<h4 class="mb-0">MALAMU</h4>
+                <div class="col-xs-3 col-sm-2 col-md-2 text-center">
+                    <!-- <img class="logo" src="<?php echo base_url('/assets/images/logo.png'); ?>">
+					<h4 class="mb-0">MALAMU</h4> -->
                     <!-- user profile menu  -->
                     <?php $this->load->view('left-menu'); ?>
 
@@ -146,7 +146,7 @@
 
                 
                 </div>
-                <div class="col-sm-10 col-md-10 middle-section">
+                <div class="col-xs-9 col-sm-10 col-md-10 middle-section">
 				<!-- load my-wallet -->
 				<?php $this->load->view('my-wallet'); ?>
 
@@ -161,13 +161,20 @@
 											<div class="tbl-survey">
 											<h2 class="text-left survey-form-heading pt-4 pb-4">Customer Service Satisfaction</h2>
 											
-											<div class="col-sm-6 col-sm-offset-3">
-											<span class="pull-left survey-label">5 of 20 answered  &nbsp;</span>
+											<!-- <div class="col-sm-6 col-sm-offset-3">
+												
+												
+											</div> -->
+
+											<div class="col-md-2 col-sm-offset-2">
+												<span class=" survey-label">5 of 20 answered  &nbsp;</span>
+											</div>
+											<div class="col-md-6">
 												<div class="progress survey-steps mt-2">
 													
-												<div class="progress-bar progress-bar-warning " role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-													<span class="sr-only">40% Complete (success)</span>
-												</div>
+													<div class="progress-bar progress-bar-warning " role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+														<span class="sr-only">40% Complete (success)</span>
+													</div>
 												</div>
 											</div>
 											
@@ -223,7 +230,7 @@
 							</div>
 
 							
-                            <div class=" col-sm-2 col-md-2 text-center " >
+                            <div class=" col-sm-2 col-md-2 text-center hidden-xs" >
 								<img class="img-responsive" src="https://via.placeholder.com/160x600?text=160x600+Wide+Skyscaper" alt="">
 							</div>
                 </div>

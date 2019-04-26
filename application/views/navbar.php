@@ -1,7 +1,11 @@
 <nav class="navbar mb-0">
 		<div class="container-fluid">
 				<div class="navbar-header">
-					<a class="navbar-brand"></a>
+					<a class="navbar-brand" href="">
+					<img class="logo" src="<?php echo base_url('/assets/images/logo.png'); ?>">
+					<h4 class="mb-0">MALAMU</h4>
+					
+					</a>
 				</div>
 				<p class="navbar-text pull-right">
 					<a href="<?php echo base_url('index.php/user/userDashBoard'); ?>">
