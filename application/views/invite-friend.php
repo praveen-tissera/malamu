@@ -127,8 +127,8 @@
             <div class="row">
             
                 <div class="col-xs-3 col-sm-2 col-md-2 text-center">
-                    <img class="login-logo logo" src="<?php echo base_url('/assets/images/logo.png'); ?>">
-                    <h4 class="mb-0">MALAMU</h4>
+                    <!-- <img class="login-logo logo" src="<?php echo base_url('/assets/images/logo.png'); ?>">
+                    <h4 class="mb-0">MALAMU</h4> -->
                     <!-- user profile menu  -->
                     <?php $this->load->view('left-menu'); ?>
 
@@ -149,7 +149,7 @@
                                     <div class="col-sm-12 mb-4">
                                         <div class="refer-friend">
                                             <h1 class="text-left pl-4 pr-4 pt-5 ">Refer Friends & Earn Money</h1>
-                                            <p class="text-left pl-4">Invite a friend to Malamu and you'll receive $5 to your wallet</p>
+                                            <p class="text-left pl-4">Invite a friend to Malamu and you'll receive $5 MD to your wallet</p>
                                             <!-- <div class="promo-label">
                                                 <h1 class="pl-4 pt-4 pr-4">$5</h1>
                                                 <h3 class="pl-4 pr-4">Wallet Balance</h3>
@@ -278,14 +278,14 @@
                                         </div>
                                         <div class="col-md-4">
                                         <img style="width:250px;margin-left:auto;margin-right:auto;" class="img-responsive" src="<?php echo base_url('/assets/images/you_earn.jpg'); ?>" alt="">
-                                           <h2>Your friend gets  $5</h2> 
+                                           <h2>Your friend gets  $5 MD</h2> 
                                            <p>
                                            Your friend gets $5 towards their wallet balance when they claim your wallet number.
                                            </p>
                                         </div>
                                         <div class="col-md-4">
                                         <img style="width:243px;margin-left:auto;margin-right:auto;" class="img-responsive" src="<?php echo base_url('/assets/images/friend_earns.jpg'); ?>" alt="">
-                                           <h2>You get $5</h2>
+                                           <h2>You get $5 MD</h2>
                                            <p>
                                            When they claim your wallet number you’ll get $5 towards your wallet balance.
 

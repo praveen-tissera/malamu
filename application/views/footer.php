@@ -6,10 +6,10 @@
 						<div class="col-sm-12 text-center">
 								<p class="fh5co-social-icons">
 									<img width= "75px" src="<?php echo base_url('assets/images/logo.png'); ?>" alt=""><br><br>
-									<a href="#">
+									<a href="http://www.facebook.com/Malamu-357272771663266">
 										<i class="icon-facebook2"></i>
 									</a>
-									<a href="#">
+									<a href="http://www.instagram.com/malamu_org">
 										<i class="icon-instagram"></i>
 									</a>
 								

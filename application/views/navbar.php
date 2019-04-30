@@ -8,7 +8,7 @@
 					</a>
 				</div>
 				<p class="navbar-text pull-right">
-					<a href="<?php echo base_url('index.php/user/userDashBoard'); ?>">
+					<a href="<?php echo base_url('user/viewMyWallet'); ?>">
 						<span class="nav-home"><i class="fas fa-wallet"></i></span>
 					</a>
 					&nbsp;&nbsp;

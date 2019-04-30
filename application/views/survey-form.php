@@ -76,7 +76,7 @@
     bottom: 0;
     position: absolute;
     content: " ";
-    width: 75%;
+    width: 70%;
     height: 5px;
     background-color: #337ab7;
 	left:15%;

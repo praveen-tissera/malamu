@@ -77,7 +77,7 @@
     bottom: 0;
     position: absolute;
     content: " ";
-    width: 75%;
+    width: 70%;
     height: 5px;
     
 	background-color: #337ab7;
@@ -144,7 +144,7 @@
 											<form class="form-inline">
 												<div class="form-group">
 													<label for="redeem-money">Code: &nbsp; &nbsp;</label>
-													<input type="text" class="form-control" id="redeem-money" placeholder="023">
+													<input type="text" class="form-control" id="redeem-money" placeholder="ex.023">
 												</div> <br><br>
 												<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Redeem</button>
 											</form>
@@ -175,17 +175,17 @@
 														</div>
 														<div class="stepwizard-step">
 														<span   class="btn btn-primary btn-circle">2</span>
-															<p>Your frident gets $5 </p>
+															<p>Your frident gets $5 MD </p>
 														</div>
 														<div class="stepwizard-step">
 														<span   class="btn btn-primary btn-circle">3</span>
-															<p>You get $5</p>
+															<p>You get $5 MD</p>
 														</div>
 													</div>
 												</div>
 
 											<!--  -->
-											<div class="col-sm-11 col-sm-offset-1">
+											<div class="col-sm-12">
 													<a href="<?php echo base_url('index.php/user/viewInviteFriend'); ?>" class="btn btn-info">Send invitation</a>
 												</div>
 

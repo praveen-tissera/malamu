@@ -76,7 +76,7 @@
     bottom: 0;
     position: absolute;
     content: " ";
-    width: 75%;
+    width: 70%;
     height: 5px;
     background-color: #337ab7;
 	left:15%;
@@ -217,7 +217,7 @@ input[type="radio"]:checked~label{
 										
 											<div class="col-sm-12 col-md-12">
 												<div class="row">
-													<h2 class="text-left survey-form-heading pt-4 pb-4"><em>Targetted Country: Zambia, and Zimbabwe</em></h2>
+													<h2 class="text-left survey-form-heading pt-4 pb-4"><em>Withdraw</em></h2>
 													
 													<div class="col-sm-12 col-sm-offset-0">
 														
