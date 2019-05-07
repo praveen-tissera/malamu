@@ -132,7 +132,7 @@
                     <!-- user profile menu  -->
                     <?php $this->load->view('left-menu'); ?>
 
-					<img src="https://via.placeholder.com/200x500?text=160x500+Wide+Skyscaper" alt="">
+					<!-- <img src="https://via.placeholder.com/200x500?text=160x500+Wide+Skyscaper" alt=""> -->
 
 
 
@@ -246,7 +246,8 @@
                                         
                                     </div>
                                     <div class="col-sm-12 mb-4">
-                                         <img class="img-responsive"  style="margin:auto;"  src="https://via.placeholder.com/908x120?text=908x120+Leaderboard" alt="">
+                                         <!-- <img class="img-responsive"  style="margin:auto;"  src="https://via.placeholder.com/908x120?text=908x120+Leaderboard" alt=""> -->
+                                         <a href="https://yllix.com/publishers/697744" target="_blank"><img src="//ylx-aff.advertica-cdn.com/pub_c6lers.png" class="img-responsive"  style="margin:auto;" width="728" height="90" border="0" alt="Monetize your website traffic with yX Media" title="Monetize your website traffic with yX Media" /></a>
                                     </div>
                                 </div>
 
@@ -299,7 +300,8 @@
 								</div>
 								<div class="row">
 								    <div class="col-sm-12 col-md-12">
-										<img class="img-responsive" style="margin:auto;"  src="https://via.placeholder.com/728x90?text=728x90+Leaderboard" alt="">
+										<!-- <img class="img-responsive" style="margin:auto;"  src="https://via.placeholder.com/728x90?text=728x90+Leaderboard" alt=""> -->
+                                        <a href="https://yllix.com/publishers/697744" target="_blank"><img src="//ylx-aff.advertica-cdn.com/pub_c6lers.png" class="img-responsive"  style="margin:auto;" width="728" height="90" border="0" alt="Monetize your website traffic with yX Media" title="Monetize your website traffic with yX Media" /></a>
 									</div>
                                 </div>
                                 <div class="row mt-4 mb-4">
@@ -331,7 +333,8 @@
 
                                 <div class="row">
 								    <div class="col-sm-12 col-md-12">
-										<img class="img-responsive" style="margin:auto;"  src="https://via.placeholder.com/728x90?text=728x90+Leaderboard" alt="">
+										<!-- <img class="img-responsive" style="margin:auto;"  src="https://via.placeholder.com/728x90?text=728x90+Leaderboard" alt=""> -->
+                                        <a href="https://yllix.com/publishers/697744" target="_blank"><img src="//ylx-aff.advertica-cdn.com/pub_c6lers.png" class="img-responsive"  style="margin:auto;" width="728" height="90" border="0" alt="Monetize your website traffic with yX Media" title="Monetize your website traffic with yX Media" /></a>
 									</div>
                                 </div>
                                 
@@ -339,7 +342,8 @@
 							
 							</div>
                             <div class=" col-sm-2 col-md-2 text-center hidden-xs" >
-								<img class="img-responsive" src="https://via.placeholder.com/160x600?text=160x600+Wide+Skyscaper" alt="">
+								<!-- <img class="img-responsive" src="https://via.placeholder.com/160x600?text=160x600+Wide+Skyscaper" alt=""> -->
+                                <a href="https://yllix.com/publishers/697744" target="_blank"><img src="//ylx-aff.advertica-cdn.com/pub_le6kgi.png" width="160" height="600" border="0" alt="Monetize your website traffic with yX Media" title="Monetize your website traffic with yX Media" /></a>
 							</div>
                 </div>
 

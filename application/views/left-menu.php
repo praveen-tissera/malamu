@@ -55,6 +55,8 @@ if(isset($this->session->userdata['userID'])){
                         <li class='mt-4 mb-4'><a class='btn-block  mt-4' href='" . base_url('index.php/user/viewHelp')."'><i class='fas fa-question-circle fa-2x'></i></a></li>
                     
                     </ul>";
+                    // echo '<img src="https://via.placeholder.com/200x500?text=160x500+Wide+Skyscaper" alt="">';
+                    echo '<a href="https://yllix.com/publishers/697744" target="_blank"><img src="//ylx-aff.advertica-cdn.com/pub_le6kgi.png" width="160" height="600" border="0" alt="Monetize your website traffic with yX Media" title="Monetize your website traffic with yX Media" /></a>';
 
 
 

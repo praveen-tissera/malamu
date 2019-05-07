@@ -64,7 +64,7 @@
                     <!-- user profile menu  -->
                     <?php $this->load->view('left-menu'); ?>
 
-					<img src="https://via.placeholder.com/200x500?text=160x500+Wide+Skyscaper" alt="">
+					<!-- <img src="https://via.placeholder.com/200x500?text=160x500+Wide+Skyscaper" alt=""> -->
 
 
 
@@ -81,7 +81,8 @@
 									<div class="row">
 										<div class="col-sm-12 col-md-12">
 											<h1 class="text-center"> <strong>HELPING IS GOOD</strong></h1>
-											<img class="img-responsive"  style="margin:auto;"  src="https://via.placeholder.com/728x90?text=728x90+Leaderboard" alt="">
+											<!-- <img class="img-responsive"  style="margin:auto;"  src="https://via.placeholder.com/728x90?text=728x90+Leaderboard" alt=""> -->
+											<a href="https://yllix.com/publishers/697744" target="_blank"><img src="//ylx-aff.advertica-cdn.com/pub_c6lers.png" class="img-responsive"  style="margin:auto;" width="728" height="90" border="0" alt="Monetize your website traffic with yX Media" title="Monetize your website traffic with yX Media" /></a>
 
 											<h3 class="text-center pt-4">Enter your cell phone number we would be happy to answer your question!</h3>
 											<h3 class="text-center">Have a good day!</h3>
@@ -199,14 +200,16 @@
 								</div>
 								<div class="row">
 								<div class="col-sm-12 col-md-12 ">
-										<img class="img-responsive" style="margin:auto;"  src="https://via.placeholder.com/728x90?text=728x90+Leaderboard" alt="">
+										<!-- <img class="img-responsive" style="margin:auto;"  src="https://via.placeholder.com/728x90?text=728x90+Leaderboard" alt=""> -->
+										<a href="https://yllix.com/publishers/697744" target="_blank"><img src="//ylx-aff.advertica-cdn.com/pub_c6lers.png" class="img-responsive"  style="margin:auto;" width="728" height="90" border="0" alt="Monetize your website traffic with yX Media" title="Monetize your website traffic with yX Media" /></a>
 									</div>
 								</div>
 								
 							
 							</div>
                             <div class=" col-sm-2 col-md-2 text-center hidden-xs" >
-								<img class="img-responsive" src="https://via.placeholder.com/160x600?text=160x600+Wide+Skyscaper" alt="">
+								<!-- <img class="img-responsive" src="https://via.placeholder.com/160x600?text=160x600+Wide+Skyscaper" alt=""> -->
+								<a href="https://yllix.com/publishers/697744" target="_blank"><img src="//ylx-aff.advertica-cdn.com/pub_le6kgi.png" width="160" height="600" border="0" alt="Monetize your website traffic with yX Media" title="Monetize your website traffic with yX Media" /></a>
 							</div>
                 </div>
 
